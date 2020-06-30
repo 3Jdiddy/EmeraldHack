@@ -65,15 +65,10 @@
 // Converts a Q24.8 fixed-point format number to a regular integer
 #define Q_24_8_TO_INT(n) ((int)((n) >> 8))
 
-<<<<<<< HEAD
 // Rounding value for Q4.12 fixed-point format
 #define Q_4_12_ROUND ((1) << (12 - 1))
 #define UQ_4_12_ROUND ((1) << (12 - 1))
-
-#define POKEMON_SLOTS_NUMBER 412
-=======
 #define POKEMON_SLOTS_NUMBER 808
->>>>>>> 0dc4db67eccb700890a582fbd8ddb6d926e31006
 
 #define min(a, b) ((a) < (b) ? (a) : (b))
 #define max(a, b) ((a) >= (b) ? (a) : (b))
