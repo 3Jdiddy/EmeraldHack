@@ -714,18 +714,42 @@ PetalburgCity_EventScript_Boy2:: @ 81DC82E
 	msgbox PetalburgCity_Text_AreYouRookieTrainer, MSGBOX_NPC
 	end
 
+PetalburgCity_EventScript_Guy1::
+	msgbox PetalburgCity_EventScript_Guy1_text, MSGBOX_NPC
+	end
+
+PetalburgCity_EventScript_Guy2::
+	msgbox PetalburgCity_EventScript_Guy2_text, MSGBOX_NPC
+	end
+
+PetalburgCity_EventScript_Sign::
+	msgbox PetalburgCity_EventScript_Sign_text, MSGBOX_SIGN
+	end
+
+PetalburgCity_EventScript_Sign_text::
+	.string "Levata Town\p"
+	.string "Home to the Levata Trainer's Academy.$"
+
+
+PetalburgCity_EventScript_Guy1_text::
+	.string "Ahhh...\p"
+	.string "Being up this high, it brings me so\n"
+	.string "much joy.\p"
+	.string "The air is so fresh and pristine, heheh.$"
+
+PetalburgCity_EventScript_Guy2_text::
+	.string "No problem here.$"
+
 PetalburgCity_Text_WhereIsWally: @ 81DC837
-	.string "Where has our WALLY gone?\p"
-	.string "We have to leave for VERDANTURF TOWN\n"
-	.string "very soon…$"
+	.string "Are you curious about the layout\n"
+	.string "of our town?\p"
+	.string "Me too!$"
 
 PetalburgCity_Text_AreYouRookieTrainer: @ 81DC881
-	.string "Hiya! Are you maybe…\n"
-	.string "A rookie TRAINER?\p"
-	.string "Do you know what POKéMON TRAINERS\n"
-	.string "do when they reach a new town?\p"
-	.string "They first check what kind of GYM\n"
-	.string "is in the town.$"
+	.string "See that kid up near the waterfall?\p"
+	.string "Pfft, yeah-- real werido that one.\p"
+	.string "I wouldn't take what he says too\n"
+	.string "seriously.$"
 
 PetalburgCity_Text_ThisIsPetalburgGym: @ 81DC91B
 	.string "See? This is PETALBURG CITY's GYM.$"
@@ -736,16 +760,18 @@ PetalburgCity_Text_ThisIsGymSign: @ 81DC93E
 
 PetalburgCity_Text_WaterReflection: @ 81DC985
 	.string "My face is reflected in the water.\p"
-	.string "It's a shining grin full of hope…\p"
-	.string "Or it could be a look of somber silence\n"
-	.string "struggling with fear…\p"
-	.string "What do you see reflected in your face?$"
+	.string "Is it a shining grin full of hope…?\p"
+	.string "Or could it be a look of somber\n"
+	.string "silence, struggling with fear…?\p"
+	.string "Your face is reflected in the water\p"
+	.string "Do you like what you see?$"
 
 PetalburgCity_Text_FullPartyExplanation: @ 81DCA30
-	.string "Let's say you have six POKéMON.\n"
-	.string "If you catch another one…\p"
-	.string "It is automatically sent to a STORAGE\n"
-	.string "BOX over a PC connection.$"
+	.string "This here school is the pride and joy\n"
+	.string "of Yuronashi.\p"
+	.string "I remember graduating with the class\n"
+	.string "of '23\p"
+	.string "Did you graduate from here recently?$" 
 
 PetalburgCity_Text_GymSign: @ 81DCAAA
 	.string "PETALBURG CITY POKéMON GYM\n"
@@ -775,3 +801,357 @@ PetalburgCity_Text_ImLookingForTalentedTrainers: @ 81DCC09
 	.string "I'm roaming the land in search of\n"
 	.string "talented TRAINERS.\p"
 	.string "I'm sorry to have taken your time.$"
+
+trainerSchoolClosed::
+	setflag FLAG_UNUSED_0x026
+	msgbox trainerSchoolClosed_text, MSGBOX_SIGN
+	end
+
+trainerSchoolClosed_text::
+	.string "Closed for cleaning.$"
+
+schoolJanitor::
+	msgbox schoolJanitor_text, MSGBOX_NPC
+	setflag FLAG_UNUSED_0x026
+	end
+
+schoolJanitor_text::
+	.string "Hmm...?\p"
+	.string "Oh, hey there, {PLAYER}. Long time\n"
+	.string "no see, buddy.\p"
+	.string "The summer semester is starting up soon,\n"
+	.string "so I'm cleaning up the place to get it\l"
+	.string "ready.\p"
+	.string "You should come back sometime and visit\n"
+	.string "once the semester begins!$"
+
+firstEvilTeamMeeting_left::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove1_left
+	applymovement 11, privateGirlMove1
+	waitmovement 0
+	msgbox privateGirl_text1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 12, girlbossMove1
+	msgbox girlboss_text1, MSGBOX_DEFAULT
+	closemessage
+	msgbox nerdGuy_text1 MSGBOX_DEFAULT
+	closemessage
+	clearflag FLAG_UNUSED_0x026
+	addobject 9
+	applymovement 9, nerdGuy_move1
+	waitmovement 9
+	msgbox nerdGuy_text2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 12, girlbossMove2
+	msgbox girlboss_text2, MSGBOX_DEFAULT
+	msgbox nerdGuy_text3, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove2
+	waitmovement 0
+	msgbox girlboss_text3, MSGBOX_DEFAULT
+	applymovement 10, malePrivate_moveStep
+	msgbox malePrivate_text1, MSGBOX_DEFAULT
+	msgbox girlboss_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 10, malePrivate_move1
+	waitmovement 0
+	msgbox malePrivate_text2, MSGBOX_DEFAULT
+	applymovement 12, girlbossMove3
+	applymovement 11, privateGirlMove2
+	waitmovement 0
+	applymovement 10, malePrivate_move2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceUpWHyNot
+	waitmovement 0
+	msgbox kalle_text1, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_FORTREE_CITY_STATE, 1
+	applymovement 10, kalle_move1
+	waitmovement 0
+	removeobject 10
+	setflag FLAG_UNUSED_0x028
+	removeobject 12
+	removeobject 11
+	setflag FLAG_UNUSED_0x027
+	applymovement 9, arthurMove1
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerFaceSide
+	waitmovement 0
+	msgbox arthurText1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 9, arthurMove1andaHalf
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerFaceDown
+	waitmovement 0
+	msgbox arthurText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 9, arthurMove2
+	waitmovement 0
+	removeobject 9
+	setflag FLAG_UNUSED_0x026
+	release
+	end
+
+firstEvilTeamMeeting_right::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove1
+	applymovement 11, privateGirlMove1
+	waitmovement 0
+	msgbox privateGirl_text1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 12, girlbossMove1
+	msgbox girlboss_text1, MSGBOX_DEFAULT
+	closemessage
+	msgbox nerdGuy_text1 MSGBOX_DEFAULT
+	closemessage
+	clearflag FLAG_UNUSED_0x026
+	addobject 9
+	applymovement 9, nerdGuy_move1
+	waitmovement 9
+	msgbox nerdGuy_text2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 12, girlbossMove2
+	msgbox girlboss_text2, MSGBOX_DEFAULT
+	msgbox nerdGuy_text3, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove2
+	waitmovement 0
+	msgbox girlboss_text3, MSGBOX_DEFAULT
+	applymovement 10, malePrivate_moveStep
+	msgbox malePrivate_text1, MSGBOX_DEFAULT
+	msgbox girlboss_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 10, malePrivate_move1
+	waitmovement 0
+	msgbox malePrivate_text2, MSGBOX_DEFAULT
+	applymovement 12, girlbossMove3
+	applymovement 11, privateGirlMove2
+	waitmovement 0
+	applymovement 10, malePrivate_move2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceUpWHyNot
+	waitmovement 0
+	msgbox kalle_text1, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_FORTREE_CITY_STATE, 1
+	applymovement 10, kalle_move1
+	waitmovement 0
+	removeobject 10
+	setflag FLAG_UNUSED_0x028
+	removeobject 12
+	removeobject 11
+	setflag FLAG_UNUSED_0x027
+	applymovement 9, arthurMove1
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerFaceSide
+	waitmovement 0
+	msgbox arthurText1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 9, arthurMove1andaHalf
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerFaceDown
+	waitmovement 0
+	msgbox arthurText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 9, arthurMove2
+	waitmovement 0
+	removeobject 9
+	setflag FLAG_UNUSED_0x026
+	release
+	end
+
+teamMeeting_playerFaceSide::
+	walk_in_place_left
+	step_end
+
+teamMeeting_playerFaceDown::
+	walk_in_place_down
+	step_end
+
+arthurMove2::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+arthurText2::
+	.string	"If you want, you can visit me in my\n"
+	.string "office, on the top floor of the academy.\p"
+	.string "I'll have a little gift for your courage.\p" 
+	.string "And-- well I think it's only fair that I\n"
+	.string "fill you in on what's going on.$"
+
+arthurMove1andaHalf::
+	walk_down
+	walk_down
+	walk_down
+	face_down
+	step_end
+
+arthurText1::
+	.string "T-Thank you for stepping in there.\p"
+	.string "You were quite brave for one so young.\p"
+	.string "However, I erge you to distance yourself\n"
+	.string "from those-- those thugs...\p"
+	.string "I am sure you are a fine trainer, but\n"
+	.string "trust me, they are on another level.$"
+
+arthurMove1::
+	walk_up
+	face_right
+	step_end
+
+malePrivate_moveStep::
+	walk_in_place_left
+	step_end
+
+playerFaceUpWHyNot::
+	walk_in_place_up
+	step_end
+
+
+
+kalle_text1::
+	.string "...\p"
+	.string "No badges, huh?\p"
+	.string "Listen, kid. I'm not gonna fight you or\n"
+	.string "anything. Just forget what you saw and\l"
+	.string "don't get in the Leutenants way again,\l"
+	.string "okay?\p"
+	.string "Take it from me, you don't want her\n"
+	.string "to remember you.$"
+
+
+kalle_move1::
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+defeatKalle::
+	.string "So strong...\p"
+	.string "Who are you?$"
+
+introKalle::
+	.string "Sorry kid.\p"
+	.string "Don't say that we didn't warn ya!$"
+
+malePrivate_move2::
+	walk_down
+	step_end
+
+girlbossMove3::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+privateGirlMove2::
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+malePrivate_text2::
+	.string "Roger.$"
+
+malePrivate_text1::
+	.string "Leutenant?$"
+
+malePrivate_move1::
+	walk_in_place_down
+	step_end
+
+girlboss_text3::
+	.string "{COLOR 04}Oh?\p"
+	.string "Who are you?\p"
+	.string "I don't think you realise who you're\n"
+	.string "dealing with, kid.\p"
+	.string "Private Kalle!$"
+
+girlboss_text4::
+	.string "{COLOR 04}Show them.$"
+
+teamMeeting_playerMove2::
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	face_up
+	step_end
+
+nerdGuy_text3::
+	.string "{COLOR 40}Arthur: Eeep...!$"
+
+girlboss_text2::
+	.string "{COLOR 04}Arthur, you again?\p"
+	.string "This is military buisiness, and any\n"
+	.string "interference will be seen as treason.\p"
+	.string "If I were you, I would scurry off to\n"
+	.string "that hole you call an academy and go\l"
+	.string "back to your trivial and shallow\l"
+	.string "research.\p"
+	.string "Unless, of course, you intend on\n"
+	.string "stopping me yourself?$"
+
+girlbossMove2::
+	walk_in_place_down
+	step_end
+
+nerdGuy_text2::
+	.string "{COLOR 40}???: Please, you don't know what you're\n"
+	.string "dealing with!$"
+
+teamMeeting_playerMove1_left::
+	emote_exclamation_mark
+	delay_16
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+teamMeeting_playerMove1::
+	emote_exclamation_mark
+	delay_16
+	walk_left
+	face_down
+	step_end
+
+nerdGuy_move1::
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	step_end
+
+nerdGuy_text1::
+	.string "{COLOR 40}???: WAAIIIT!!$"
+
+girlboss_text1::
+	.string "{COLOR 04}Good. Let's get going, then.$"
+
+girlbossMove1::
+	walk_in_place_up
+	step_end
+
+privateGirl_text1::
+	.string "Leutenant, we retreived the papers you\n"
+	.string "asked for.$"
+
+privateGirlMove1::
+	walk_in_place_right
+	step_end

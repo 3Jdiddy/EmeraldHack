@@ -700,3 +700,467 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale: @ 8292DDE
 EventScript_RunningShoesManual:: @ 8292DE5
 	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
 	end
+
+firstCutScene::
+	lock
+	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
+	setflag FLAG_UNUSED_0x025
+	setflag FLAG_SYS_NATIONAL_DEX
+	setflag FLAG_SYS_B_DASH
+	setvar VAR_UNUSED_0x404E, 1
+	applymovement 2, momStep
+	waitmovement 0
+	msgbox firstCutScene_Text_0
+	closemessage
+	applymovement 1, lucySeesPlayer
+	waitmovement 0
+	msgbox firstCutScene_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq firstCutScene_2
+	msgbox firstCutScene_Text_3
+	closemessage
+	goto firstCutScene_1
+
+firstCutScene_1:
+	applymovement 2, momToPlayer
+	waitmovement 0
+	msgbox firstCutScene_Text_4
+	closemessage
+	applymovement 2, momFaceDown
+	waitmovement 0
+	release
+	end
+
+momFaceDown:
+	face_down
+	step_end
+
+firstCutScene_2:
+	msgbox firstCutScene_Text_2
+	closemessage
+	goto firstCutScene_1
+
+momToPlayer:
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+momStep:
+	walk_in_place_right
+	step_end
+
+lucySeesPlayer:
+	emote_exclamation_mark
+	delay_16
+	face_player
+	step_end
+
+firstCutScene_Text_0:
+	.string "{COLOR 04}Mom: Oh, {PLAYER}!\p"
+	.string "There you are!$"
+
+firstCutScene_Text_1:
+	.string "{COLOR 04}Lucy: Hey, {PLAYER}!\p"
+	.string "Have you finished packing yet?$"
+
+firstCutScene_Text_2:
+	.string "{COLOR 04}Mom: Don't worry about it, {PLAYER}.\p"
+	.string "I'll take care of what's left.$"
+
+firstCutScene_Text_3:
+	.string "{COLOR 04}Lucy: Good! Me too!$"
+
+firstCutScene_Text_4:
+	.string "{COLOR 04}Mom: Before you head out,\n"
+	.string "I have one more thing for the two of\l"
+	.string "you!\p"
+	.string "Why don't you take a look in\n"
+	.string "that bag on the table?$"
+
+lucyTalk::
+	lock
+	faceplayer
+	msgbox lucyText, MSGBOX_DEFAULT
+	release
+	end
+
+lucyText:
+	.string "{COLOR 04}Lucy: Hehe.\p"
+	.string "Your Mom's so funny,\n"
+	.string "trying to play coy like that.\p"
+	.string "You and I both know what's in that\n"
+	.string "bag!\p"
+	.string "Just make sure you save one for me!$"
+
+momTalk::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x024, momNorm
+	goto_if_set FLAG_UNUSED_0x023, momTalk1
+	msgbox momText0, MSGBOX_DEFAULT
+	release
+	end
+
+momText0:
+	.string "{COLOR 04}Mom: I think this is well overdue.\p"
+	.string "Go on! Take a look in the bag.$"
+
+momTalk1::
+	msgbox momText1, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x024
+	release
+	end
+
+momNorm::
+	msgbox momHeal, MSGBOX_YESNO
+	compare VAR_RESULT 1
+	goto_if_eq yesHeal
+	msgbox momPreBadge, MSGBOX_DEFAULT
+	release
+	end
+
+yesHeal::
+	fadescreen 1
+	special HealPlayerParty
+	fadescreen 0
+	msgbox postHeal, MSGBOX_DEFAULT
+	release
+	end
+
+postHeal:
+	.string "{COLOR 04}Ready to go?\p"
+	.string "Do your best out there!$"
+
+
+momPreBadge:
+	.string "{COLOR 04}When you get to Ensio City, say hi\n"
+	.string "to the Professor for me!\p"
+	.string "He was the one who gave me those\n"
+	.string "Pokémon.$"
+
+momHeal:
+	.string "{COLOR 04}Hi, {PLAYER}. Do you need to rest?$"
+
+momText1:
+	.string "{COLOR 04}Mom: Take care of yourself, {PLAYER}!\p"
+	.string "You can always visit, but you may\n"
+	.string "be cozier getting an apartment in\l"
+	.string "Ensio City!$"
+
+tableBag::
+	lock
+	setflag FLAG_UNUSED_0x023
+	goto_if_set FLAG_UNUSED_0x021, alreadyGot
+	special ChooseStarter
+	setflag FLAG_SYS_POKEMON_GET
+	waitstate
+	goto afterPoke
+
+alreadyGot::
+	msgbox noMorePokes, MSGBOX_DEFAULT
+	release
+	end
+
+noMorePokes:
+	.string "{COLOR 04}Mom: {PLAYER}!\p"
+	.string "Save that last one, okay?\p"
+	.string "The Professor said he had plans\n"
+	.string "for it.$"
+
+afterPoke::
+    applymovement 1, lucyBag
+	applymovement OBJ_EVENT_ID_PLAYER, faceLucy
+	msgbox lucyPoke, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x021
+	setvar VAR_DEWFORD_TOWN_STATE, 1
+	compare VAR_STARTER_MON, 1
+	goto_if_gt lucyHoundour
+	goto_if_lt lucyStaryu
+	msgbox lucyShroomishGot, MSGBOX_SIGN
+	goto pokeGot
+
+dontLeave::
+	lock
+	applymovement 2, lookThisMAYHAHA
+	applymovement OBJ_EVENT_ID_PLAYER, moveBack
+	msgbox pokesFirst, MSGBOX_DEFAULT
+	release
+	end
+
+lookThisMAYHAHA:
+	face_player
+	step_end
+
+moveBack:
+	walk_up
+	step_end
+
+pokesFirst:
+	.string "{COLOR 04}Mom: Hey!\p"
+	.string "Where do you think you are going?\p"
+	.string "You won't get very far without a Pokémo-\n"
+	.string "Ehhhh I mean, your present!\p"
+	.string "Oh, just look in the bag, {PLAYER}!$"
+
+
+faceLucy:
+	face_right
+	step_end
+	
+lucyHoundour::
+	msgbox lucyHoundourGot, MSGBOX_SIGN
+	goto pokeGot
+
+lucyHoundourGot:
+	.string "Lucy received the Houndour.$"
+
+lucyShroomishGot:
+	.string "Lucy received the Shroomish.$"
+
+lucyStaryu::
+	msgbox lucyStaryuGot, MSGBOX_SIGN
+	goto pokeGot
+
+lucyStaryuGot:
+	.string "Lucy received the Staryu.$"
+
+lucyPoke:
+	.string "{COLOR 04}Hmmmm...\p"
+	.string "Okay! I'll take this one!$"
+
+lucyBag:
+	walk_up
+	walk_left
+	face_down
+	step_end
+
+pokeGot::
+	applymovement 2, momFace
+	waitmovement 0
+	applymovement 1, lucyFacePlayer
+	waitmovement 0
+	msgbox lucyGot, MSGBOX_DEFAULT
+	applymovement 1, lucyMomFace
+	waitmovement 0
+	msgbox lucyMomTalk, MSGBOX_DEFAULT
+	applymovement 2, momStep2
+	waitmovement 0
+	msgbox momLucyTalk, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, playerFace
+	msgbox lucyMomTalk2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, lucyLeave
+	waitmovement 0
+	removeobject 1
+	setflag FLAG_UNUSED_0x022
+	release
+	end
+
+lucyLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+lucyMomTalk2:
+	.string "{COLOR 04}Lucy: Will do!\p"
+	.string "Well, I'm off!$"
+
+playerFace:
+	face_right
+	step_end
+
+momLucyTalk:
+	.string "{COLOR 04}Mom: You are so welcome!\p"
+	.string "Travel safe, and when you get the\n"
+	.string "chance, drag {PLAYER} down with you\l"
+	.string "to visit!$"
+
+momStep2:
+	walk_in_place_left
+	step_end
+
+lucyMomTalk:
+	.string "{COLOR 04}Thank you for having me, and for\n"
+	.string "the Pokémon, of course!$"
+
+lucyMomFace:
+	face_right
+	step_end
+
+lucyGot:
+	.string "{COLOR 04}Alright.\p"
+	.string "{PLAYER}, I am going to head to\n"
+	.string "town, so meet me there when you're\l"
+	.string "ready!$"
+
+lucyFacePlayer:
+	face_player
+	step_end
+
+momFace:
+	face_down
+	face_down
+	step_end
+
+weatherTile::
+	compare VAR_MAUVILLE_CITY_STATE, 1
+	goto_if_gt wasStormy
+	goto_if_eq wasRainy
+    random 36
+    switch VAR_RESULT
+    case 0, weatherSunny
+    case 1, weatherSunny
+    case 2, weatherSunny
+    case 3, weatherSunny
+    case 4, weatherSunny
+    case 5, weatherSunny
+    case 6, weatherSunny
+    case 7, weatherRainy
+    case 8, weatherRainy
+    case 9, weatherSunny
+	case 10, weatherSunny
+	case 11, weatherSunny
+	case 12, weatherSunny
+	case 13, weatherSunny
+	case 14, weatherSunny
+	case 15, weatherSunny
+	case 16, weatherSunny
+	case 17, weatherSunny
+	case 18, weatherSunny
+	case 19, weatherSunny
+	case 20, weatherSunny
+	case 21, weatherSunny
+	case 22, weatherSunny
+	case 23, weatherSunny
+	case 24, weatherSunny
+	case 25, weatherSunny
+	case 26, weatherSunny
+	case 27, weatherSunny
+	case 28, weatherSunny
+	case 29, weatherSunny
+	case 30, weatherSunny
+	case 31, weatherSunny
+	case 32, weatherSunny
+	case 33, weatherSunny
+	case 34, weatherSunny
+	case 35, weatherSunny
+	release
+    end
+
+wasRainy::
+	random 36
+    switch VAR_RESULT
+    case 0, weatherRainy
+    case 1, weatherRainy
+    case 2, weatherRainy
+    case 3, weatherRainy
+    case 4, weatherRainy
+    case 5, weatherRainy
+    case 6, weatherRainy
+    case 7, weatherRainy
+    case 8, weatherRainy
+    case 9, weatherStorm
+	case 10, weatherStorm
+	case 11, weatherStorm
+	case 12, weatherRainy
+	case 13, weatherRainy
+	case 14, weatherRainy
+	case 15, weatherRainy
+	case 16, weatherRainy
+	case 17, weatherRainy
+	case 18, weatherRainy
+	case 19, weatherRainy
+	case 20, weatherRainy
+	case 21, weatherRainy
+	case 22, weatherRainy
+	case 23, weatherRainy
+	case 24, weatherRainy
+	case 25, weatherRainy
+	case 26, weatherRainy
+	case 27, weatherRainy
+	case 28, weatherRainy
+	case 29, weatherRainy
+	case 30, weatherRainy
+	case 31, weatherRainy
+	case 31, weatherRainy
+	case 33, weatherSunny
+	case 34, weatherSunny
+	case 35, weatherSunny
+	release
+    end
+
+wasStormy::
+	random 36
+    switch VAR_RESULT
+    case 0, weatherStorm
+    case 1, weatherStorm
+    case 2, weatherStorm
+    case 3, weatherStorm
+    case 4, weatherStorm
+    case 5, weatherStorm
+    case 6, weatherStorm
+    case 7, weatherStorm
+    case 8, weatherStorm
+    case 9, weatherStorm
+	case 10, weatherStorm
+	case 11, weatherStorm
+	case 12, weatherStorm
+	case 13, weatherStorm
+	case 14, weatherStorm
+	case 15, weatherStorm
+	case 16, weatherRainy
+	case 17, weatherRainy
+	case 18, weatherRainy
+	case 19, weatherRainy
+	case 20, weatherRainy
+	case 21, weatherRainy
+	case 22, weatherRainy
+	case 23, weatherRainy
+	case 24, weatherRainy
+	case 25, weatherRainy
+	case 26, weatherRainy
+	case 27, weatherRainy
+	case 28, weatherRainy
+	case 29, weatherRainy
+	case 30, weatherStorm
+	case 31, weatherStorm
+	case 32, weatherStorm
+	case 33, weatherStorm
+	case 34, weatherStorm
+	case 35, weatherStorm
+	release
+    end
+
+weatherSunny::
+    setweather WEATHER_SUNNY
+	setvar VAR_MAUVILLE_CITY_STATE, 0
+    doweather
+	release
+    end
+
+weatherRainy::
+    setweather WEATHER_RAIN
+	setvar VAR_MAUVILLE_CITY_STATE, 1
+    doweather
+	release
+    end
+
+weatherStorm::
+    setweather WEATHER_RAIN_THUNDERSTORM
+	setvar VAR_MAUVILLE_CITY_STATE, 2
+    doweather
+	release
+    end
+

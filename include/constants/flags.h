@@ -41,15 +41,15 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_UNUSED_0x020    0x20 // keeps you from getting infinapotions
+#define FLAG_UNUSED_0x021    0x21 // makes bag dissapear
+#define FLAG_UNUSED_0x022    0x22 // makes lucy dissapear
+#define FLAG_UNUSED_0x023    0x23 // makes Mom go to next dialogue.
+#define FLAG_UNUSED_0x024    0x24 // makes Mom go to her healing dialogue
+#define FLAG_UNUSED_0x025    0x25 // hides Lucy in Asier Forest Town
+#define FLAG_UNUSED_0x026    0x26 // hides nerd dude before and after evil team meetup
+#define FLAG_UNUSED_0x027    0x27 // makes the leutenant and F private hidden
+#define FLAG_UNUSED_0x028    0x28 // hides M private after first meeting
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

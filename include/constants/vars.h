@@ -49,7 +49,7 @@
 #define VAR_RECYCLE_GOODS                    0x4020
 #define VAR_REPEL_STEP_COUNT                 0x4021
 #define VAR_ICE_STEP_COUNT                   0x4022
-#define VAR_STARTER_MON                      0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip
+#define VAR_STARTER_MON                      0x4023 // 0= Shroomish, 1= Houndour, 2= Htaryu
 #define VAR_MIRAGE_RND_H                     0x4024
 #define VAR_MIRAGE_RND_L                     0x4025
 #define VAR_SECRET_BASE_MAP                  0x4026
@@ -94,20 +94,20 @@
 #define VAR_POKELOT_RND1                     0x404B
 #define VAR_POKELOT_RND2                     0x404C
 #define VAR_POKELOT_PRIZE_PLACE              0x404D
-#define VAR_UNUSED_0x404E                    0x404E // Unused Var
+#define VAR_UNUSED_0x404E                    0x404E // First Trigger in House to Get pokes
 #define VAR_LOTAD_SIZE_RECORD                0x404F
 #define VAR_LITTLEROOT_TOWN_STATE            0x4050
 #define VAR_OLDALE_TOWN_STATE                0x4051
-#define VAR_DEWFORD_TOWN_STATE               0x4052 // Unused Var
+#define VAR_DEWFORD_TOWN_STATE               0x4052 // Makes it so you can't leave the house
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
 #define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE            0x4055 // Unused Var
-#define VAR_PACIFIDLOG_TOWN_STATE            0x4056 // Unused Var
+#define VAR_VERDANTURF_TOWN_STATE            0x4055 // First battle with Lucy
+#define VAR_PACIFIDLOG_TOWN_STATE            0x4056 // Weather Tile Activation
 #define VAR_PETALBURG_CITY_STATE             0x4057
 #define VAR_SLATEPORT_CITY_STATE             0x4058
-#define VAR_MAUVILLE_CITY_STATE              0x4059 // Unused Var
+#define VAR_MAUVILLE_CITY_STATE              0x4059 //  Weather Info Storage -- 0 is sunny, 1 is rainy, 2 is stormy.
 #define VAR_RUSTBORO_CITY_STATE              0x405A
-#define VAR_FORTREE_CITY_STATE               0x405B // Unused Var
+#define VAR_FORTREE_CITY_STATE               0x405B // First Military Meeting 
 #define VAR_LILYCOVE_CITY_STATE              0x405C // Unused Var
 #define VAR_MOSSDEEP_CITY_STATE              0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E

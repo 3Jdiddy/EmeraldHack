@@ -1836,7 +1836,7 @@ Route114_Text_NancyPostBattle: @ 829A916
 	.string "I just had a tasty meal.\n"
 	.string "I'm getting drowsy…$"
 
-Route114_Text_SteveIntro: @ 829A943
+Route114_Text_SteveIntro: @ 829A943n
 	.string "Ufufufufufu…\n"
 	.string "Want to battle against my POKéMON?$"
 

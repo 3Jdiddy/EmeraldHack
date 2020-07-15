@@ -14,6 +14,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleGirl;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Girl3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RichBoy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rival; // new
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FatMan;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanF;
@@ -486,6 +487,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LINK_RS_MAY] =              &gObjectEventGraphicsInfo_RubySapphireMay,
     [OBJ_EVENT_GFX_LUGIA] =                    &gObjectEventGraphicsInfo_Lugia,
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
+    [OBJ_EVENT_GFX_RIVAL] =                    &gObjectEventGraphicsInfo_Rival,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

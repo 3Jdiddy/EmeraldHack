@@ -314,3 +314,39 @@ PlayersHouse_2F_Text_ItsAGameCube: @ 81F884F
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+PlayerRoomBox_1::
+	msgbox Box_1_Text, MSGBOX_SIGN
+	end
+
+PlayerRoom_Box_2::
+	msgbox Box_2_text, MSGBOX_SIGN
+	end
+
+PlayerRoom_Box_3::
+	goto_if_set 0x20, PlayerRoom_PotionGot
+	msgbox Box_3_text, MSGBOX_SIGN
+	giveitem ITEM_POTION, 1
+	setflag 0x20
+	release
+	end
+
+PlayerRoom_PotionGot::
+	msgbox Box_3Cont, MSGBOX_SIGN
+	end
+
+Box_1_Text:
+	.string "Inside, you see a mess of shoes\n"
+	.string "and various clothing articles.$"
+
+Box_2_text:
+	.string "There's a stack of your favorite\n"
+	.string "books and comics.$"
+
+Box_3_text:
+	.string "You take a peek inside the box...\p"
+	.string "Oh?\p"
+	.string "How did this get in here?$"
+
+Box_3Cont:
+	.string "There's nothing else of use.$"

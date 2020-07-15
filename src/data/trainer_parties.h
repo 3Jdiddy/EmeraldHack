@@ -1,16 +1,135 @@
-static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LucyGrass1[] = {
     {
     .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_GEODUDE,
+    .lvl = 5,
+    .species = SPECIES_SHROOMISH,
+    }
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LucyFire1[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_HOUNDOUR,
+    }
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LucyWater1[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_STARYU,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
+//AsierForest START
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Emerson3J[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 4,
+    .species = SPECIES_PICHU, 
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_PINECO,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Ryan3J[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SPINARAK,
+    },
+    {
+    .iv = 0,
+    .lvl = 6,
+    .species = SPECIES_WEEDLE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Anna3J[] = {
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_TAILLOW,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Buster3J[] = {
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_GRUBBIN,
+    },
+    {
+    .iv = 0,
+    .lvl = 6,
+    .species = SPECIES_WURMPLE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Joe3J[] = {
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_BUTTERFREE,
+    }    
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Lexia3J[] = {
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_PICHU,
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_PICHU,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Kent3J[] = {
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_PIDGEY,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_SLAKOTH,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Margaret3J[] = {
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_CHATOT,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_BULBASAUR,
+    }
+};
+
+//END
+
+//Military Privates
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PrivateKalle[] = {
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_PORYGON,
+    },
+    {
+    .iv = 0,
+    .lvl = 11,
+    .species = SPECIES_VOLTORB,
     }
 };
 
@@ -12434,3 +12553,4 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+

@@ -414,3 +414,32 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext: @ 81F9BE7
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
+
+lucysMomTalk::
+	lock
+	faceplayer
+	compare VAR_VERDANTURF_TOWN_STATE, 1
+	goto_if_eq lucysMomTalkNorm
+	msgbox lucysMomText, MSGBOX_DEFAULT
+	release
+
+
+lucysMomText:
+	.string "{COLOR 04}Oh, hi {PLAYER}!\p"
+	.string "Lucy just popped in to say gooodbye...\p"
+	.string "They sure do grow fast... I think she\n"
+	.string "said she was going to wait for you in\l"
+	.string "town. You should meet her there!$"
+
+lucysMomTalkNorm::
+	msgbox lucysMomTextNorm, MSGBOX_DEFAULT
+	release
+	end 
+
+lucysMomTextNorm:
+	.string "{COLOR 04}Hmm?\p"
+	.string "Oh, {PLAYER}, hi!\p"
+	.string "Lucy's not here, if you were looking for\n"
+	.string "her.\p"
+	.string "You're welcome to stay as long as you'd like,\n"
+	.string "but I think your Mom might like to see you!$"

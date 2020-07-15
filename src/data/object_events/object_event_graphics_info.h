@@ -243,3 +243,21 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrenda
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay = {0xFFFF, OBJ_EVENT_PAL_TAG_34, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, gObjectEventSpriteOamTables_16x32, gObjectEventImageAnimTable_Standard, gObjectEventPicTable_RubySapphireMay, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia = {0xFFFF, OBJ_EVENT_PAL_TAG_32, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, gObjectEventSpriteOamTables_32x32, gObjectEventImageAnimTable_Standard, gObjectEventPicTable_Lugia, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh = {0xFFFF, OBJ_EVENT_PAL_TAG_31, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 10, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, gObjectEventSpriteOamTables_32x32, gObjectEventImageAnimTable_HoOh, gObjectEventPicTable_HoOh, gDummySpriteAffineAnimTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rival = { 
+    .tileTag = 0xFFFF,
+    .paletteTag1 = OBJ_EVENT_PAL_RIVAL,
+    .paletteTag2 = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = 10,               // No idea which one to use? If 4 doesn't work, try 10 and 0.
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = gObjectEventSpriteOamTables_16x32,
+    .anims = gObjectEventImageAnimTable_Standard,
+    .images = gObjectEventPicTable_Rival,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};

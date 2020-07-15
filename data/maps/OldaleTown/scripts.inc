@@ -401,3 +401,140 @@ OldaleTown_Text_CitySign: @ 81E94DA
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
+girlOne::
+	msgbox girlOneText, MSGBOX_NPC
+	end
+
+girlOneText:
+	.string "Oh!\p"
+	.string "Umm... Hi, {PLAYER}\p"
+	.string "......\p"
+	.string "You're, umm, leaving today, right?\p"
+	.string "Just make sure you visit, okay?$"
+
+schoolBoy::
+	msgbox schoolBoyText, MSGBOX_NPC
+	end
+
+schoolBoyText:
+	.string "{PLAYER}, you're leaving already?\p"
+	.string "Man, school's gonna be rough without\n"
+	.string "you to help me out.\p"
+	.string "Aww well... Good luck out there,\n"
+	.string "{PLAYER}! I'll do my best too!$"
+
+boyOne::
+	msgbox boyOneText, MSGBOX_NPC
+	end
+
+boyOneText:
+	.string "Looking for Lucy?\p"
+	.string "Ehh, I haven't seen her.\p"
+	.string "I wouldn't bother looking. Knowing Lucy,\n"
+	.string "she'll find you before you find her.$"
+
+lucyEventTile_left::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceLucy_FirstBattle
+	clearflag FLAG_UNUSED_0x025
+	addobject 5
+	applymovement 5, Asier_Forest_Town_lucyMove_left
+	goto lucyBattleOne
+
+lucyEventTile_right::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceLucy_FirstBattle
+	clearflag FLAG_UNUSED_0x025
+	addobject 5
+	applymovement 5, Asier_Forest_Town_lucyMove_right
+	goto lucyBattleOne
+
+playerFaceLucy_FirstBattle:
+	face_down
+	step_end
+
+Asier_Forest_Town_lucyMove_left:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Asier_Forest_Town_lucyMove_right:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+
+lucyBattleOne::
+	compare VAR_STARTER_MON, 1
+	goto_if_lt lucyWater
+	goto_if_gt lucyFire
+	setvar VAR_VERDANTURF_TOWN_STATE, 1
+	trainerbattle_single TRAINER_NONE, introLucy, defeatLucy, lucyFirstBattle_continued
+	release
+	end
+
+lucyFire:
+	setvar VAR_VERDANTURF_TOWN_STATE, 1
+	trainerbattle_single TRAINER_SAWYER_1, introLucy, defeatLucy, lucyFirstBattle_continued
+	release
+	end
+
+lucyWater:
+	setvar VAR_VERDANTURF_TOWN_STATE, 1
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_1, introLucy, defeatLucy, lucyFirstBattle_continued
+	release
+	end
+
+lucyFirstBattle_continued::
+	lock
+	msgbox lucyFirstBattle_continuedText, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_UNUSED_0x026
+	applymovement 5, lucyFirstBattle_continuedLeave
+	waitmovement 0
+	removeobject 5
+	setflag FLAG_UNUSED_0x025
+	release
+	end
+
+lucyFirstBattle_continuedLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+lucyFirstBattle_continuedText:
+	.string "{COLOR 04}Lucy: I suppose I should have trained up\n"
+	.string "before storming into battle like that.\p"
+	.string "(Sigh)\p"
+	.string "Well, I think I'll go heal up.\p"
+	.string "Be careful as you go deeper in the\n"
+	.string "forest. There's trainers and wild Pokémon\l"
+	.string "all over the place!\p"
+	.string "Welp! See you 'round, {PLAYER}!$"
+
+
+introLucy:
+	.string "{COLOR 04}Lucy: There you are, {PLAYER}!\p"
+	.string "So, I've been thinking...\p"
+	.string "Now that we're both trainers and all,\n"
+	.string "we should have a Pokémon battle!$"
+
+defeatLucy:
+	.string "Eeep! Okay, fine! You win.$"
+
+
+
+

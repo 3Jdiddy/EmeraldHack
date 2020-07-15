@@ -31,7 +31,7 @@
 #define STARTER_PKMN_POS_Y 64
 
 // text
-extern const u8 gText_BirchInTrouble[];
+//extern const u8 gText_BirchInTrouble[];
 extern const u8 gText_ConfirmStarterChoice[];
 
 // this file's functions
@@ -57,7 +57,7 @@ static u16 sStarterChooseWindowId;
 const u16 gBirchBagGrassPal[][16] =
 {
     INCBIN_U16("graphics/misc/birch_bag.gbapal"),
-    INCBIN_U16("graphics/misc/birch_grass.gbapal"),
+    //INCBIN_U16("graphics/misc/birch_grass.gbapal"),
 };
 
 const u16 gBirchBallarrow_Pal[] = INCBIN_U16("graphics/misc/birch_ballarrow.gbapal");
@@ -66,7 +66,7 @@ const u16 gBirchCircle_Pal[] = INCBIN_U16("graphics/misc/birch_circle.gbapal");
 
 const u32 gBirchBagTilemap[] = INCBIN_U32("graphics/misc/birch_bag_map.bin.lz");
 
-const u32 gBirchGrassTilemap[] = INCBIN_U32("graphics/misc/birch_grass_map.bin.lz");
+// const u32 gBirchGrassTilemap[] = INCBIN_U32("graphics/misc/birch_grass_map.bin.lz");
 
 const u32 gBirchHelpGfx[] = INCBIN_U32("graphics/misc/birch_help.4bpp.lz");
 
@@ -126,9 +126,9 @@ static const u8 sStarterLabelCoords[][2] =
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    SPECIES_TREECKO,
-    SPECIES_TORCHIC,
-    SPECIES_MUDKIP,
+    SPECIES_SHROOMISH,
+    SPECIES_HOUNDOUR,
+    SPECIES_STARYU,
 };
 
 static const struct BgTemplate gUnknown_085B1E00[3] =
@@ -409,7 +409,7 @@ void CB2_ChooseStarter(void)
 
     LZ77UnCompVram(gBirchHelpGfx, (void *)VRAM);
     LZ77UnCompVram(gBirchBagTilemap, (void *)(BG_SCREEN_ADDR(6)));
-    LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(7)));
+    // LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(7)));
 
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, gUnknown_085B1E00, ARRAY_COUNT(gUnknown_085B1E00));
@@ -484,8 +484,8 @@ static void MainCallback2_StarterChoose(void)
 static void Task_StarterChoose1(u8 taskId)
 {
     CreateStarterPokemonLabel(gTasks[taskId].tStarterSelection);
-    DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2A8, 0xD);
-    AddTextPrinterParameterized(0, 1, gText_BirchInTrouble, 0, 1, 0, NULL);
+    //DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2A8, 0xD);
+    //AddTextPrinterParameterized(0, 1, gText_BirchInTrouble, 0, 1, 0, NULL);
     PutWindowTilemap(0);
     schedule_bg_copy_tilemap_to_vram(0);
     gTasks[taskId].func = Task_StarterChoose2;
@@ -538,6 +538,7 @@ static void Task_StarterChoose3(u8 taskId)
 static void Task_StarterChoose4(u8 taskId)
 {
     PlayCry1(GetStarterPokemon(gTasks[taskId].tStarterSelection), 0);
+    DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2A8, 0xD); //added
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     AddTextPrinterParameterized(0, 1, gText_ConfirmStarterChoice, 0, 1, 0, NULL);
     schedule_bg_copy_tilemap_to_vram(0);

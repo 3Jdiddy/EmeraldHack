@@ -1346,7 +1346,7 @@ static void Task_CreditsLoadGrassScene(u8 taskIdA)
         FreeAllSpritePalettes();
         gReservedSpritePaletteCount = 8;
         LZ77UnCompVram(gBirchHelpGfx, (void *)VRAM);
-        LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(7)));
+        // LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(7)));
         LoadPalette(gBirchBagGrassPal[0] + 1, 1, 31 * 2);
 
         for (i = 0; i < 0x800; i++)
