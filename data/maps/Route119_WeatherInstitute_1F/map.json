@@ -91,8 +91,8 @@
       "x": 9,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE119",
-      "dest_warp_id": 0
+      "dest_map": "MAP_SLATEPORT_CITY",
+      "dest_warp_id": 8
     },
     {
       "x": 10,

@@ -50,9 +50,9 @@
 #define FLAG_UNUSED_0x026    0x26 // hides nerd dude before and after evil team meetup
 #define FLAG_UNUSED_0x027    0x27 // makes the leutenant and F private hidden
 #define FLAG_UNUSED_0x028    0x28 // hides M private after first meeting
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_UNUSED_0x029    0x29 // hides Arthur before first meeting
+#define FLAG_UNUSED_0x02A    0x2A // arthurSecondTalk
+#define FLAG_UNUSED_0x02B    0x2B // hides people in school once semester starts
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

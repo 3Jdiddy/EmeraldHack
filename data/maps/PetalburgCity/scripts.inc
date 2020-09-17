@@ -804,6 +804,7 @@ PetalburgCity_Text_ImLookingForTalentedTrainers: @ 81DCC09
 
 trainerSchoolClosed::
 	setflag FLAG_UNUSED_0x026
+	setflag FLAG_UNUSED_0x029
 	msgbox trainerSchoolClosed_text, MSGBOX_SIGN
 	end
 
@@ -956,6 +957,7 @@ firstEvilTeamMeeting_right::
 	waitmovement 0
 	removeobject 9
 	setflag FLAG_UNUSED_0x026
+	clearflag FLAG_UNUSED_0x029
 	release
 	end
 
@@ -976,25 +978,23 @@ arthurMove2::
 	step_end
 
 arthurText2::
-	.string	"If you want, you can visit me in my\n"
-	.string "office, on the top floor of the academy.\p"
-	.string "I'll have a little gift for your courage.\p" 
-	.string "And-- well I think it's only fair that I\n"
+	.string	"{COLOR 40}If you want, you can visit me in my\n"
+	.string "office on the top floor of the academy.\p"
+	.string "I think it's only fair that I\n"
 	.string "fill you in on what's going on.$"
 
 arthurMove1andaHalf::
 	walk_down
 	walk_down
-	walk_down
-	face_down
+	face_up
 	step_end
 
 arthurText1::
-	.string "T-Thank you for stepping in there.\p"
+	.string "{COLOR 40} T-Thank you for stepping in there.\p"
 	.string "You were quite brave for one so young.\p"
 	.string "However, I erge you to distance yourself\n"
 	.string "from those-- those thugs...\p"
-	.string "I am sure you are a fine trainer, but\n"
+	.string "I am sure you are a fine trainer but\n"
 	.string "trust me, they are on another level.$"
 
 arthurMove1::
@@ -1032,13 +1032,6 @@ kalle_move1::
 	walk_slow_up
 	step_end
 
-defeatKalle::
-	.string "So strong...\p"
-	.string "Who are you?$"
-
-introKalle::
-	.string "Sorry kid.\p"
-	.string "Don't say that we didn't warn ya!$"
 
 malePrivate_move2::
 	walk_down
@@ -1155,3 +1148,102 @@ privateGirl_text1::
 privateGirlMove1::
 	walk_in_place_right
 	step_end
+
+arthurExplain0::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x02A, arthurAfterExplain
+	msgbox arthurExplain1, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq arthurExplain_PlayerAnsweredYES
+	msgbox arthurExplainFULL, MSGBOX_NPC
+	goto arthurExplain_PlayerAnsweredYES2
+
+arthurExplain_PlayerAnsweredYES::
+	msgbox arthurBUFFER, MSGBOX_NPC
+	msgbox arthurExplainPartial, MSGBOX_NPC
+	setflag FLAG_UNUSED_0x02A
+	release
+	end
+
+arthurExplain_PlayerAnsweredYES2::
+	msgbox arthurExplainPartial, MSGBOX_NPC
+	setflag FLAG_UNUSED_0x02A
+	release
+	end
+
+arthurExplain1::
+	.string "{COLOR 40}Oh... You came.\p"
+	.string "Sorry. I don't mean to be rude, but\n"
+	.string "there is a part of me that was hoping\l"
+	.string "you wouldn't be interested.\p"
+	.string "Although, after all the fuss,\n"
+	.string  "how could one not be curious?\p"
+	.string "So, tell me, have you heard of the\n"
+	.string "Legendary Titans?$"
+
+arthurBUFFER::
+	.string "{COLOR 40}I see.\p"
+	.string "Then you should know exactly\n"
+	.string "how dangerous they are.$"
+
+arthurExplainFULL::
+	.string "{COLOR 40}The Legendary Titans-- Regirock,\n"
+	.string "Regice, and Registeel-- are three\l"
+	.string "Pokémon with incredible power,\l"
+	.string "created by a golem and worshiped\l"
+	.string "by ancient people.$"
+
+arthurExplainPartial::
+	.string "{COLOR 40}Those papers contained information\n"
+	.string "regarding the location of one of\l"
+	.string "these Titans.\p"
+	.string "Those people you saw before--\n"
+	.string "they once served as the military\l"
+	.string "force of Yorunashi.\p"
+	.string "However, since General Akuji\n"
+	.string "dissapeared, his son Alexander took\l"
+	.string "control of the army.\p"
+	.string "Alexander has been tearing strong\n"
+	.string "trainers away from their families,\l"
+	.string "imposing harsh tariffs on international\l"
+	.string "goods, and otherwise doing\l"
+	.string "whatever he can to accrue power.\p"
+	.string "But, why?\p"
+	.string "There is still much we don't know,\n"
+	.string "and I would advice you to stay far\l"
+	.string "away from their kind.\p"
+	.string "As you saw first hand, being stripped\n"
+	.string "from their families hasn't nessesarily\l"
+	.string "ignighted the flames of battle in the\l"
+	.string "hearts of the soldiers.\p"
+	.string "However, there are also those that\n"
+	.string "fully support Alexander.\p"
+	.string "They won't hesitate to remove you\n"
+	.string "if you stand in there way!\p"
+	.string "What I mean to say is: be careful.$"
+
+arthurAfterExplain::
+	msgbox arthurAfterExplainText, MSGBOX_NPC
+	release
+	end
+
+arthurAfterExplainText::
+	.string "{COLOR 40}Soon, i'll head to Uraranta City to\n"
+	.string "discuss this with-- well,\l"
+	.string "'the higher ups'.\p"
+	.string "I suggest you keep your head down.$"
+
+emptySchoolKid::
+	lock
+	msgbox emptySchoolKidText, MSGBOX_NPC
+	release
+	end
+
+emptySchoolKidText::
+	.string "Wow...\p"
+	.string "The school seems a lot bigger when\n"
+	.string "it's empty.\p"
+	.string "I hope school starts again soon though.\n"
+	.string "I want to rent a Pokémon!$"
+

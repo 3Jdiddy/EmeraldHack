@@ -503,6 +503,7 @@ lucyFirstBattle_continued::
 	waitmovement 0
 	removeobject 5
 	setflag FLAG_UNUSED_0x025
+	setflag FLAG_UNUSED_0x029
 	release
 	end
 
