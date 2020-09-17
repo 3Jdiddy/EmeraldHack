@@ -231,47 +231,55 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Emerson3J},
     },
 
+//Fisherman Todd
+
     [TRAINER_DECLAN] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_SWIMMER_M,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_M,
-        .trainerName = _("DECLAN"),
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Todd"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Declan),
-        .party = {.NoItemDefaultMoves = sParty_Declan},
+        .partySize = ARRAY_COUNT(sParty_Todd3J),
+        .party = {.NoItemDefaultMoves = sParty_Todd3J},
     },
+
+//Twins Katherine and Madeline
 
     [TRAINER_GRUNT_RUSTURF_TUNNEL] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_SR_AND_JR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
+        .trainerPic = TRAINER_PIC_SR_AND_JR,
+        .trainerName = _("Katherine and Madeline"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntRusturfTunnel),
-        .party = {.NoItemDefaultMoves = sParty_GruntRusturfTunnel},
+        .partySize = ARRAY_COUNT(sParty_KatherineMadeline3J),
+        .party = {.NoItemCustomMoves = sParty_KatherineMadeline3J},
     },
+
+//SchoolKid Tommy
 
     [TRAINER_GRUNT_WEATHER_INST_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_SCHOOL_KID,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_M,
+        .trainerName = _("Tommy"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntWeatherInst1),
-        .party = {.NoItemDefaultMoves = sParty_GruntWeatherInst1},
+        .partySize = ARRAY_COUNT(sParty_Tommy3J),
+        .party = {.NoItemDefaultMoves = sParty_Tommy3J},
     },
+
+// route 105 DONE //
 
     [TRAINER_GRUNT_WEATHER_INST_2] =
     {

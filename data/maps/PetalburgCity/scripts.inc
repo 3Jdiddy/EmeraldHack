@@ -730,7 +730,6 @@ PetalburgCity_EventScript_Sign_text::
 	.string "Levata Town\p"
 	.string "Home to the Levata Trainer's Academy.$"
 
-
 PetalburgCity_EventScript_Guy1_text::
 	.string "Ahhh...\p"
 	.string "Being up this high, it brings me so\n"
@@ -1010,8 +1009,6 @@ playerFaceUpWHyNot::
 	walk_in_place_up
 	step_end
 
-
-
 kalle_text1::
 	.string "...\p"
 	.string "No badges, huh?\p"
@@ -1022,7 +1019,6 @@ kalle_text1::
 	.string "Take it from me, you don't want her\n"
 	.string "to remember you.$"
 
-
 kalle_move1::
 	walk_slow_up
 	walk_slow_up
@@ -1031,7 +1027,6 @@ kalle_move1::
 	walk_slow_up
 	walk_slow_up
 	step_end
-
 
 malePrivate_move2::
 	walk_down
@@ -1247,3 +1242,19 @@ emptySchoolKidText::
 	.string "I hope school starts again soon though.\n"
 	.string "I want to rent a Pokémon!$"
 
+Route105_EventScript_Steven3J::
+	trainerbattle_single TRAINER_ALBERTO, Route105_EventScript_Steven3J_intro, Route105_EventScript_Steven3J_defeat
+	msgbox Route105_EventScript_Steven3J_text, MSGBOX_NPC
+	end
+
+Route105_EventScript_Steven3J_text::
+	.string "Mr. Yamashita is really nice for letting\n"
+	.string "us look for Pokémon in his yard!$"
+
+Route105_EventScript_Steven3J_intro::
+	.string "Hey!\p"
+	.string "This is private property you know!$"
+
+Route105_EventScript_Steven3J_defeat::
+	.string "Well...\n"
+	.string "I never said it was MY private property.$"

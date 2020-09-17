@@ -151,36 +151,56 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Steven3J[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Jonathan3J[] = {
     {
     .iv = 0,
-    .lvl = 10,
-    .species = SPECIES_GOLDEEN,
+    .lvl = 12,
+    .species = SPECIES_PIDGEY,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Todd3J[] = {
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 5,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .iv = 0,
+    .lvl = 18,
+    .species = SPECIES_MAGIKARP,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_KatherineMadeline3J[] = {
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_LOTAD,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_SEEDOT,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Alison3J[] = {
+    {
+    .iv = 0,
+    .lvl = 36,
     .species = SPECIES_CARVANHA,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern1[] = {
-    {
-    .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_POOCHYENA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern2[] = {
-    {
-    .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Tommy3J[] = {
     {
     .iv = 0,
     .lvl = 36,
