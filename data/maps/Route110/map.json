@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": 0,
       "map": "MAP_MAUVILLE_CITY"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_SLATEPORT_CITY"
     }
   ],
   "object_events": [

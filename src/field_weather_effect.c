@@ -970,7 +970,7 @@ static void UpdateSnowflakeSprite(struct Sprite *sprite)
         sprite->pos1.x = 242 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
     else if (x > 242)
         sprite->pos1.x = -3 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
-
+ /* here start delete 
     y = (sprite->pos1.y + sprite->centerToCornerVecY + gSpriteCoordOffsetY) & 0xFF;
     if (y > 163 && y < 171)
     {
@@ -996,6 +996,7 @@ static void UpdateSnowflakeSprite(struct Sprite *sprite)
         sprite->invisible = TRUE;
         sprite->callback = WaitSnowflakeSprite;
     }
+    */
 }
 
 #undef tPosY

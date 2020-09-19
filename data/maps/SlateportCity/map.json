@@ -5,7 +5,7 @@
   "music": "MUS_FINECITY",
   "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -16,12 +16,22 @@
     {
       "direction": "down",
       "offset": 0,
-      "map": "MAP_ROUTE109"
+      "map": "MAP_ROUTE105"
     },
     {
-      "direction": "down",
+      "direction": "left",
+      "offset": 10,
+      "map": "MAP_ROUTE112"
+    },
+    {
+      "direction": "right",
       "offset": 0,
-      "map": "MAP_ROUTE105"
+      "map": "MAP_ROUTE110"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE116"
     }
   ],
   "object_events": [
@@ -35,7 +45,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioCity_WiseLady",
       "flag": "0"
     },
     {
@@ -48,7 +58,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioCity_HeartyMan",
       "flag": "0"
     },
     {
@@ -72,14 +82,14 @@
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
       "movement_range_x": 2,
       "movement_range_y": 8,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "NULL",
+      "script": "EnsioCity_BugCatcher",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 31,
+      "x": 32,
       "y": 55,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -95,9 +105,9 @@
       "x": 32,
       "y": 58,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -113,7 +123,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioCity_SkittyGirl",
       "flag": "0"
     },
     {
@@ -126,20 +136,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioSKITTYHAHAHAH",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 12,
-      "y": 48,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioCity_Gent",
       "flag": "0"
     },
     {
@@ -152,12 +162,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioCity_PhoneGuy",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 39,
+      "x": 37,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -169,16 +179,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
       "x": 32,
       "y": 9,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EnsioCity_FlowerGirl",
       "flag": "0"
     }
   ],
@@ -240,14 +250,14 @@
       "dest_warp_id": 0
     },
     {
-      "x": 10,
+      "x": 12,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY",
       "dest_warp_id": 0
     },
     {
-      "x": 22,
+      "x": 24,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
@@ -300,8 +310,8 @@
     },
     {
       "type": "sign",
-      "x": 12,
-      "y": 6,
+      "x": 22,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "NULL"

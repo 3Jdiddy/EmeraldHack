@@ -1258,3 +1258,194 @@ Route105_EventScript_Steven3J_intro::
 Route105_EventScript_Steven3J_defeat::
 	.string "Well...\n"
 	.string "I never said it was MY private property.$"
+
+Route105_EventScript_Jonathan3J::
+	trainerbattle_single TRAINER_GRUNT_SEAFLOOR_CAVERN_4, Route105_EventScript_Jonathan3J_intro, Route105_EventScript_Jonathan3J_defeat
+	msgbox Route105_EventScript_Jonathan3J_text, MSGBOX_NPC
+	end
+
+Route105_EventScript_Jonathan3J_text::
+	.string "Isn't it weird to see a dock on a river?\p"
+	.string "You'd think it would be hard to maintain.\p"
+	.string "Maybe i'll build a bridge one day!$"
+
+Route105_EventScript_Jonathan3J_intro::
+	.string "Woah!\p"
+	.string "Be careful--\n"
+	.string "you almost made me fall in!$"
+
+Route105_EventScript_Jonathan3J_defeat::
+	.string "Uhg. I'm always rusty in the summer.$"
+
+Route105_EventScript_Todd3J::
+	trainerbattle_single TRAINER_DECLAN, Route105_EventScript_Todd3J_intro, Route105_EventScript_Todd3J_defeat
+	msgbox Route105_EventScript_Todd3J_text, MSGBOX_NPC
+	end
+
+Route105_EventScript_Todd3J_text::
+	.string "Take it from me kid, you can't lose\n"
+	.string "if you don't play.$"
+
+Route105_EventScript_Todd3J_intro::
+	.string "Heheheh...\n"
+	.string "...Heh...Hehehe...heh\l"
+	.string "Heh...\p"
+	.string "You like Magikarp?$" 
+
+Route105_EventScript_Todd3J_defeat::
+	.string "You win..?\p"
+	.string "No, heheh, I ALWAYS win.$"
+
+Route105_EventScript_KatMad3J::
+	trainerbattle_single TRAINER_GRUNT_RUSTURF_TUNNEL, Route105_EventScript_KatMad3J_intro, Route105_EventScript_KatMad3J_defeat
+	msgbox Route105_EventScript_KatMad3J_text, MSGBOX_NPC
+	end
+
+Route105_EventScript_KatMad3J_text::
+	.string "Kat: You are way strong!\p"
+	.string "Maddy: Yeah, you made us look like utter\n"
+	.string "garbage!\p"
+	.string "Kat: Yeah!\p"
+	.string "Kat: Wait...$"
+
+Route105_EventScript_KatMad3J_intro::
+	.string "Kat: You think you can take us both on?\p"
+	.string "Maddy: Haha! You probably can; we are\n"
+	.string "pretty bad!\p"
+	.string "Kat: Yeah!\p"
+	.string "Kat: Wait...$" 
+
+Route105_EventScript_KatMad3J_defeat::
+	.string "Kat: Aack! Maddy! You totally threw me\n"
+	.string "off!\p"
+	.string "Maddy: Eh? I did? Oops.$"
+
+Route105_schoolkid::
+	msgbox Route105_schoolkid_text, MSGBOX_NPC
+	end
+
+Route105_lass::
+	msgbox Route105_lass_text, MSGBOX_NPC
+	end
+
+Route105_fisherman::
+	msgbox Route105_fisherman_text, MSGBOX_NPC
+	end
+
+Route105_swimmer::
+	msgbox Route105_swimmer_text, MSGBOX_NPC
+	end
+
+Route105_schoolkid_text::
+	.string "It's rare to see nature in full bloom\n"
+	.string "right outside of the city.\p"
+	.string "Too many Combees if you ask me though!$"
+
+Route105_lass_text::
+	.string "Did you say hi to Mr. Yamashita?\p"
+	.string "I heard he used to be a trainer, but\n"
+	.string "he never likes to talk about it for\l"
+	.string "some reason.$"
+
+Route105_fisherman_text::
+	.string "Having a dock out on a river is really\n"
+	.string "convenient.\p"
+	.string "The current isn't fast, but it's enough\n"
+	.string "to bring in a large variety of fish.$"
+
+Route105_swimmer_text::
+	.string "Huff Huff Huff...\p"
+	.string "I gotta big meet soon, so I basically\n"
+	.string "practice 24/7\p"
+	.string "Huuuuf huff...$"
+
+EnsioCity_PhoneGuy::
+	lock
+	msgbox EnsioCity_PhoneGuy_Text, MSGBOX_DEFAULT
+	msgbox EnsioCity_PhoneGuy_Text1, MSGBOX_NPC
+	release
+	end
+
+EnsioCity_PhoneGuy_Text::
+	.string "So they're in Uraranta... huh?$"
+
+EnsioCity_PhoneGuy_Text1::
+	.string "Oi, mate. I'm having a phoner.\p"
+	.string "Buzz off.\p"
+	.string "Yeah so as I was saying...$"
+
+EnsioSKITTYHAHAHAH::
+	lock
+	faceplayer
+	playmoncry SPECIES_SKITTY, 0
+	release
+	end
+
+EnsioCity_SkittyGirl::
+	msgbox EnsioCity_SkittyGirl_text, MSGBOX_NPC
+	end
+
+EnsioCity_SkittyGirl_text::
+	.string "Aww!\p"
+	.string "I just found this cutie playing with a\n"
+	.string "flower in the park!\p"
+	.string "If only I had a trainers license--\n"
+	.string "I would catch you in a heartbeat!$"
+
+EnsioCity_BugCatcher::
+	msgbox EnsioCity_BugCatcher_text, MSGBOX_NPC
+	end
+
+EnsioCity_BugCatcher_text::
+	.string "Man, even these Pokémon don't stand a\n"
+	.string "chance against Pierre's prized Caterpie!\p"
+	.string "I gotta train hard!$"
+
+EnsioCity_HeartyMan::
+	msgbox EnsioCity_HeartyMan_text, MSGBOX_NPC
+	end
+
+EnsioCity_HeartyMan_text::
+	.string "OooOoh geez... Where's the Pokémart?\n"
+	.string "This place is bigger than I thought.$"
+
+EnsioCity_Gent::
+	msgbox EnsioCity_Gent_text, MSGBOX_NPC
+	end
+
+EnsioCity_Gent_text::
+	.string "FUUUUuuuuuAaahhh...\p"
+	.string "Never in my day has there been a city\n"
+	.string "with air as fresh as this!\p"
+	.string "Ensio City truly is a joy!$"
+
+EnsioCity_FlowerGirl::
+	msgbox EnsioCity_FlowerGirl_text, MSGBOX_NPC
+	end
+
+EnsioCity_FlowerGirl_text::
+	.string "Professor Lupin has quite the green\n"
+	.string "thumb.\p"
+	.string "Why, if these flowers could dance,\n"
+	.string "I sure they would be, hohoho!$"
+
+EnsioCity_WiseLady::
+	msgbox EnsioCity_WiseLady_text, MSGBOX_DEFAULT
+	msgbox EnsioCity_WiseLady_text2, MSGBOX_NPC
+	end
+
+EnsioCity_WiseLady_text::
+	.string "Those flowers...\n"
+	.string "If only they knew...$"
+
+EnsioCity_WiseLady_text2::
+	.string "Oh dearie, don't mind me.\p"
+	.string "I am just thinking about the past.$"
+
+
+
+
+
+
+
+

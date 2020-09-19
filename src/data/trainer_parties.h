@@ -179,7 +179,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Todd3J[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_KatherineMadeline3J[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_KatMad3J[] = {
     {
     .iv = 0,
     .lvl = 12,
@@ -195,9 +195,14 @@ static const struct TrainerMonNoItemDefaultMoves sParty_KatherineMadeline3J[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_Alison3J[] = {
     {
     .iv = 0,
-    .lvl = 36,
+    .lvl = 11,
+    .species = SPECIES_GOLDUCK,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
     .species = SPECIES_CARVANHA,
-    }
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Tommy3J[] = {

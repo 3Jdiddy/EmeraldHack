@@ -251,16 +251,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_GRUNT_RUSTURF_TUNNEL] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_SR_AND_JR,
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TWINS,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
         .trainerPic = TRAINER_PIC_SR_AND_JR,
-        .trainerName = _("Katherine and Madeline"),
+        .trainerName = _("Maddy & Kat"),
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_KatherineMadeline3J),
-        .party = {.NoItemCustomMoves = sParty_KatherineMadeline3J},
+        .partySize = ARRAY_COUNT(sParty_KatMad3J),
+        .party = {.NoItemDefaultMoves = sParty_KatMad3J},
     },
 
 //SchoolKid Tommy
