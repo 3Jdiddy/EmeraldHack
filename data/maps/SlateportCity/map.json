@@ -2,7 +2,7 @@
   "id": "MAP_SLATEPORT_CITY",
   "name": "SlateportCity",
   "layout": "LAYOUT_SLATEPORT_CITY",
-  "music": "MUS_FINECITY",
+  "music": "MUS_RG_NANA45",
   "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -63,12 +63,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 37,
-      "y": 21,
+      "x": 34,
+      "y": 20,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -190,6 +190,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EnsioCity_FlowerGirl",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCOTT",
+      "x": 21,
+      "y": 39,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EnsioCity_Scott",
+      "flag": "FLAG_UNUSED_0x02C"
     }
   ],
   "warp_events": [
@@ -211,8 +224,8 @@
       "x": 23,
       "y": 25,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F",
-      "dest_warp_id": 0
+      "dest_map": "MAP_SS_TIDAL_LOWER_DECK",
+      "dest_warp_id": 2
     },
     {
       "x": 5,
@@ -247,7 +260,7 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     },
     {
       "x": 12,
@@ -310,7 +323,7 @@
     },
     {
       "type": "sign",
-      "x": 22,
+      "x": 23,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

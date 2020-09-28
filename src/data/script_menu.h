@@ -1,4 +1,6 @@
 // multichoice lists
+
+//dodinasWishQuestion
 static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
 {
     {gText_Petalburg},
@@ -13,12 +15,13 @@ static const struct MenuAction MultichoiceList_EnterInfo[] =
     {gText_Exit},
 };
 
+//dodinas wish question
 static const struct MenuAction MultichoiceList_ContestInfo[] =
 {
     {gText_WhatsAContest},
     {gText_TypesOfContests},
     {gText_Ranks},
-    {gText_Cancel2},
+    {gText_DefaultNameLucy},
 };
 
 static const struct MenuAction MultichoiceList_ContestType[] =

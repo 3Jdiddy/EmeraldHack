@@ -2,7 +2,7 @@
   "id": "MAP_PETALBURG_CITY",
   "name": "PetalburgCity",
   "layout": "LAYOUT_PETALBURG_CITY",
-  "music": "MUS_MACHI_S2",
+  "music": "MUS_DOORO1",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -27,12 +27,12 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 31,
-      "y": 17,
+      "x": 28,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PetalburgCity_EventScript_WallyAunt",
@@ -92,7 +92,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 27,
+      "x": 25,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -105,10 +105,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 17,
-      "y": 25,
+      "x": 13,
+      "y": 26,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -118,8 +118,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCOTT",
-      "x": 52,
-      "y": 23,
+      "x": 53,
+      "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -180,6 +180,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_UNUSED_0x027 "
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "x": 21,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02F"
     }
   ],
   "warp_events": [
@@ -217,6 +230,13 @@
       "elevation": 0,
       "dest_map": "MAP_RUSTBORO_CITY_POKEMON_SCHOOL",
       "dest_warp_id": 0
+    },
+    {
+      "x": 30,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN_MOVE_RELEARNERS_HOUSE",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
@@ -237,6 +257,33 @@
       "var": "VAR_FORTREE_CITY_STATE",
       "var_value": "0",
       "script": "firstEvilTeamMeeting_left"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_STATE",
+      "var_value": "0",
+      "script": "dodinasFirstMeet_left"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_STATE",
+      "var_value": "0",
+      "script": "dodinasFirstMeet"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_STATE",
+      "var_value": "0",
+      "script": "dodinasFirstMeet_right"
     }
   ],
   "bg_events": [
@@ -283,10 +330,18 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 24,
+      "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "PetalburgCity_EventScript_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "FallarborTown_EventScript_MoveTutorSign"
     }
   ]
 }

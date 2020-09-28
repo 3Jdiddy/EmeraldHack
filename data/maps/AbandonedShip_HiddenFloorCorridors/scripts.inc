@@ -1,6 +1,5 @@
 AbandonedShip_HiddenFloorCorridors_MapScripts:: @ 823896C
 	map_script MAP_SCRIPT_ON_RESUME, AbandonedShip_HiddenFloorCorridors_OnResume
-	map_script MAP_SCRIPT_ON_LOAD, AbandonedShip_HiddenFloorCorridors_OnLoad
 	.byte 0
 
 AbandonedShip_HiddenFloorCorridors_OnResume: @ 8238977
@@ -27,11 +26,9 @@ AbandonedShip_HiddenFloorCorridors_EventScript_UnlockRoom2:: @ 82389D3
 	return
 
 AbandonedShip_HiddenFloorCorridors_EventScript_UnlockRoom4:: @ 82389DD
-	setmetatile 3, 3, METATILE_InsideShip_DoorIndent_Unlocked, 0
 	return
 
 AbandonedShip_HiddenFloorCorridors_EventScript_UnlockRoom6:: @ 82389E7
-	setmetatile 9, 3, METATILE_InsideShip_DoorIndent_Unlocked, 0
 	return
 
 AbandonedShip_HiddenFloorCorridors_EventScript_LockRoom1:: @ 82389F1

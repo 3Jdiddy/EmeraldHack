@@ -737,7 +737,9 @@ PetalburgCity_EventScript_Guy1_text::
 	.string "The air is so fresh and pristine, heheh.$"
 
 PetalburgCity_EventScript_Guy2_text::
-	.string "No problem here.$"
+	.string "No problem here.\p"
+	.string "...\p"
+	.string "What?$"
 
 PetalburgCity_Text_WhereIsWally: @ 81DC837
 	.string "Are you curious about the layout\n"
@@ -1224,7 +1226,7 @@ arthurAfterExplain::
 	end
 
 arthurAfterExplainText::
-	.string "{COLOR 40}Soon, i'll head to Uraranta City to\n"
+	.string "{COLOR 40}Soon, I'll head to Uraranta City to\n"
 	.string "discuss this with-- well,\l"
 	.string "'the higher ups'.\p"
 	.string "I suggest you keep your head down.$"
@@ -1267,7 +1269,7 @@ Route105_EventScript_Jonathan3J::
 Route105_EventScript_Jonathan3J_text::
 	.string "Isn't it weird to see a dock on a river?\p"
 	.string "You'd think it would be hard to maintain.\p"
-	.string "Maybe i'll build a bridge one day!$"
+	.string "Maybe I'll build a bridge one day!$"
 
 Route105_EventScript_Jonathan3J_intro::
 	.string "Woah!\p"
@@ -1435,17 +1437,1419 @@ EnsioCity_WiseLady::
 	end
 
 EnsioCity_WiseLady_text::
-	.string "Those flowers...\n"
-	.string "If only they knew...$"
+	.string "Those flowers...\p"
+	.string "Since when was the Professor so\n"
+	.string "interested in botany?$"
 
 EnsioCity_WiseLady_text2::
 	.string "Oh dearie, don't mind me.\p"
 	.string "I am just thinking about the past.$"
 
+EnsioCity_Scott::
+	setflag FLAG_UNUSED_0x02E  
+	setflag FLAG_UNUSED_0x02D
+	msgbox EnsioCity_Scott_text, MSGBOX_NPC
+	end
+
+EnsioCity_Scott_text::
+	.string "Heya, sport!\p"
+	.string "Pierre's already seeing a challenger\n"
+	.string "right now.\p"
+	.string "Why don't you look around town for a\n"
+	.string "bit?\p"
+	.string "I would recommend the flower shop--\n"
+	.string "It's the pride of the city!\p"
+	.string "Err, after this here Gym of course.\p"
+	.string "Ahah...$"
+
+EnsioCity_ApartmentFL2_Sign0::
+	msgbox apartmentFL2_sign0, MSGBOX_SIGN
+
+apartmentFL2_sign0::
+	.string "Room 201$"
+
+EnsioCity_ApartmentFL2_Sign1::
+	msgbox apartmentFL2_sign1, MSGBOX_SIGN
+
+apartmentFL2_sign1::
+	.string "Room 202$"
+
+EnsioCity_ApartmentFL2_Sign2::
+	msgbox apartmentFL2_sign2, MSGBOX_SIGN
+
+apartmentFL2_sign2::
+	.string "Room 203$"
+
+EnsioCity_ApartmentFL2_Sign3::
+	msgbox apartmentFL2_sign3, MSGBOX_SIGN
+
+apartmentFL2_sign3::
+	.string "Room 204$"
+
+EnsioCity_ApartmentFL2_Sign4::
+	msgbox apartmentFL2_sign4, MSGBOX_SIGN
+
+apartmentFL2_sign4::
+	.string "Room 205$"
+
+EnsioCity_ApartmentFL2_Sign5::
+	msgbox apartmentFL2_sign5, MSGBOX_SIGN
+
+apartmentFL2_sign5::
+	.string "Room 206$"
+
+
+EnsioCity_ApartmentFL1_Sign0::
+	msgbox apartmentFL1_sign0, MSGBOX_SIGN
+
+apartmentFL1_sign0::
+	.string "Room 101$"
+
+EnsioCity_ApartmentFL1_Sign1::
+	msgbox apartmentFL1_sign1, MSGBOX_SIGN
+
+apartmentFL1_sign1::
+	.string "Room 102$"
+
+EnsioCity_ApartmentFL1_Sign2::
+	msgbox apartmentFL1_sign2, MSGBOX_SIGN
+
+apartmentFL1_sign2::
+	.string "Room 103$"
+
+EnsioCity_ApartmentFL1_Sign3::
+	msgbox apartmentFL1_sign3, MSGBOX_SIGN
+
+apartmentFL1_sign3::
+	.string "Room 104$"
+
+EnsioCity_ApartmentFL1_Sign4::
+	msgbox apartmentFL1_sign4, MSGBOX_SIGN
+
+apartmentFL1_sign4::
+	.string "Room 105$"
+
+EnsioCity_ApartmentFL1_Sign5::
+	msgbox apartmentFL1_sign5, MSGBOX_SIGN
+
+apartmentFL1_sign5::
+	.string "Room 106$"
+
+locked::
+	msgbox locked_text, MSGBOX_SIGN
+	end
+
+locked_text::
+	.string "Locked.$"
+
+noHotel::
+	lock
+	applymovement 1, hotelGirl_move1
+	msgbox hotelGirl_text1, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, playerLeaveHotel
+	waitmovement 0
+	applymovement 1, hotelGirl_move2
+	waitmovement 0
+	release
+	end
+
+playerLeaveHotel::
+	walk_down
+	walk_down
+	step_end
+
+hotelGirl_text1::
+	.string "Excuse me, but only guests and residents\n"
+	.string "are allowed beyond this point.$"
+
+hotelGirl_move1::
+	emote_exclamation_mark
+	face_left
+	step_end
+
+hotelGirl_move2::
+	face_down
+	step_end
+
+hotelGirl::
+	msgbox hotelGirl_text, MSGBOX_NPC
+	end
+
+hotelGirl_text::
+	.string "Welcome!$"
+
+hotelManager::
+	applymovement 3, hotelManager_move
+	msgbox hotelManager_text, MSGBOX_NPC
+	end
+
+hotelManager_move::
+	walk_in_place_down
+	step_end
+
+hotelManager_text::
+	.string "Welcome!\p"
+	.string "Or, that is what I would like to say,\n"
+	.string "but we are currently full!\p"
+	.string "Things have been busy recently in\n"
+	.string "preperation for the star festival.\p"
+	.string "Sorry for the inconvienience.$"
+
+flowerShopWoman::
+	msgbox flowerShopWoman_text, MSGBOX_NPC
+	end
+
+flowerShopWoman_text::
+	.string "Hmm I wonder what we should get him...$"
+
+flowerShopGirl::
+	msgbox flowerShopGirl_text, MSGBOX_NPC
+	end
+
+flowerShopGirl_text::
+	.string "Mom always goes all-out on Father's Day.\p"
+	.string "It's sweet, but sometimes it feels like\n"
+	.string "a competition between the two!$"
+
+flowerShopOldWoman::
+	msgbox flowerShopOldWoman_text, MSGBOX_NPC
+	end
+
+flowerShopOldWoman_text::
+	.string "Mr. Lupine has a wonderful aesthetic\n"
+	.string "sense.\p"
+	.string "Though, I wonder if he is still doing\n"
+	.string "research?$"
+
+flowerShopScene_3::
+	lock
+	applymovement 1, flowershop_prof_move1
+	waitmovement 0
+	msgbox flowershop_professor_Welcome, MSGBOX_NPC
+	closemessage
+	applymovement 1, flowershop_prof_move2
+	waitmovement 0
+	msgbox flowershop_professor_text2, MSGBOX_NPC
+	closemessage
+	applymovement 1, flowershop_professor_move3
+	applymovement OBJ_EVENT_ID_PLAYER, playerGetOnProfLevel_3
+	waitmovement 0
+	msgbox flowershop_professor_text3, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move4
+	waitmovement 0
+	msgbox flowershop_professor_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, surprisedToSee
+	applymovement 5, flowershop_dodinas_move1
+	waitmovement 0
+	applymovement 1, flowershop_professor_move5
+	waitmovement 0
+	applymovement 5, flowershop_dodinas_move2
+	waitmovement 0
+	msgbox flowershop_dodinas_text1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move6
+	waitmovement 0
+	msgbox flowershop_professor_text5, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move7
+	waitmovement 0
+	msgbox flowershop_professor_text6, MSGBOX_DEFAULT
+	applymovement 5, flowershop_dodinas_move2
+	waitmovement 0
+	msgbox flowershop_dodinas_text2, MSGBOX_DEFAULT
+	closemessage 
+	applymovement 1, flowershop_professor_move8
+	waitmovement 0
+	applymovement 5, flowershop_dodinas_move3
+	waitmovement 0
+	msgbox flowershop_dodinas_text3, MSGBOX_DEFAULT
+	applymovement 1, flowershop_professor_move7
+	msgbox flowershop_professor_text7, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move9
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, flowershop_playerMove
+	applymovement 5, flowershop_dodinas_move4
+	waitmovement 0
+	msgbox flowershop_professor_text8, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveA
+	waitmovement 0
+	playfanfare MUS_FANFA4
+	waitfanfare
+	msgbox system_DexReceived, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_ADVENTURE_STARTED
+	applymovement 1, flowershop_professor_moveB
+	waitmovement 0
+	msgbox system_DexReceived_dodinas, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveC
+	waitmovement 0
+	msgbox flowershop_professor_text9, MSGBOX_DEFAULT
+	msgbox flowershop_dodinas_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, flowershop_professor_move8
+	waitmovement 0
+	msgbox flowershop_professor_textA, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, flowershop_dodinas_move5
+	waitmovement 0
+	msgbox flowershop_dodinas_text5, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveD
+	applymovement 5, flowershop_dodinas_move6
+	waitmovement 0
+	hideobjectat 5, MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP
+	setflag FLAG_UNUSED_0x02E
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_UNUSED_0x02C 
+	setflag FLAG_SYS_NATIONAL_DEX   
+	setvar VAR_EVER_GRANDE_CITY_STATE, 1
+	release
+	end
+
+flowerShopScene_2::
+	lock
+	applymovement 1, flowershop_prof_move1
+	waitmovement 0
+	msgbox flowershop_professor_Welcome, MSGBOX_NPC
+	closemessage
+	applymovement 1, flowershop_prof_move2
+	waitmovement 0
+	msgbox flowershop_professor_text2, MSGBOX_NPC
+	closemessage
+	applymovement 1, flowershop_professor_move3
+	applymovement OBJ_EVENT_ID_PLAYER, playerGetOnProfLevel_2
+	waitmovement 0
+	msgbox flowershop_professor_text3, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move4
+	waitmovement 0
+	msgbox flowershop_professor_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, surprisedToSee
+	applymovement 5, flowershop_dodinas_move1
+	waitmovement 0
+	applymovement 1, flowershop_professor_move5
+	waitmovement 0
+	applymovement 5, flowershop_dodinas_move2
+	waitmovement 0
+	msgbox flowershop_dodinas_text1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move6
+	waitmovement 0
+	msgbox flowershop_professor_text5, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move7
+	waitmovement 0
+	msgbox flowershop_professor_text6, MSGBOX_DEFAULT
+	applymovement 5, flowershop_dodinas_move2
+	waitmovement 0
+	msgbox flowershop_dodinas_text2, MSGBOX_DEFAULT
+	closemessage 
+	applymovement 1, flowershop_professor_move8
+	waitmovement 0
+	applymovement 5, flowershop_dodinas_move3
+	waitmovement 0
+	msgbox flowershop_dodinas_text3, MSGBOX_DEFAULT
+	applymovement 1, flowershop_professor_move7
+	msgbox flowershop_professor_text7, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move9
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, flowershop_playerMove
+	applymovement 5, flowershop_dodinas_move4
+	waitmovement 0
+	msgbox flowershop_professor_text8, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveA
+	waitmovement 0
+	playfanfare MUS_FANFA4
+	waitfanfare
+	msgbox system_DexReceived, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_ADVENTURE_STARTED
+	applymovement 1, flowershop_professor_moveB
+	waitmovement 0
+	msgbox system_DexReceived_dodinas, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveC
+	waitmovement 0
+	msgbox flowershop_professor_text9, MSGBOX_DEFAULT
+	msgbox flowershop_dodinas_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, flowershop_professor_move8
+	waitmovement 0
+	msgbox flowershop_professor_textA, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, flowershop_dodinas_move5
+	waitmovement 0
+	msgbox flowershop_dodinas_text5, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveD
+	applymovement 5, flowershop_dodinas_move6
+	waitmovement 0
+	hideobjectat 5, MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP
+	setflag FLAG_UNUSED_0x02E
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_UNUSED_0x02C 
+	setvar VAR_EVER_GRANDE_CITY_STATE, 1
+	setflag FLAG_SYS_NATIONAL_DEX
+	release
+	end
+
+flowerShopScene_1::
+	lock
+	applymovement 1, flowershop_prof_move1
+	waitmovement 0
+	msgbox flowershop_professor_Welcome, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_prof_move2
+	waitmovement 0
+	msgbox flowershop_professor_text2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move3
+	applymovement OBJ_EVENT_ID_PLAYER, playerGetOnProfLevel_1
+	waitmovement 0
+	msgbox flowershop_professor_text3, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move4
+	waitmovement 0
+	msgbox flowershop_professor_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, surprisedToSee
+	applymovement 5, flowershop_dodinas_move1
+	waitmovement 0
+	applymovement 1, flowershop_professor_move5
+	waitmovement 0
+	applymovement 5, flowershop_dodinas_move2
+	waitmovement 0
+	msgbox flowershop_dodinas_text1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move6
+	waitmovement 0
+	msgbox flowershop_professor_text5, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move7
+	waitmovement 0
+	msgbox flowershop_professor_text6, MSGBOX_DEFAULT
+	applymovement 5, flowershop_dodinas_move2
+	waitmovement 0
+	msgbox flowershop_dodinas_text2, MSGBOX_DEFAULT
+	closemessage 
+	applymovement 1, flowershop_professor_move8
+	waitmovement 0
+	applymovement 5, flowershop_dodinas_move3
+	waitmovement 0
+	msgbox flowershop_dodinas_text3, MSGBOX_DEFAULT
+	applymovement 1, flowershop_professor_move7
+	msgbox flowershop_professor_text7, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_move9
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, flowershop_playerMove
+	applymovement 5, flowershop_dodinas_move4
+	waitmovement 0
+	msgbox flowershop_professor_text8, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveA
+	waitmovement 0
+	playfanfare MUS_FANFA4
+	waitfanfare
+	msgbox system_DexReceived, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_ADVENTURE_STARTED
+	applymovement 1, flowershop_professor_moveB
+	waitmovement 0
+	msgbox system_DexReceived_dodinas, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, flowershop_professor_moveC
+	waitmovement 0
+	msgbox flowershop_professor_text9, MSGBOX_DEFAULT
+	msgbox flowershop_dodinas_text4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, flowershop_professor_move8
+	waitmovement 0
+	applymovement 1, flowershop_professor_moveD
+	waitmovement 0
+	msgbox flowershop_professor_textA, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, flowershop_dodinas_move5
+	waitmovement 0
+	msgbox flowershop_dodinas_text5, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, flowershop_dodinas_move6
+	waitmovement 0
+	hideobjectat 5, MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP
+	setflag FLAG_UNUSED_0x02E
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_UNUSED_0x02C 
+	setvar VAR_EVER_GRANDE_CITY_STATE, 1
+	setflag FLAG_SYS_NATIONAL_DEX
+	release
+	end
+
+flowershop_dodinas_move6::
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+flowershop_professor_moveD::
+	walk_in_place_down
+	step_end
+
+flowershop_lupine::
+	msgbox flowershop_lupine_text, MSGBOX_NPC
+	release
+	end
+
+flowershop_lupine_text::
+	.string "Thanks again for your help.\p"
+	.string "I am counting on you!$"
+
+flowershop_dodinas_move5::
+	walk_in_place_left
+	step_end
+
+flowershop_dodinas_text5::
+	.string "{COLOR 15}Dodinas: Well, {PLAYER}.\p"
+	.string "Do your best out there.$"
+
+flowershop_professor_textA::
+	.string "Lupine: YES!!\p"
+	.string "Thank you both so much!\p"
+	.string "I can't begin to tell you how much this\n"
+	.string "means to me.\p"
+	.string "I wish I could do more to help you,\n"
+	.string "but given my situation, I will have\l"
+	.string "to leave it to you two.$"
+
+
+flowershop_professor_text9::
+	.string "Lupine: With these, I--\p"
+	.string "We can continue researching even under\n"
+	.string "military surveillance.\p"
+	.string "They have no way of knowing it's the\n"
+	.string "two of you who have them.\p"
+	.string "They may not even know what they look\n"
+	.string "like, so there's no added danger.\p"
+	.string "Please, help me with this research!\p"
+	.string "All you have to do is catch new Pokémon;\n"
+	.string "this research means the world to me--\p"
+	.string "It's my life's work! It's--$"
+
+flowershop_dodinas_text4::
+	.string "{COLOR 15}Dodinas: Professor.\p"
+	.string "We'll do it.$"
+	
+flowershop_professor_moveC::
+	walk_left
+	walk_up
+	walk_in_place_down
+	step_end
+
+system_DexReceived_dodinas::
+	.string "Dodinas received the Pokédex.$"
+
+system_DexReceived::
+	.string "{PLAYER} received the Pokédex.$"
+
+flowershop_professor_moveB::
+	walk_right
+	walk_in_place_down
+	step_end
+
+
+flowershop_professor_moveA::
+	walk_down
+	step_end
+
+flowershop_professor_text8::
+	.string "However...\p"
+	.string "There's something we can do that they\n"
+	.string "would have no way to track.$"
+
+flowershop_playerMove::
+	walk_slow_up
+	step_end
+
+flowershop_dodinas_move4::
+	walk_in_place_up
+	step_end
+
+flowershop_professor_move9::
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+
+flowershop_dodinas_text3::
+	.string "{COLOR 15}Dodinas: What?\p"
+	.string "We're we not going to mention that?\p"
+	.string "If you are going to ask him for help\n"
+	.string "The least you could do is fill him in.$"
+
+flowershop_professor_text7::
+	.string "Lupine: ...\p"
+	.string "You're right--\n"
+	.string "Like he said, the military is holding\l"
+	.string "most of my recent research over my\l"
+	.string "head.\p"
+	.string "They check in every so often to\n"
+	.string "remind me...\p"
+	.string "It's not all bad though!\p"
+	.string "With all my newfound spare time,\n" 
+	.string "I've gotten into garending, hah...$"
+
+flowershop_professor_move8::
+	emote_exclamation_mark
+	face_right
+	step_end
+
+flowershop_dodinas_move3::
+	walk_in_place_left
+	step_end
+
+flowershop_dodinas_text2::
+	.string "{COLOR 15}Dodinas: We're being blackmailed by\n"
+	.string "the military.$"
+
+flowershop_dodinas_move2::
+	walk_in_place_down
+	step_end
+
+flowershop_professor_move7::
+	walk_in_place_down
+	step_end
+
+flowershop_professor_move6::
+	walk_in_place_right
+	step_end
+
+flowershop_professor_text5::
+	.string "Lupine: So you two are already\n"
+	.string "acquainted?\p"
+	.string "Perfect, then I'll get right to it.$"
+
+flowershop_professor_text6::
+	.string "Lupine: Dodinas is my assistant.\n"
+	.string "However, I have had to discontinue\l"
+	.string "the majority of my research due to...\p"
+	.string "Well...$"
+
+flowershop_dodinas_text1::
+	.string "{COLOR 15}Dodinas: It's nice to see you again,\n"
+	.string "{PLAYER}.$"
+
+surprisedToSee::
+	emote_exclamation_mark
+	step_end
+
+flowershop_professor_move5::
+	walk_in_place_down
+	step_end
+
+flowershop_dodinas_move1::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+flowershop_professor_move4::
+	walk_in_place_right
+	step_end
+
+
+flowershop_professor_text4::
+	.string "Dodinas! {PLAYER} is here!\p"
+	.string "The one I told you about earlier!$"
+
+playerGetOnProfLevel_1::
+	walk_up
+	walk_right
+	face_up
+	step_end
+
+playerGetOnProfLevel_2::
+	walk_up
+	step_end
+
+playerGetOnProfLevel_3::
+	walk_up
+	walk_left
+	face_up
+	step_end
+
+flowershop_prof_move1::
+	walk_in_place_down
+	step_end
+
+flowershop_professor_Welcome::
+	.string "Hello! Welco--$"
+
+flowershop_prof_move2::
+	emote_exclamation_mark
+	step_end
+
+flowershop_professor_text2::
+	.string "Oh, you are...$"
+
+flowershop_professor_move3::
+	walk_left
+	walk_down
+	face_down
+	walk_in_place_down
+	step_end
+
+flowershop_professor_text3::
+	.string "{PLAYER}!\p"
+	.string "I almost didn't recognize you; it's\n"
+	.string "been a while!\p"
+	.string "Your mother said you'd be stopping by,\n"
+	.string "but I guess I lost track of time...\p"
+	.string "Oh...!\p"
+	.string "There's actually someone I want you\n"
+	.string "to meet.$"
+
+rivalEnter::
+	walk_down
+	walk_left
+	step_end
+
+dodinasFirstMeet_right::
+	applymovement OBJ_EVENT_ID_PLAYER, dodinasFirstMeet_playerMoveLeft
+	waitmovement 0
+	goto dodinasFirstMeet
+
+dodinasFirstMeet_playerMoveRight::
+	walk_right
+	face_up
+	step_end
+
+dodinasFirstMeet_left::
+	applymovement OBJ_EVENT_ID_PLAYER, dodinasFirstMeet_playerMoveRight
+	waitmovement 0
+	goto dodinasFirstMeet
+
+dodinasFirstMeet_playerMoveLeft::
+	walk_left
+	face_up
+	step_end
+
+dodinasFirstMeet::
+	lock
+	setflag FLAG_UNUSED_0x030
+	fadeoutbgm 0
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, dodinasFirstMeet_CameraUp
+	waitmovement 0
+	applymovement 13, dodinasFirstMove1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, dodinasFirstMeet_playerMoveUp
+	waitmovement 0
+	special RemoveCameraObject
+	msgbox dodinasFirstText1, MSGBOX_DEFAULT
+	closemessage
+	playbgm MUS_RUNECITY 0
+	applymovement 13, dodinasFirstMove2
+	waitmovement 0
+	msgbox dodinasFirstText2, MSGBOX_DEFAULT
+	multichoice 20, 4, MULTI_CONTEST_INFO, 1
+	waitmessage
+	switch VAR_RESULT
+	case 0, wishAnswer_money
+	case 1, wishAnswer_power
+	case 2, wishAnswer_love
+	case 3, wishAnswer_hotdog
+	release
+	end
+
+dodinasFirstMeet2::
+	compare VAR_STARTER_MON, 1
+	goto_if_lt dodinasFirstMeetHoundour
+	goto_if_gt dodinasFirstMeetShroomish
+	trainerbattle_single TRAINER_NONE, intrododinas1, defeatDodinas1, dodinasContinued1
+	end
+
+
+dodinasFirstMeetShroomish::
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_GRUNT_MUSEUM_1, 13, intrododinas1, defeatDodinas1, dodinasContinued1, NO_MUSIC
+
+dodinasFirstMeetStaryu::
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_GRUNT_WEATHER_INST_2, 13, intrododinas1, defeatDodinas1, dodinasContinued1, NO_MUSIC
+
+dodinasFirstMeetHoundour::
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_GRUNT_WEATHER_INST_3, 13, intrododinas1, defeatDodinas1, dodinasContinued1, NO_MUSIC
+
+dodinasContinued1::
+	playbgm MUS_RUNECITY 0
+	setvar VAR_ROUTE102_STATE, 1
+	msgbox dodinasFirstText3, MSGBOX_DEFAULT
+	closemessage
+	applymovement 13, dodinasFirstMove3
+	waitmovement 0
+	compare VAR_ROUTE103_STATE, 0
+	goto_if_eq dodinasContinued1_2
+	compare VAR_ROUTE103_STATE, 1
+	goto_if_eq dodinasContinued1_3
+	compare VAR_ROUTE103_STATE, 2
+	goto_if_eq dodinasContinued1_4
+	compare VAR_ROUTE103_STATE, 3
+	goto_if_eq dodinasContinued1_5
+
+dodinasContinued1_2::
+	msgbox moneyWish_text, MSGBOX_DEFAULT
+	closemessage
+	applymovement 13, dodinasFirstMove4
+	waitmovement 0
+	msgbox moneyWish_text2, MSGBOX_DEFAULT
+	closemessage
+	goto dodinasFinish
+
+moneyWish_text::
+	.string "{COLOR 15}For someone who values money as much as\n"
+	.string "you do, you are rather generous with\l"
+	.string "your time.$"
+
+moneyWish_text2::
+	.string "{COLOR 15}Time is money too, you know.$"
+
+dodinasContinued1_3::
+	msgbox powerWish_text, MSGBOX_DEFAULT
+	closemessage
+	applymovement 13, dodinasFirstMove4
+	waitmovement 0
+	msgbox powerWish_text2, MSGBOX_DEFAULT
+	closemessage
+	goto dodinasFinish
+
+powerWish_text::
+	.string "{COLOR 15}Power, huh?\p"
+	.string "The attempt to combine wisdom and power\n"
+	.string "has only rarely been successful.\p"
+	.string "In which case, it is only for a\n"
+	.string "short while.$"
+
+powerWish_text2::
+	.string "{COLOR 15}I guess what I mean to say is, be\n"
+	.string "careful what you wish for.$"
+
+dodinasContinued1_4::
+	msgbox loveWish_text, MSGBOX_DEFAULT
+	closemessage
+	applymovement 13, dodinasFirstMove4
+	waitmovement 0
+	msgbox loveWish_text2, MSGBOX_DEFAULT
+	closemessage
+	goto dodinasFinish
+
+loveWish_text::
+	.string "{COLOR 15}Would you say it is better to have\n"
+	.string "loved and lost?\p"
+	.string "...$"
+
+loveWish_text2::
+	.string "{COLOR 15}Maybe I am asking the wrong person.$"
+
+
+dodinasContinued1_5::
+	msgbox hotdogWish_text, MSGBOX_DEFAULT
+	closemessage
+	goto dodinasFinish
+
+hotdogWish_text::
+	.string "{COLOR 15}That battle sure worked up an appetite.\p"
+	.string "Maybe I'll grab a hotdog in Ensio City.$"
+
+dodinasFinish::
+	applymovement 13, dodinasFirstLeave
+	waitmovement 0
+	hideobjectat 13, MAP_PETALBURG_CITY
+	setflag FLAG_UNUSED_0x02F
+	fadedefaultbgm
+	release
+	end
+
+dodinasFirstLeave::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+dodinasFirstMove3::
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+dodinasFirstMove4::
+	walk_in_place_slow_down
+	step_end
+
+intrododinas1::
+	.string "{COLOR 15}I think I have asked enough questions.\p"
+	.string "Instead, how about a battle?\n"
+	.string "You are a trainer, aren't you?\p"
+	.string "Don't worry--\n"
+	.string "I am new to this myself.$"
+
+defeatDodinas1::
+	.string "It seems I was correct.\p"
+	.string "You are quite strong, {PLAYER}.$"
+
+dodinasFirstText3::
+	.string "{COLOR 15}That was useful, thank you.\p"
+	.string "The Star Festival is coming up, isn't it?\p"
+	.string "Maybe your wish will come true.$"
+
+wishAnswer_hotdog::
+	setvar VAR_ROUTE103_STATE, 3
+	msgbox wishAnswer_hotdog_text, MSGBOX_DEFAULT
+	goto dodinasFirstMeet2
+
+wishAnswer_love::
+	setvar VAR_ROUTE103_STATE, 2
+	msgbox wishAnswer_love_text, MSGBOX_DEFAULT
+	goto dodinasFirstMeet2
+
+wishAnswer_power::
+	setvar VAR_ROUTE103_STATE, 1
+	msgbox wishAnswer_power_text, MSGBOX_DEFAULT
+	goto dodinasFirstMeet2
+
+wishAnswer_money::
+	msgbox wishAnswer_money_text, MSGBOX_DEFAULT
+	goto dodinasFirstMeet2
+
+wishAnswer_hotdog_text::
+	.string "{COLOR 15}...\p"
+	.string "I see.\p"
+	.string "Are you avoiding the question?\p"
+	.string "Or maybe you're just satisfied with\n"
+	.string "what you have?\p"
+	.string "Or...\p"
+	.string "You just really like hotdogs?\p"
+	.string "Well...$"
+
+wishAnswer_love_text::
+	.string "{COLOR 15}Love?\p"
+	.string "...\p"
+	.string "I did not expect that.\n"
+	.string "Did you not feel loved as a child?\p"
+	.string "Or, are you simply a romantic?\p"
+	.string "No-- that's alright.$"
+
+wishAnswer_power_text::
+	.string "{COLOR 15}Power?\p"
+	.string "Intersting, and a little spooky.\n"
+	.string "For Pokémon battles? Or...\l"
+	.string "Maybe you have something else in mind?\p"
+	.string "No-- that's alright.$"
+
+wishAnswer_money_text::
+	.string "{COLOR 15}That makes sense...\n"
+	.string "everyone needs money.\p"
+	.string "Hmm... but what would you spend it on?\n"
+	.string "No-- that's alright.$"
+
+dodinasFirstText2::
+	.string "{COLOR 15}Excuse me.\p"
+	.string "Can I ask you a question?\p"
+	.string "If you could have one wish, what would\n"
+	.string "you wish for?$"
+
+dodinasFirstMove2::
+	walk_down
+	walk_down
+	step_end
+	
+dodinasFirstText1::
+	.string "{COLOR 15}???: ...$"
+
+dodinasFirstMove1::
+	walk_in_place_down
+	step_end
+
+dodinasFirstMeet_CameraUp::
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+dodinasFirstMeet_playerMoveUp::
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+sign_route105::
+	msgbox sign_route105_text, MSGBOX_SIGN
+	end
+
+sign_route105_text::
+	.string "Mr. Yamashita's house.$"
+
+yamashita::
+	lock
+	goto_if_set FLAG_UNUSED_0x031, yamashita_after
+	msgbox yamashita_text, MSGBOX_NPC
+	compare VAR_STARTER_MON, 1
+	goto_if_gt yamashita_give_grass
+	goto_if_lt yamashita_give_grass
+	msgbox yamashita_give_grass
+	end
+
+yamashita_after::
+	msgbox yamashita_after_text, MSGBOX_NPC
+	end
+
+yamashita_after_text::
+	.string "Hmm?\p"
+	.string "You look dissapointed...\p"
+	.string "Hahah, hey now-- beggars can't be\n"
+	.string "choosers!\p"
+	.string "Make the best of it!$"
+
+yamashita_text::
+	.string "Hey there, welcome!\p"
+	.string "Having fun out there?\p"
+	.string "Trainers seem to love my yard;\n"
+	.string "I don't mind, so I let them hang\l"
+	.string "around!\p"
+	.string "Since you took the time to say hi,\n"
+	.string "I feel like giving you something!\p"
+	.string "Let's see...$"
+
+yamashita_text2::
+	.string "Ah!\p"
+	.string "This should be good for you!$"
+
+yamashita_give_grass::
+	msgbox yamashita_text2
+	giveitem ITEM_TM20_SAFEGUARD, 1
+	setflag FLAG_UNUSED_0x031
+	release
+	end
+
+yamashita_give_fire::
+	msgbox yamashita_text2
+	giveitem ITEM_GARDEVOIRITE, 1
+	setflag FLAG_UNUSED_0x031
+	release
+	end
+
+yamashita_give_water::
+	msgbox yamashita_text2
+	giveitem ITEM_GARDEVOIRITE, 1
+	setflag FLAG_UNUSED_0x031
+	release
+	end
+	
+firstGym::
+	lock
+	msgbox youngsterText1, MSGBOX_DEFAULT
+	closemessage
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, firstGym_cameraMove1
+	waitmovement 0
+	msgbox youngsterText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_CAMERA, firstGym_cameraMove2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, gym1PlayerMove
+	msgbox pierreText1, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_CAMERA, firstGym_cameraMove3
+	applymovement 2, youngsterMove
+	waitmovement 0
+	hideobjectat 2, MAP_RUSTBORO_CITY_GYM
+	setflag FLAG_UNUSED_0x033
+	applymovement OBJ_EVENT_ID_PLAYER, playerMoveBackGym
+	waitmovement 0
+	special RemoveCameraObject
+	setvar VAR_ROUTE105_STATE, 1
+	release
+	end
+
+playerMoveBackGym::
+	walk_right
+	face_up
+	step_end
+
+pierreGym::
+	goto_if_set FLAG_BADGE02_GET, pierreGym_afterBattle
+	msgbox pierreGym_text, MSGBOX_NPC
+	release
+	end
+
+pierreGym_afterBattle::
+	msgbox pierreGym_afterBattle_text
+	release
+	end
+
+pierreGym_afterBattle_text::
+	.string "What!?\p"
+	.string "I gave you your badge, freak!\n"
+	.string "Leave me alone!$"
+
+
+pierreGym_text::
+	.string "Umm, are you new?\p"
+	.string "Go on the podium!$"
+
+youngsterMove::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+gym1PlayerMove::
+	walk_slow_left
+	face_right
+	step_end
+
+pierreText1::
+	.string "Pierre: NOOOOOOOOOOOOOOOoooooooooooo\n"
+	.string "ooooooooooooooookayy kid, nice fight.\p"
+	.string "You are officially a gym badge holder.\p"
+	.string "Congradulations, now uhh-- You can go.\p"
+	.string "Remember to tell all your friends about\n"
+	.string "the Ensio City gym and its powerful yet\l"
+	.string "benevolent leader.$."
+
+youngsterText1::
+	.string "Yes!! I did it!!$"
+
+youngsterText2::
+	.string "I finally defeated your ultra powerful\n"
+	.string "Caterpie!!$"
+
+firstGym_cameraMove2::
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	step_end
+
+firstGym_cameraMove1::
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+firstGym_cameraMove3::
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fast_down
+	walk_fast_down
+	walk_down
+	step_end
+
+gymBattleOne::
+	lockall
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, gymBattleOne_cameraMove1
+	waitmovement 0
+	msgbox gymBattle_pierreText1, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq gymBattle_pierreText1_YES
+	applymovement 1, pierreWalkPlace
+	waitmovement 0
+	msgbox gymBattle_pierreText1_NO, MSGBOX_DEFAULT
+	setvar VAR_0x8004, 3   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 4   @ shake delay
+	special ShakeCamera
+	msgbox rumbleText, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, pierePrep
+	waitmovement 0
+	applymovement 1, pierreFlyUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, pierreFlyUp_camerafollow
+	waitmovement 0
+	applymovement 1, extraDown
+	waitmovement 0
+	applymovement 1, pierreFlyDown
+	waitmovement 0
+	applymovement 1, malePrivate_move1
+	waitmovement 0
+	msgbox disrespectPierre, MSGBOX_DEFAULT
+	setflag FLAG_DISABLE_BAG
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_ROXANNE_1, 1, introPierre, defeatPierre, afterPierre, NO_MUSIC
+	release
+	end
+
+disrespectPierre::
+	.string "You disrespectful little punk!\p"
+	.string "What do you know about me?\p"
+	.string "What do you know about ART!?$"
+
+pierreFlyUp_camerafollow::
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	step_end
+
+pierePrep::
+	face_left
+	face_up
+	face_right
+	face_down
+	face_left
+	face_up
+	face_right
+	face_down
+	step_end
+
+
+pierreFlyUp::
+	face_left
+	face_up
+	face_right
+	face_down
+	face_left
+	face_up
+	face_right
+	face_down
+	fly_up
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
 
 
 
+pierreFlyDown::
+	fly_down
+	face_left
+	face_up
+	face_right
+	face_down
+	face_left
+	face_up
+	face_right
+	face_down
+	step_end
+
+
+gymBattle_pierreText1_YES::
+	msgbox happyPierre, MSGBOX_DEFAULT
+	closemessage
+	showmoneybox 0, 0, 0
+	msgbox payup, MSGBOX_YESNO
+	hidemoneybox
+	compare VAR_RESULT, 1
+	goto_if_eq payup_yes
+	msgbox gymBattle_pierreText1_NO, MSGBOX_DEFAULT
+	setvar VAR_0x8004, 3   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 4   @ shake delay
+	special ShakeCamera
+	msgbox rumbleText, MSGBOX_DEFAULT
+	closemessage
+	applymovement 1, pierreFlyUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, pierreFlyUp_camerafollow
+	waitmovement 0
+	applymovement 1, extraDown
+	waitmovement 0
+	applymovement 1, pierreFlyDown
+	waitmovement 0
+	msgbox pierreYou, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_0x8004, 3   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 4   @ shake delay
+	special ShakeCamera
+	msgbox pierreYOU,  MSGBOX_DEFAULT
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_ROXANNE_1, 1, introPierre, defeatPierre, afterPierre, NO_MUSIC
+	closemessage
+	release
+	end
+
+extraDown::
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+pierreYou::
+	.string "You...\p"
+	.string "You think you're better than me,\n"
+	.string "don't you?\p"
+	.string "Grrrrr-- you little...$"
+
+pierreYOU::
+	.string "YOU FREAK!!!$"
+
+payup_yes::
+	checkmoney 50000, 0
+	compare VAR_RESULT, 0
+	goto_if_eq Pierre_NotEnoughMoney
+	release
+	end
+
+Pierre_NotEnoughMoney::
+	msgbox pierreMoneyLacking, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_CAMERA, pierreFlyUp_camerafollow
+	waitmovement 0
+	special RemoveCameraObject
+	release
+	end
+
+pierreMoneyLacking::
+	.string "Wonderful! You'll be champ in no time\n"
+	.string "at this rate!\p"
+	.string "Hmm?\p"
+	.string "Hey! This isn't nearly enough!\p"
+	.string "Scram, peasant!$"
 
 
 
+pierreWalkPlace::
+	walk_in_place_down
+	step_end
+
+introPierre::
+	.string "Fine... You think you're so tough?\p"
+	.string "I hate people like you-- just like\n"
+	.string "the Professor, intruding on everyone's\l"
+	.string "buisiness with his stupid flowers.\p" 
+	.string "You're all freaks-- Freaks!\p"
+	.string "I'll beat you down so hard, you'll\n"
+	.string "never battle again!$"
+
+defeatPierre::
+	.string "NO!\p"
+	.string "Damn it! You little--\n"
+	.string "I hate you! I--\p"
+	.string "...Uhhg$"
+
+afterPierre::
+	msgbox takeFirstBadge, MSGBOX_DEFAULT
+	call Common_EventScript_PlayGymBadgeFanfare
+	msgbox pierre_getOut, MSGBOX_DEFAULT
+	release
+	end
+
+pierre_getOut::
+	.string "That's the beatle badge.\p"
+	.string "What? That's it. I'm done.\p"
+	.string "If you are serious about the\n"
+	.string "gym challange I would go west\l" 
+	.string "to Ururanta City, but you can\l"
+	.string "do whatever-- I don't care.$"
+
+takeFirstBadge::
+	.string "Fine... Fine!\p"
+	.string "Take your badge.$"
+
+happyPierre::
+	.string "You have fine taste! Wow, such talent!\p"
+	.string "You may have what it takes to be a fine\n"
+	.string "trainer one day!\p"
+	.string "In fact, I have a special offer for you.$"
+
+payup::
+	.string "Pay me 50,000 big ones; I give you\n"
+	.string "an easy fight.\p"
+	.string "How about it?$"
+
+gymBattle_pierreText1_NO::
+	.string "Hahah, yes of course...\p"
+	.string "Wait...$"
+
+rumbleText::
+	.string "WWHHAAAATTT!!??$"
+
+gymBattle_pierreText1::
+	.string "Pierre: Welcome. I am Pierre-- the Ensio\n"
+	.string "City Gym Leader.\p"
+	.string "I use Bug-Type Pokémon, and my garden is\n"
+	.string "nicest in town...\p"
+	.string "Err, not that anyone has any doubts--\n"
+	.string "I mean, look how many flowers I have!\p"
+	.string "I am sure a fine trainer such as yourself\n"
+	.string "can appreciate my gym's artful aesthetic."
+
+gymBattle_pierreText2::
+	.string "$"
+
+gymBattleOne_cameraMove1::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 

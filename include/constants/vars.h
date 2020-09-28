@@ -49,7 +49,7 @@
 #define VAR_RECYCLE_GOODS                    0x4020
 #define VAR_REPEL_STEP_COUNT                 0x4021
 #define VAR_ICE_STEP_COUNT                   0x4022
-#define VAR_STARTER_MON                      0x4023 // 0= Shroomish, 1= Houndour, 2= Htaryu
+#define VAR_STARTER_MON                      0x4023 // 0= Shroomish, 1= Houndour, 2= Staryu
 #define VAR_MIRAGE_RND_H                     0x4024
 #define VAR_MIRAGE_RND_L                     0x4025
 #define VAR_SECRET_BASE_MAP                  0x4026
@@ -108,16 +108,16 @@
 #define VAR_MAUVILLE_CITY_STATE              0x4059 //  Weather Info Storage -- 0 is sunny, 1 is rainy, 2 is stormy.
 #define VAR_RUSTBORO_CITY_STATE              0x405A
 #define VAR_FORTREE_CITY_STATE               0x405B // First Military Meeting 
-#define VAR_LILYCOVE_CITY_STATE              0x405C // Unused Var
+#define VAR_LILYCOVE_CITY_STATE              0x405C // No Hotel for you!
 #define VAR_MOSSDEEP_CITY_STATE              0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E
-#define VAR_EVER_GRANDE_CITY_STATE           0x405F // Unused Var
+#define VAR_EVER_GRANDE_CITY_STATE           0x405F // FlowershopScene
 #define VAR_ROUTE101_STATE                   0x4060
-#define VAR_ROUTE102_STATE                   0x4061 // Unused Var
-#define VAR_ROUTE103_STATE                   0x4062 // Unused Var
+#define VAR_ROUTE102_STATE                   0x4061 // First Dodinas meeting
+#define VAR_ROUTE103_STATE                   0x4062 // Stores Wish Choice
 #define VAR_ROUTE104_STATE                   0x4063
-#define VAR_ROUTE105_STATE                   0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                   0x4065 // Unused Var
+#define VAR_ROUTE105_STATE                   0x4064 // First Gym event1
+#define VAR_ROUTE106_STATE                   0x4065 // first gym battle
 #define VAR_ROUTE107_STATE                   0x4066 // Unused Var
 #define VAR_ROUTE108_STATE                   0x4067 // Unused Var
 #define VAR_ROUTE109_STATE                   0x4068 // Unused Var

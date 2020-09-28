@@ -251,7 +251,6 @@
 
 // gTileset_InsideShip
 #define METATILE_InsideShip_DoorIndent_Locked           0x234
-#define METATILE_InsideShip_DoorIndent_Unlocked         0x21A
 #define METATILE_InsideShip_IntactDoor_Bottom_Interior  0x297
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B

@@ -53,14 +53,14 @@
 #define FLAG_UNUSED_0x029    0x29 // hides Arthur before first meeting
 #define FLAG_UNUSED_0x02A    0x2A // arthurSecondTalk
 #define FLAG_UNUSED_0x02B    0x2B // hides people in school once semester starts
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
+#define FLAG_UNUSED_0x02C    0x2C // Makes scott leave the first gym doorway
+#define FLAG_UNUSED_0x02D    0x2D // Keeps the flower shop empty
+#define FLAG_UNUSED_0x02E    0x2E // Hides Dodinas in flowerShop
+#define FLAG_UNUSED_0x02F    0x2F // Hides Dodinas in lavata Town
+#define FLAG_UNUSED_0x030    0x30 // Hides moveTutor
+#define FLAG_UNUSED_0x031    0x31 // Makes so you cant get inifinagardevoirites
+#define FLAG_DISABLE_BAG     0x493 // Disables the use of items
+#define FLAG_UNUSED_0x033    0x33 // hides gym youngster
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
@@ -114,7 +114,7 @@
 #define FLAG_TV_EXPLAINED                    0x62
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
 #define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
+#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 // 
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
