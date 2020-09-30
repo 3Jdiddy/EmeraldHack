@@ -633,6 +633,18 @@ $(MID_SUBDIR)/mus_vs_rekku.s: %.s: %.mid
 $(MID_SUBDIR)/mus_yama_eye.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G097 -V076
 
+$(MID_SUBDIR)/mus_malltheme.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G005 -V100 -P1
+
+$(MID_SUBDIR)/mus_sold.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G005 -V100 -P1
+
+$(MID_SUBDIR)/mus_town1.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G005 -V100 -P1
+
+$(MID_SUBDIR)/mus_town2.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G005 -V100 -P1
+
 $(MID_SUBDIR)/ph_choice_blend.s: %.s: %.mid
 	$(MID) $< $@ -E -G130 -P4
 

@@ -1172,6 +1172,10 @@ SECTIONS {
         sound/songs/midi/mus_rg_t_tower.o(.rodata);
         sound/songs/midi/mus_rg_slowmasara.o(.rodata);
         sound/songs/midi/mus_rg_tvnoize.o(.rodata);
+	    sound/songs/midi/mus_malltheme.o(.rodata);
+	    sound/songs/midi/mus_sold.o(.rodata);
+	    sound/songs/midi/mus_town1.o(.rodata);
+	    sound/songs/midi/mus_town2.o(.rodata);
         sound/songs/midi/ph_trap_blend.o(.rodata);
         sound/songs/midi/ph_trap_held.o(.rodata);
         sound/songs/midi/ph_trap_solo.o(.rodata);

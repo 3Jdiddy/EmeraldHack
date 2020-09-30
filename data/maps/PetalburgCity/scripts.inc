@@ -764,7 +764,7 @@ PetalburgCity_Text_WaterReflection: @ 81DC985
 	.string "Is it a shining grin full of hope…?\p"
 	.string "Or could it be a look of somber\n"
 	.string "silence, struggling with fear…?\p"
-	.string "Your face is reflected in the water\p"
+	.string "Your face is reflected in the water.\p"
 	.string "Do you like what you see?$"
 
 PetalburgCity_Text_FullPartyExplanation: @ 81DCA30
@@ -775,7 +775,7 @@ PetalburgCity_Text_FullPartyExplanation: @ 81DCA30
 	.string "Did you graduate from here recently?$" 
 
 PetalburgCity_Text_GymSign: @ 81DCAAA
-	.string "PETALBURG CITY POKéMON GYM\n"
+	.string "PETALBURG CITY Pokémon GYM\n"
 	.string "LEADER: NORMAN\l"
 	.string "“A man in pursuit of power!”$"
 
@@ -821,11 +821,11 @@ schoolJanitor_text::
 	.string "Hmm...?\p"
 	.string "Oh, hey there, {PLAYER}. Long time\n"
 	.string "no see, buddy.\p"
-	.string "The summer semester is starting up soon,\n"
+	.string "The summer quarter is starting up soon,\n"
 	.string "so I'm cleaning up the place to get it\l"
 	.string "ready.\p"
 	.string "You should come back sometime and visit\n"
-	.string "once the semester begins!$"
+	.string "once the quarter begins!$"
 
 firstEvilTeamMeeting_left::
 	lock
@@ -891,6 +891,7 @@ firstEvilTeamMeeting_left::
 	waitmovement 0
 	removeobject 9
 	setflag FLAG_UNUSED_0x026
+	clearflag FLAG_UNUSED_0x029
 	release
 	end
 
@@ -1331,7 +1332,9 @@ Route105_lass::
 	end
 
 Route105_fisherman::
-	msgbox Route105_fisherman_text, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox Route105_fisherman_text, MSGBOX_DEFAULT
 	end
 
 Route105_swimmer::
@@ -1432,6 +1435,7 @@ EnsioCity_FlowerGirl_text::
 	.string "I sure they would be, hohoho!$"
 
 EnsioCity_WiseLady::
+	lock
 	msgbox EnsioCity_WiseLady_text, MSGBOX_DEFAULT
 	msgbox EnsioCity_WiseLady_text2, MSGBOX_NPC
 	end
@@ -1919,7 +1923,9 @@ flowershop_lupine::
 
 flowershop_lupine_text::
 	.string "Thanks again for your help.\p"
-	.string "I am counting on you!$"
+	.string "I am counting on you!\p"
+	.string "The Pokédex is a valuable tool; I am\n"
+	.string "sure this won't be a one sided deal!$"
 
 flowershop_dodinas_move5::
 	walk_in_place_left
@@ -2000,8 +2006,8 @@ flowershop_professor_move9::
 flowershop_dodinas_text3::
 	.string "{COLOR 15}Dodinas: What?\p"
 	.string "We're we not going to mention that?\p"
-	.string "If you are going to ask him for help\n"
-	.string "The least you could do is fill him in.$"
+	.string "If you are going to ask them for help\n"
+	.string "The least you could do is fill them in.$"
 
 flowershop_professor_text7::
 	.string "Lupine: ...\p"
@@ -2013,7 +2019,7 @@ flowershop_professor_text7::
 	.string "remind me...\p"
 	.string "It's not all bad though!\p"
 	.string "With all my newfound spare time,\n" 
-	.string "I've gotten into garending, hah...$"
+	.string "I've gotten into gardening, hah...$"
 
 flowershop_professor_move8::
 	emote_exclamation_mark
@@ -2185,10 +2191,11 @@ dodinasFirstMeet::
 	end
 
 dodinasFirstMeet2::
+	special HealPlayerParty
 	compare VAR_STARTER_MON, 1
 	goto_if_lt dodinasFirstMeetHoundour
 	goto_if_gt dodinasFirstMeetShroomish
-	trainerbattle_single TRAINER_NONE, intrododinas1, defeatDodinas1, dodinasContinued1
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_GRUNT_WEATHER_INST_2, 13, intrododinas1, defeatDodinas1, dodinasContinued1, NO_MUSIC
 	end
 
 
@@ -2420,7 +2427,7 @@ yamashita::
 	compare VAR_STARTER_MON, 1
 	goto_if_gt yamashita_give_grass
 	goto_if_lt yamashita_give_grass
-	msgbox yamashita_give_grass
+	msgbox yamashita_give_grass, MSGBOX_DEFAULT
 	end
 
 yamashita_after::
@@ -2471,11 +2478,12 @@ yamashita_give_water::
 	
 firstGym::
 	lock
-	msgbox youngsterText1, MSGBOX_DEFAULT
-	closemessage
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, firstGym_cameraMove1
 	waitmovement 0
+	msgbox youngsterText1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 2, youngsterWalk
 	msgbox youngsterText2, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_CAMERA, firstGym_cameraMove2
@@ -2494,6 +2502,10 @@ firstGym::
 	setvar VAR_ROUTE105_STATE, 1
 	release
 	end
+
+youngsterWalk::
+	walk_in_place_up
+	step_end
 
 playerMoveBackGym::
 	walk_right
@@ -2632,6 +2644,7 @@ gymBattleOne::
 	msgbox disrespectPierre, MSGBOX_DEFAULT
 	setflag FLAG_DISABLE_BAG
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_ROXANNE_1, 1, introPierre, defeatPierre, afterPierre, NO_MUSIC
+	clearflag FLAG_DISABLE_BAG
 	release
 	end
 
@@ -2641,7 +2654,6 @@ disrespectPierre::
 	.string "What do you know about ART!?$"
 
 pierreFlyUp_camerafollow::
-	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
@@ -2713,6 +2725,8 @@ gymBattle_pierreText1_YES::
 	special ShakeCamera
 	msgbox rumbleText, MSGBOX_DEFAULT
 	closemessage
+	applymovement 1, pierePrep
+	waitmovement 0
 	applymovement 1, pierreFlyUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_CAMERA, pierreFlyUp_camerafollow
@@ -2720,6 +2734,8 @@ gymBattle_pierreText1_YES::
 	applymovement 1, extraDown
 	waitmovement 0
 	applymovement 1, pierreFlyDown
+	waitmovement 0
+	applymovement 1, malePrivate_move1
 	waitmovement 0
 	msgbox pierreYou, MSGBOX_DEFAULT
 	closemessage
@@ -2729,6 +2745,7 @@ gymBattle_pierreText1_YES::
 	setvar VAR_0x8007, 4   @ shake delay
 	special ShakeCamera
 	msgbox pierreYOU,  MSGBOX_DEFAULT
+	setflag FLAG_DISABLE_BAG
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_ROXANNE_1, 1, introPierre, defeatPierre, afterPierre, NO_MUSIC
 	closemessage
 	release
@@ -2793,9 +2810,11 @@ defeatPierre::
 	.string "...Uhhg$"
 
 afterPierre::
+	clearflag FLAG_DISABLE_BAG
 	msgbox takeFirstBadge, MSGBOX_DEFAULT
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox pierre_getOut, MSGBOX_DEFAULT
+	special RemoveCameraObject
 	release
 	end
 
@@ -2803,7 +2822,7 @@ pierre_getOut::
 	.string "That's the beatle badge.\p"
 	.string "What? That's it. I'm done.\p"
 	.string "If you are serious about the\n"
-	.string "gym challange I would go west\l" 
+	.string "gym challenge, I would go west\l" 
 	.string "to Ururanta City, but you can\l"
 	.string "do whatever-- I don't care.$"
 
@@ -2852,4 +2871,79 @@ gymBattleOne_cameraMove1::
 	walk_up
 	walk_up
 	step_end
+
+AsierForestSign_resthouse::
+	msgbox AsierForestSign_resthouse_text, MSGBOX_SIGN
+	end
+
+AsierForestSign_resthouse_text::
+	.string "Feeling tired? Come in a have a rest!$"
+
+EnsioCity_Mother::
+	msgbox EnsioCity_Mother_text, MSGBOX_NPC
+	release
+	end
+
+EnsioCity_Mother_text::
+	.string "The river is so clean!\p"
+	.string "We are lucky that we have a nice place\n"
+	.string "to swim in the summer.\p"
+	.string "So close to the city too!$"
+
+Berryboy::
+	msgbox Berryboy_text, MSGBOX_NPC
+	end
+
+Berryboy_text::
+	.string "A lot of trainers overlook the\n"
+	.string "importance of berries.\p"
+	.string "All good trainers use berries to their\n"
+	.string "fullest potential!$"
+
+fatpokecentermaninlavata::
+	msgbox fatpokecentermaninlavata_text, MSGBOX_NPC
+	end
+
+fatpokecentermaninlavata_text::
+	.string "Hmmm...\p"
+	.string "I wonder what I should wish for\n"
+	.string "this year?\p"
+	.string "Well, its not like it would ever\n"
+	.string "come true.$"
+
+apartmentSign::
+	msgbox apartmentSign_text, MSGBOX_SIGN
+	end
+
+apartmentSign_text::
+	.string "Ensio City Housing.$" 
+
+bikeShop::
+	msgbox bikeShop_text, MSGBOX_SIGN
+	end
+
+bikeShop_text::
+	.string "Marko's Bike Shop$"
+
+colorTest::
+	.string "{COLOR 0} color 0\p"
+	.string "{COLOR 1} color 1\p"
+	.string "{COLOR 2} color 2\p"
+	.string "{COLOR 3} color 3\p"
+	.string "{COLOR 4} color 4\p"
+	.string "{COLOR 5} color 5\p"
+	.string "{COLOR 6} color 6\p"
+	.string "{COLOR 7} color 7\p"
+	.string "{COLOR 8} color 8\p"
+	.string "{COLOR 9} color 9\p"
+	.string "{COLOR 10} color 10\p"
+	.string "{COLOR 11} color 11\p"
+	.string "{COLOR 12} color 12\p"
+	.string "{COLOR 13} color 13$"
+
+
+
+
+
+
 

@@ -522,7 +522,8 @@ lucyFirstBattle_continuedText:
 	.string "(Sigh)\p"
 	.string "Well, I think I'll go heal up.\p"
 	.string "Be careful as you go deeper in the\n"
-	.string "forest. There's trainers and wild Pokémon\l"
+	.string "forest.\p"
+	.string "There's trainers and wild Pokémon\n"
 	.string "all over the place!\p"
 	.string "Welp! See you 'round, {PLAYER}!$"
 

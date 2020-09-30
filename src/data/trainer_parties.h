@@ -80,26 +80,26 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Joe3J[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Lexia3J[] = {
     {
     .iv = 0,
-    .lvl = 8,
+    .lvl = 6,
     .species = SPECIES_PICHU,
     },
     {
     .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_PICHU,
+    .lvl = 6,
+    .species = SPECIES_METAPOD,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Kent3J[] = {
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_PIDGEY,
+    .lvl = 7,
+    .species = SPECIES_BULBASAUR,
     },
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_SLAKOTH,
+    .lvl = 6,
+    .species = SPECIES_CHATOT,
     }
 };
 
@@ -145,7 +145,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Steven3J[] = {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_CASCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_KAKUNA,
     }
+
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Jonathan3J[] = {
@@ -153,6 +159,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jonathan3J[] = {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_PIDGEY,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_RATTATA,
     }
 };
 
@@ -216,12 +227,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tommy3J[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_dodinas_staryu1[] = {
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 10,
     .species = SPECIES_EEVEE,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 7,
     .species = SPECIES_STARYU,
     }
 };
@@ -3505,7 +3516,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     },
     {
     .iv = 100,
-    .lvl = 11,
+    .lvl = 10,
     .species = SPECIES_DWEBBLE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PROTECT, MOVE_BLOCK, MOVE_SMACK_DOWN, MOVE_WITHDRAW}
@@ -3533,10 +3544,10 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     },
     {
     .iv = 200,
-    .lvl = 15,
+    .lvl = 13,
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_U_TURN, MOVE_AIR_CUTTER, MOVE_VENOSHOCK, MOVE_TOXIC_SPIKES}
+    .moves = {MOVE_FELL_STINGER, MOVE_AIR_CUTTER, MOVE_VENOSHOCK, MOVE_TOXIC_SPIKES}
     }
 };
 

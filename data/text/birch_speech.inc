@@ -1,12 +1,10 @@
 gText_Birch_Welcome:: @ 82C897B
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the Yorunashi Region!\p"
-	.string "My name is Dr. Akileija.\p"
-	.string "Hahah, don't worry, you can just call me\n"
-	.string "Professor A.\p"
-	.string "Not to brag, but some say that I'm among\n"
-	.string "the most prolific Pokémon researchers\l"
-	.string "in Yorunashi!\p"
+	.string "My name is Professor Lupine.\p"
+	.string "Not to brag, but some say that I was\n"
+	.string "once among the most prolific Pokémon\l"
+	.string "researchers in the nation!\p"
 	.string "$"
 
 gText_Birch_Pokemon:: @ 82C89FB
@@ -27,42 +25,44 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "know everything about Pokémon.\p"
 	.string "In fact, there are many, many\n"
 	.string "secrets surrounding Pokémon.\p"
-	.string "To unravel Pokémon mysteries,\n"
-	.string "I, and many others, have been\l"
-	.string "undertaking research on Pokémon.\p"
-	.string "That's what I do.\p"
+	.string "Maybe they will never be solved,\n"
+	.string "and maybe some were never meant\l"
+	.string "to be solved!\p"
+	.string "Either way, many trainers seek out\n"
+	.string "the truth behind these mysteries--\l"
+	.string "whether in search of fame, fortune,\l"
+	.string "power, or adventure.\p"
+	.string "Will you be one of them?\p"
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "And you are...$"
+	.string "Incidentally, who are you?$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
-	.string "{COLOR 40}Are you a boy or a girl?$"
+	.string "Who are you?$"
 
 gText_Birch_WhatsYourName:: @ 82C8BFF
-	.string "{COLOR 40}Enter your name.$"
+	.string "What's your name?$"
 
 gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "{COLOR 40}Is {PLAYER}{KUN} correct?$"
+	.string "Is {PLAYER}{KUN} correct?$"
 
 gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "{PLAYER}{KUN}!\p"
+	.string "I know that name!\p"
 	.string "You know, I've heard you're moving out\n"
-	.string "soon. Isn't that right?\p"
-	.string "Hmm. It's a big change, but I am sure\n"
+	.string "this summer. Isn't that right?\p"
+	.string "Hmmm...\p"
+	.string "It's a big change, but I am sure\n"
 	.string "you can handle it!\p"
+	.string "Hopefully you can find a new place to\n"
+	.string "stay before the Star Festival!\p"
 	.string "$"
 
 gText_Birch_AreYouReady:: @ 82C8C7A
 	.string "Alrighty then-- you ready?\p"
-	.string "Your very own adventure is about\n"
-	.string "to unfold.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of Pokémon where dreams,\l"
-	.string "adventure, and friendships await!\p"
 	.string "Oh, one more thing!\p"
-	.string "I have a lab in Ensio City, north of\n"
-	.string "the Forest.\p"
-	.string "You should stop by, I have something I\n"
-	.string "want to ask of you.\p"
+	.string "If you ever find yourself in Ensio City,\n"
+	.string "you should swing by my shop.\p"
+	.string "I have something I want to ask of you.\p"
 	.string "$"

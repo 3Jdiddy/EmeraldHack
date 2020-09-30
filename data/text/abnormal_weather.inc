@@ -130,11 +130,11 @@ trainerBuster::
 
 introBuster::
 	.string "Heh, I heard that bug Pokémon are the\n"
-	.string "strongest of all.\p"
+	.string "strongest of them all.\p"
 	.string "You won't stand a chance!$"
 
 defeatBuster::
-	.string "What? How did I lose...$"
+	.string "What!? How did I lose...?$"
 
 busterAfter::
 	.string "The Gym Leader in Ensio City, Pierre,\n"
@@ -173,8 +173,8 @@ trainerKent::
 	end
 
 introKent::
-	.string "Me and Marg just rented a bunch of cool\n"
-	.string "and strong Pokémon from the school.\p"
+	.string "Marg and I rented a bunch of cool and\n"
+	.string "strong Pokémon from the school.\p"
 	.string "They're so rare, it almost feels like\n"
 	.string "cheating!$"
 
@@ -201,9 +201,9 @@ defeatMarg::
 	.string "You're really good...$"
 
 margAfter::
-	.string "You should stop by the Trainers school.\p"
-	.string "You're good, but some extra studying can\n"
-	.string "always help!$"
+	.string "I would say you should visit the school\n"
+	.string "too, but it's closed until the summer\l"
+	.string "quarter begins!$"
 
 trainerJoe::
 	trainerbattle_single TRAINER_GRUNT_PETALBURG_WOODS, introJoe, defeatJoe

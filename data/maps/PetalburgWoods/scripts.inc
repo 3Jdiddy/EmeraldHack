@@ -445,9 +445,9 @@ PetalburgWoods_Text_HiddenItemsExplanation: @ 822EA8B
 
 PetalburgWoods_Text_TryUsingThisItem: @ 822EAFE
 	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
-	.string "You should try using this item.$"
+	.string "Are you a trainer?\p"
+	.string "You should try using this item.\n"
+	.string "It wouldn't be of much use to me!$"
 
 PetalburgWoods_Text_MiracleSeedExplanation: @ 822EB63
 	.string "It's a MIRACLE SEED.\n"
