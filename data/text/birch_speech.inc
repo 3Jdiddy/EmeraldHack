@@ -39,13 +39,13 @@ gText_Birch_AndYouAre:: @ 82C8BD0
 	.string "Incidentally, who are you?$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
-	.string "Who are you?$"
+	.string "{COLOR 40}Who are you?$"
 
 gText_Birch_WhatsYourName:: @ 82C8BFF
-	.string "What's your name?$"
+	.string "{COLOR 40}What is your name?$"
 
 gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "Is {PLAYER}{KUN} correct?$"
+	.string "{COLOR 40}Is {PLAYER}{KUN} correct?$"
 
 gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "{PLAYER}{KUN}!\p"

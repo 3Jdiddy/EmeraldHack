@@ -1686,6 +1686,11 @@ static const u8 sText_Opposing1[] = _("The opposing");
 static const u8 sText_Your2[] = _("your");
 static const u8 sText_Opposing2[] = _("the opposing");
 static const u8 sText_dodinasFirstBattleLowHp[] = _("This doesn't look good, now does it?\p");
+static const u8 sText_pierreFirstBattleOneDown[] = _("Hmph.\pI am going to teach you some respect!\p");
+static const u8 sText_pierreFirstBattleOneLeft[] = _("I-It's not too late to accept my deal!\p");
+static const u8 sText_pierreFirstBattleLowHp[] = _("No no no no no no no!");
+
+
 
 // This is four lists of moves which use a different attack string in Japanese
 // to the default. See the documentation for ChooseTypeOfMoveUsedString for more detail.
@@ -3568,7 +3573,10 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
+    {TRAINER_GRUNT_WEATHER_INST_1, 0, sText_dodinasFirstBattleLowHp, 0},
+    {TRAINER_GRUNT_WEATHER_INST_2, 0, sText_dodinasFirstBattleLowHp, 0},
     {TRAINER_GRUNT_WEATHER_INST_3, 0, sText_dodinasFirstBattleLowHp, 0},
+    {TRAINER_ROXANNE_1, sText_pierreFirstBattleOneLeft, sText_pierreFirstBattleLowHp, sText_pierreFirstBattleOneDown},
 };
 
 static u32 GetEnemyMonCount(bool32 onlyAlive)

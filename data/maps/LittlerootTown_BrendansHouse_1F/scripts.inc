@@ -428,15 +428,8 @@ PlayersHouse_1F_Text_IsThatABreakingStory: @ 81F824B
 	.string "MOM: Is that a breaking news story?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash: @ 81F826F
-	.string "We bring you this emergency\n"
-	.string "news flash!\p"
-	.string "In various HOENN locales, there have\n"
-	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
-	.string "currently unknown.\p"
-	.string "We now return you to the regular\n"
-	.string "movie program.$"
+	.string "It's the news.\p"
+	.string "Everyone looks so happy!$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay: @ 81F8351
 	.string "MOM: {PLAYER}, did you catch that?\p"

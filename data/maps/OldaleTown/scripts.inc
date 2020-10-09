@@ -517,19 +517,19 @@ lucyFirstBattle_continuedLeave:
 	step_end
 
 lucyFirstBattle_continuedText:
-	.string "{COLOR 04}Lucy: I suppose I should have trained up\n"
+	.string "{COLOR 06}Lucy: I suppose I should have trained up\n"
 	.string "before storming into battle like that.\p"
 	.string "(Sigh)\p"
 	.string "Well, I think I'll go heal up.\p"
 	.string "Be careful as you go deeper in the\n"
 	.string "forest.\p"
-	.string "There's trainers and wild Pokémon\n"
+	.string "There are trainers and wild Pokémon\n"
 	.string "all over the place!\p"
 	.string "Welp! See you 'round, {PLAYER}!$"
 
 
 introLucy:
-	.string "{COLOR 04}Lucy: There you are, {PLAYER}!\p"
+	.string "{COLOR 06}Lucy: There you are, {PLAYER}!\p"
 	.string "So, I've been thinking...\p"
 	.string "Now that we're both trainers and all,\n"
 	.string "we should have a Pokémon battle!$"

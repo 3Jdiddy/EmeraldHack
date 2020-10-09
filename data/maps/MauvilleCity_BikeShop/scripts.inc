@@ -185,23 +185,23 @@ MauvilleCity_BikeShop_EventScript_ExitAcroHandbook:: @ 820EE20
 MauvilleCity_BikeShop_Text_RydelGreeting: @ 820EE22
 	.string "Well, well, what have we here?\n"
 	.string "A most energetic customer!\p"
-	.string "Me? You may call me RYDEL.\n"
+	.string "Me? You may call me Marko.\n"
 	.string "I'm the owner of this cycle shop.$"
 
 MauvilleCity_BikeShop_Text_DidYouComeFromFarAway: @ 820EE99
-	.string "RYDEL: Your RUNNING SHOES…\n"
+	.string "Your RUNNING SHOES…\n"
 	.string "They're awfully filthy.\p"
 	.string "Did you come from far away?$"
 
 MauvilleCity_BikeShop_Text_GuessYouDontNeedBike: @ 820EEE8
-	.string "RYDEL: Is that right?\p"
+	.string "Is that right?\p"
 	.string "Then, I guess you have no need for\n"
 	.string "any of my BIKES.$"
 
 MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne: @ 820EF32
-	.string "RYDEL: Hm, hm… … … … …\p"
+	.string "Hm, hm… … … … …\p"
 	.string "You're saying that you came all this\n"
-	.string "way from LITTLEROOT?\p"
+	.string "way from Asier Forest?\p"
 	.string "My goodness!\n"
 	.string "That's ridiculously far!\p"
 	.string "If you had one of my BIKES, you could\n"
@@ -229,15 +229,15 @@ MauvilleCity_BikeShop_Text_ChoseAcroBike: @ 820F1A5
 	.string "{PLAYER} chose the ACRO BIKE.$"
 
 MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes: @ 820F1BD
-	.string "RYDEL: If you get the urge to switch\n"
+	.string "If you get the urge to switch\n"
 	.string "BIKES, just come see me!$"
 
 MauvilleCity_BikeShop_Text_WantToSwitchBikes: @ 820F1FB
-	.string "RYDEL: Oh? Were you thinking about\n"
+	.string "Oh? Were you thinking about\n"
 	.string "switching BIKES?$"
 
 MauvilleCity_BikeShop_Text_IllSwitchBikes: @ 820F22F
-	.string "RYDEL: Okay, no problem!\n"
+	.string "Okay, no problem!\n"
 	.string "I'll switch BIKES for you!$"
 
 MauvilleCity_BikeShop_Text_ExchangedMachForAcro: @ 820F263
@@ -249,7 +249,7 @@ MauvilleCity_BikeShop_Text_ExchangedAcroForMach: @ 820F294
 	.string "for a MACH BIKE.$"
 
 MauvilleCity_BikeShop_Text_HappyYouLikeIt: @ 820F2C4
-	.string "RYDEL: Good, good!\n"
+	.string "Good, good!\n"
 	.string "I'm happy that you like it!$"
 
 MauvilleCity_BikeShop_Text_OhYourBikeIsInPC: @ 820F2F3

@@ -829,6 +829,7 @@ schoolJanitor_text::
 
 firstEvilTeamMeeting_left::
 	lock
+	playbgm MUS_AJITO 0
 	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove1_left
 	applymovement 11, privateGirlMove1
 	waitmovement 0
@@ -866,6 +867,7 @@ firstEvilTeamMeeting_left::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, playerFaceUpWHyNot
 	waitmovement 0
+	fadedefaultbgm 
 	msgbox kalle_text1, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_FORTREE_CITY_STATE, 1
@@ -897,6 +899,7 @@ firstEvilTeamMeeting_left::
 
 firstEvilTeamMeeting_right::
 	lock
+	playbgm MUS_AJITO 0
 	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove1
 	applymovement 11, privateGirlMove1
 	waitmovement 0
@@ -915,9 +918,12 @@ firstEvilTeamMeeting_right::
 	closemessage
 	applymovement 12, girlbossMove2
 	msgbox girlboss_text2, MSGBOX_DEFAULT
+	applymovement 9, MOVEwalk_up
 	msgbox nerdGuy_text3, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove2
+	waitmovement 0
+	applymovement 12, MOVEwalk_down
 	waitmovement 0
 	msgbox girlboss_text3, MSGBOX_DEFAULT
 	applymovement 10, malePrivate_moveStep
@@ -934,6 +940,7 @@ firstEvilTeamMeeting_right::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, playerFaceUpWHyNot
 	waitmovement 0
+	fadedefaultbgm
 	msgbox kalle_text1, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_FORTREE_CITY_STATE, 1
@@ -962,6 +969,14 @@ firstEvilTeamMeeting_right::
 	clearflag FLAG_UNUSED_0x029
 	release
 	end
+
+MOVEwalk_down::
+	walk_in_place_down
+	step_end
+
+MOVEwalk_up::
+	walk_in_place_up
+	step_end
 
 teamMeeting_playerFaceSide::
 	walk_in_place_left
@@ -1087,12 +1102,12 @@ nerdGuy_text3::
 
 girlboss_text2::
 	.string "{COLOR 04}Arthur, you again?\p"
-	.string "This is military buisiness, and any\n"
-	.string "interference will be seen as treason.\p"
-	.string "If I were you, I would scurry off to\n"
-	.string "that hole you call an academy and go\l"
-	.string "back to your trivial and shallow\l"
-	.string "research.\p"
+	.string "This is military buisiness.\p"
+	.string "Any interference will be seen as\n"
+	.string "treason.\p"
+	.string "If I were you, I would run off to that\n"
+	.string "hole you call an academy and go back\l"
+	.string "to your trivial and shallow research.\p"
 	.string "Unless, of course, you intend on\n"
 	.string "stopping me yourself?$"
 
@@ -1205,8 +1220,8 @@ arthurExplainPartial::
 	.string "Alexander has been tearing strong\n"
 	.string "trainers away from their families,\l"
 	.string "imposing harsh tariffs on international\l"
-	.string "goods, and otherwise doing\l"
-	.string "whatever he can to accrue power.\p"
+	.string "goods, and otherwise doing whatever\l"
+	.string "he can to accrue power.\p"
 	.string "But, why?\p"
 	.string "There is still much we don't know,\n"
 	.string "and I would advice you to stay far\l"
@@ -1228,8 +1243,8 @@ arthurAfterExplain::
 
 arthurAfterExplainText::
 	.string "{COLOR 40}Soon, I'll head to Uraranta City to\n"
-	.string "discuss this with-- well,\l"
-	.string "'the higher ups'.\p"
+	.string "discuss this with, well--\l"
+	.string "'The higher ups'.\p"
 	.string "I suggest you keep your head down.$"
 
 emptySchoolKid::
@@ -1332,9 +1347,7 @@ Route105_lass::
 	end
 
 Route105_fisherman::
-	lock
-	faceplayer
-	msgbox Route105_fisherman_text, MSGBOX_DEFAULT
+	msgbox Route105_fisherman_text, MSGBOX_NPC
 	end
 
 Route105_swimmer::
@@ -1449,8 +1462,7 @@ EnsioCity_WiseLady_text2::
 	.string "Oh dearie, don't mind me.\p"
 	.string "I am just thinking about the past.$"
 
-EnsioCity_Scott::
-	setflag FLAG_UNUSED_0x02E  
+EnsioCity_Scott:: 
 	setflag FLAG_UNUSED_0x02D
 	msgbox EnsioCity_Scott_text, MSGBOX_NPC
 	end
@@ -1932,7 +1944,7 @@ flowershop_dodinas_move5::
 	step_end
 
 flowershop_dodinas_text5::
-	.string "{COLOR 15}Dodinas: Well, {PLAYER}.\p"
+	.string "{COLOR 15}Tiras: Well, {PLAYER}.\p"
 	.string "Do your best out there.$"
 
 flowershop_professor_textA::
@@ -1959,7 +1971,7 @@ flowershop_professor_text9::
 	.string "It's my life's work! It's--$"
 
 flowershop_dodinas_text4::
-	.string "{COLOR 15}Dodinas: Professor.\p"
+	.string "{COLOR 15}Tiras: Professor.\p"
 	.string "We'll do it.$"
 	
 flowershop_professor_moveC::
@@ -1969,7 +1981,7 @@ flowershop_professor_moveC::
 	step_end
 
 system_DexReceived_dodinas::
-	.string "Dodinas received the Pokédex.$"
+	.string "Tiras received the Pokédex.$"
 
 system_DexReceived::
 	.string "{PLAYER} received the Pokédex.$"
@@ -2004,7 +2016,7 @@ flowershop_professor_move9::
 
 
 flowershop_dodinas_text3::
-	.string "{COLOR 15}Dodinas: What?\p"
+	.string "{COLOR 15}Tiras: What?\p"
 	.string "We're we not going to mention that?\p"
 	.string "If you are going to ask them for help\n"
 	.string "The least you could do is fill them in.$"
@@ -2031,7 +2043,7 @@ flowershop_dodinas_move3::
 	step_end
 
 flowershop_dodinas_text2::
-	.string "{COLOR 15}Dodinas: We're being blackmailed by\n"
+	.string "{COLOR 15}Tiras: We're being blackmailed by\n"
 	.string "the military.$"
 
 flowershop_dodinas_move2::
@@ -2052,13 +2064,13 @@ flowershop_professor_text5::
 	.string "Perfect, then I'll get right to it.$"
 
 flowershop_professor_text6::
-	.string "Lupine: Dodinas is my assistant.\n"
+	.string "Lupine: Tiras is my assistant.\n"
 	.string "However, I have had to discontinue\l"
 	.string "the majority of my research due to...\p"
 	.string "Well...$"
 
 flowershop_dodinas_text1::
-	.string "{COLOR 15}Dodinas: It's nice to see you again,\n"
+	.string "{COLOR 15}Tiras: It's nice to see you again,\n"
 	.string "{PLAYER}.$"
 
 surprisedToSee::
@@ -2087,7 +2099,7 @@ flowershop_professor_move4::
 
 
 flowershop_professor_text4::
-	.string "Dodinas! {PLAYER} is here!\p"
+	.string "Tiras! {PLAYER} is here!\p"
 	.string "The one I told you about earlier!$"
 
 playerGetOnProfLevel_1::
@@ -2351,6 +2363,7 @@ wishAnswer_power::
 	goto dodinasFirstMeet2
 
 wishAnswer_money::
+	setvar VAR_ROUTE103_STATE, 0
 	msgbox wishAnswer_money_text, MSGBOX_DEFAULT
 	goto dodinasFirstMeet2
 
@@ -2427,7 +2440,10 @@ yamashita::
 	compare VAR_STARTER_MON, 1
 	goto_if_gt yamashita_give_grass
 	goto_if_lt yamashita_give_grass
-	msgbox yamashita_give_grass, MSGBOX_DEFAULT
+	msgbox yamashita_text2, MSGBOX_DEFAULT
+	giveitem ITEM_TM20_SAFEGUARD, 1
+	setflag FLAG_UNUSED_0x031
+	release
 	end
 
 yamashita_after::
@@ -2456,7 +2472,7 @@ yamashita_text2::
 	.string "This should be good for you!$"
 
 yamashita_give_grass::
-	msgbox yamashita_text2
+	msgbox yamashita_text2, MSGBOX_DEFAULT
 	giveitem ITEM_TM20_SAFEGUARD, 1
 	setflag FLAG_UNUSED_0x031
 	release
@@ -2519,7 +2535,7 @@ pierreGym::
 	end
 
 pierreGym_afterBattle::
-	msgbox pierreGym_afterBattle_text
+	msgbox pierreGym_afterBattle_text, MSGBOX_NPC
 	release
 	end
 
@@ -2809,10 +2825,19 @@ defeatPierre::
 	.string "I hate you! I--\p"
 	.string "...Uhhg$"
 
+nothingImportant::
+	msgbox nothingImportant_text, MSGBOX_SIGN
+	end
+
+nothingImportant_text::
+	.string "Nothing important.$"
+
 afterPierre::
 	clearflag FLAG_DISABLE_BAG
+	setvar VAR_ROUTE106_STATE, 1
 	msgbox takeFirstBadge, MSGBOX_DEFAULT
 	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_BADGE02_GET
 	msgbox pierre_getOut, MSGBOX_DEFAULT
 	special RemoveCameraObject
 	release
@@ -2926,24 +2951,201 @@ bikeShop_text::
 	.string "Marko's Bike Shop$"
 
 colorTest::
-	.string "{COLOR 0} color 0\p"
-	.string "{COLOR 1} color 1\p"
-	.string "{COLOR 2} color 2\p"
-	.string "{COLOR 3} color 3\p"
-	.string "{COLOR 4} color 4\p"
-	.string "{COLOR 5} color 5\p"
-	.string "{COLOR 6} color 6\p"
-	.string "{COLOR 7} color 7\p"
-	.string "{COLOR 8} color 8\p"
-	.string "{COLOR 9} color 9\p"
-	.string "{COLOR 10} color 10\p"
-	.string "{COLOR 11} color 11\p"
-	.string "{COLOR 12} color 12\p"
-	.string "{COLOR 13} color 13$"
+	.string "{COLOR 0} color 0$"
 
+alisonTrainerBattle::
+	trainerbattle_single TRAINER_ED, Alison3J_intro, Alison3J_defeat
+	msgbox alisonAfter, MSGBOX_NPC
+	release
+	end
 
+alisonAfter::
+	.string "Maybe I would be a better trainer\n"
+	.string "if I walked in a line too...?$"
 
+Alison3J_defeat::
+	.string "Trainers can saunter too you know!$"
 
+Alison3J_intro::
+	.string "Huh?\p"
+	.string "Did you think I wasn't a trainer just\n"
+	.string "because I wasn't walking in a linear\l"
+	.string "pattern?\p"
+	.string "That's... really weird!$"
 
+signForCollin::
+	msgbox thereYouGoCollin, MSGBOX_SIGN
+	setvar VAR_ROUTE106_STATE, 0
+	release
+	end
 
+thereYouGoCollin::
+	.string "You can now fight the gym again!$"
 
+WestEnsio_Richard3J::
+	trainerbattle_single TRAINER_GRUNT_MUSEUM_2, WestEnsio_Richard3J_intro, WestEnsio_Richard3J_defeat
+	msgbox WestEnsio_Richard3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Richard3J_defeat::
+	.string "LOSE! TRAIN! FIGHT AGAIN!$"
+
+WestEnsio_Richard3J_intro::
+	.string "TRAIN!\p"
+	.string "FIGHT!\p"
+	.string "WIN!$"
+
+WestEnsio_Richard3J_text::
+	.string "FIGHT ON! FIGHT ON! FIGHT ON!$"
+
+WestEnsio_Clarence3J::
+	trainerbattle_single TRAINER_GRUNT_SPACE_CENTER_1, WestEnsio_Clarence3J_intro, WestEnsio_Clarence3J_defeat
+	msgbox WestEnsio_Clarence3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Clarence3J_defeat::
+	.string "Sploosh...$"
+
+WestEnsio_Clarence3J_intro::
+	.string "Splash splash splash...\p"
+    .string "Why is the ocean blue?\p"
+    .string "Splash splash splash...$"
+
+WestEnsio_Clarence3J_text::
+	.string "I don't need this floaty; I am a\n"
+    .string "good swimmer!\p"
+    .string "I just like it because it's soft.$"
+
+WestEnsio_Gilly3J::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_1, WestEnsio_Gilly3J_intro, WestEnsio_Gilly3J_defeat
+	msgbox WestEnsio_Gilly3J_text, MSGBOX_NPC
+	end 
+
+WestEnsio_Gilly3J_defeat::
+	.string "Maybe I'm washed up...$"
+
+WestEnsio_Gilly3J_intro::
+	.string "Hey there!\p"
+    .string "You're a trainer, right? How 'bout\n"
+    .string "a quick battle?$"
+
+WestEnsio_Gilly3J_text::
+	.string "Hoh-- kids these days are tough.\p"
+    .string "There was a girl about your age who\n"
+    .string "passed by not long ago!\p"
+    .string "She whooped me too, hohoh!$"
+
+WestEnsio_Michelle3J::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_2, WestEnsio_Michelle3J_intro, WestEnsio_Michelle3J_defeat
+	msgbox WestEnsio_Michelle3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Michelle3J_defeat::
+	.string "I followed him! You should too!$"
+
+WestEnsio_Michelle3J_intro::
+	.string "Hey hey hey!\p"
+    .string "Do you know Lucretius? He can make\n"
+    .string "you happy!$"
+
+WestEnsio_Michelle3J_text::
+	.string "You'll never know happiness unless you\n"
+    .string "follow Lucretius!$"
+
+WestEnsio_Bob3J::
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_3, WestEnsio_Bob3J_intro, WestEnsio_Bob3J_defeat
+	msgbox WestEnsio_Bob3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Bob3J_text::
+	.string "Kids have been acting weird nowadays.\p"
+    .string "Maybe the city environment just isn't\n"
+	.string "good for a developing brain...$"
+
+WestEnsio_Bob3J_intro::
+	.string "Lucretius this; Lucretius that.\p"
+    .string "You aren't another one of his fans,\n"
+    .string "are you?$"
+
+WestEnsio_Bob3J_defeat::
+	.string "Well, you seem to be in your right\n"
+    .string "mind at least!$"
+
+WestEnsio_Steven3J::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_5, WestEnsio_Steven3J_intro, WestEnsio_Steven3J_defeat
+	msgbox WestEnsio_Steven3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Steven3J_text::
+	.string "You are tough, but I would leave still\n"
+    .string "leave that guy alone!$"
+
+WestEnsio_Steven3J_intro::
+	.string "You know that house over there?\p"
+    .string "A really-- err, intense guy lives there.$"
+
+WestEnsio_Steven3J_defeat::
+	.string "Speaking of intense-- woah!$"
+
+WestEnsio_Sarah3J::
+	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_4, WestEnsio_Sarah3J_intro, WestEnsio_Sarah3J_defeat
+	msgbox WestEnsio_Sarah3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Sarah3J_text::
+	.string "I prefer this beach over the one in\n"
+    .string "Ururanta City!\p"
+    .string "It's not as crowded, so you can relax\n"
+    .string "without worrying about other people.$"
+
+WestEnsio_Sarah3J_intro::
+	.string "Have you found anything cool on\n"
+    .string "the beach yet?$"
+
+WestEnsio_Sarah3J_defeat::
+	.string "Hmph.\p"
+    .string "I haven't found a thing!$"
+
+WestEnsio_Tom3J::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_6, WestEnsio_Tom3J_intro, WestEnsio_Tom3J_defeat
+	msgbox WestEnsio_Tom3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Tom3J_intro::
+	.string "Tom: I see many things when I see you.\p"
+    .string "Is this... love?$"
+
+WestEnsio_Tom3J_text::
+	.string "It was an honor to face you\p"
+    .string "It is clear to me: You are destined\n"
+    .string "to do great things$"
+
+WestEnsio_Tom3J_defeat::
+	.string "Tom: A defeat sweeter than this can\n"
+    .string "not exist in this cruel world.$"
+
+WestEnsio_Nathan3J::
+	trainerbattle_single TRAINER_FREDRICK, WestEnsio_Nathan3J_intro, WestEnsio_Nathan3J_defeat
+	msgbox WestEnsio_Nathan3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_Nathan3J_intro::
+	.string "Nathan: You have an interesting\n"
+    .string "aura indeed.\p"
+    .string "How about a battle?$"
+
+WestEnsio_Nathan3J_defeat::
+	.string "Nathan: I...\p"
+    .string "I didn't see that coming.$"
+
+WestEnsio_Nathan3J_text::
+	.string "It will be interesting to see how you\n"
+    .string "deal with the... characters in town.$"
+
+WestEnsio_youngster3J::
+	msgbox WestEnsio_youngster3J_text, MSGBOX_NPC
+	end
+
+WestEnsio_youngster3J_text::
+	.string "I am looking for heart shaped rocks!\p"
+    .string "Heheh-- the ladies love 'em!$"
