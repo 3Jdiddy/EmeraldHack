@@ -3149,3 +3149,173 @@ WestEnsio_youngster3J::
 WestEnsio_youngster3J_text::
 	.string "I am looking for heart shaped rocks!\p"
     .string "Heheh-- the ladies love 'em!$"
+
+Ururanta_beauty1::
+	msgbox Ururanta_beauty1_text, MSGBOX_NPC
+	end
+
+Ururanta_beauty1_text::
+	.string "Hohohoh!\p"
+	.string "The housing in Ururanta is simply\n"
+	.string "lavish!\p"
+	.string "I can't imagine living anywhere else!$"
+
+Ururanta_fatman1::
+	msgbox Ururanta_fatman1_text, MSGBOX_NPC
+	end
+
+Ururanta_fatman1_text::
+	.string "Wow. People here are really odd!\p"
+	.string "Like, I m just visiting my grandpa,\n"
+	.string "but like, everyone has so much money.\p"
+	.string "It's all they ever talk about...$"
+
+Busy::
+	lock
+	msgbox Busy_text, MSGBOX_DEFAULT
+	release
+	end
+
+Busy_text::
+	.string "They look busy...$"
+
+Ururanta_reporterM1::
+	msgbox Ururanta_reporterM1_text, MSGBOX_NPC
+	end
+
+Ururanta_reporterM1_text::
+	.string "This just in: Lucretius is totally\n"
+	.string "the best!$"
+
+Ururanta_boy1::
+	msgbox Ururanta_boy1_text, MSGBOX_NPC
+	end
+
+Ururanta_boy1_text::
+	.string "The super market is great and all, but\n"
+	.string "doesn't it seem a little sketchy to you?\p"
+	.string "Maybe I am overthinking things.$"
+
+Ururanta_richboy1::
+	msgbox Ururanta_richboy1_text, MSGBOX_NPC
+	setflag FLAG_UNUSED_0x034
+	end
+
+Ururanta_richboy1_text::
+	.string "Wow-- you're clothes are really dirty.\p"
+	.string "Why don't you ask your mom for some\n"
+	.string "new ones?$"
+
+Ururanta_girl1::
+	msgbox Ururanta_girl1_text, MSGBOX_NPC
+	end
+
+Ururanta_girl1_text::
+	.string "The ship yard in there is super cool,\n"
+	.string "but the workers get mad when strangers\l"
+	.string "waltz on in.\p"
+	.string "But hey-- don't let me stop you!$"
+
+Ururanta_reporterF1::
+	msgbox Ururanta_reporterF1_text, MSGBOX_NPC
+	end
+
+Ururanta_reporterF1_text::
+	.string "Hmm?\p"
+	.string "Sorry sorry sorry!\p"
+	.string "The contest hall is closed-- for good!\p"
+	.string "Something bigger and better is on the\n"
+	.string "way.\p"
+	.string "You won't miss this old thing!$"
+
+Ururanta_gamblinGuy::
+	msgbox Ururanta_gamblinGuy_text, MSGBOX_NPC
+	end
+
+Ururanta_gamblinGuy_text::
+	.string "Man... I blew all my cash again.\p"
+	.string "Ooooo, what am I gonna tell my wife!?$"
+
+Ururanta_artsyGuy1::
+	msgbox Ururanta_artsyGuy1_text, MSGBOX_NPC
+	end
+
+Ururanta_artsyGuy1_text::
+	.string "The artist who made most of the\n"
+	.string "paintings in the museum is also an\l"
+	.string "impressive trainer, so I've heard.\p"
+	.string "Haven't seem them in a while though.$" 
+
+ururanta_lucy_scene::
+	lock
+	applymovement 14, ururanta_lucyMove1
+	waitmovement 0
+	msgbox ururanta_lucyText1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, ururanta_reporterMove1
+	waitmovement 0
+	msgbox ururanta_reporterText1, MSGBOX_DEFAULT
+	applymovement 5, ururanta_reporterMove1
+	waitmovement 0
+	msgbox ururanta_lucyText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 14, lucySmack
+	waitmovement 0
+	setvar VAR_0x8004, 3   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 3  @ num shakes
+	setvar VAR_0x8007, 0   @ shake delay
+	special ShakeCamera
+	msgbox smackText, MSGBOX_DEFAULT
+	applymovement 5, reporterBack
+	waitmovement 0
+	release
+	end
+
+reporterSpin::
+	face_left
+	face_up
+	face_right
+	face_down
+	face_left
+	face_up
+	face_right
+	face_down
+	step_end
+
+reporterBack::
+	face_down
+	lock_facing_direction
+	jump_special_up
+	step_end
+
+lucySmack::
+	walk_in_place_fast_up
+	step_end
+
+smackText::
+	.string "SMAAAACK$"
+
+ururanta_lucyText2::
+	.string "Eep!!\n"
+	.string "Let go of me!$"
+
+ururanta_reporterText1::
+	.string "What!? Pretencious?\p"
+	.string "Now now, sweety, don't be shy!\n"
+	.string "Tell the camera how you really feel!$"
+
+ururanta_reporterMove1::
+	walk_in_place_down
+	step_end
+
+ururanta_lucyMove1::
+	walk_in_place_up
+	step_end
+
+ururanta_lucyText1::
+	.string "I've already told you!\p"
+	.string "I don't know who Lucretius is,\n"
+	.string "and I don't care!\p"
+	.string "And, to be frank, he sounds kinda\n"
+	.string "pretencious!$"

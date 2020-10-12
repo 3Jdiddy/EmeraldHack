@@ -118,7 +118,7 @@
 #define VAR_ROUTE104_STATE                   0x4063
 #define VAR_ROUTE105_STATE                   0x4064 // First Gym event1
 #define VAR_ROUTE106_STATE                   0x4065 // first gym battle
-#define VAR_ROUTE107_STATE                   0x4066 // Unused Var
+#define VAR_ROUTE107_STATE                   0x4066 // Ururanta Lucy Scene
 #define VAR_ROUTE108_STATE                   0x4067 // Unused Var
 #define VAR_ROUTE109_STATE                   0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                   0x4069

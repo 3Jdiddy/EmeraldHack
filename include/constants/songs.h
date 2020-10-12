@@ -326,7 +326,7 @@
 #define MUS_GOTOWN 399          // Rustboro/Mauville/Mossdeep City
 #define MUS_POKECEN 400         // Pokémon Center
 #define MUS_NEXTROAD 401        // Route 104
-#define MUS_GRANROAD 402        // Route 119
+#define MUS_GRANROAD 402        // Route 119   Replaced NOW HAPPYRELAXINGSONGITHINK
 #define MUS_CYCLING 403         // Cycling
 #define MUS_FRIENDLY 404        // Pokémart
 #define MUS_MISHIRO 405         // Littleroot Town

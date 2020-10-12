@@ -184,7 +184,7 @@ $(MID_SUBDIR)/mus_gotown.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G045 -V085
 
 $(MID_SUBDIR)/mus_granroad.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G048 -V096
+	$(MID) $< $@ -E -R$(STD_REVERB) -G044 -V096
 
 $(MID_SUBDIR)/mus_hageshii.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G062 -V078
