@@ -62,9 +62,9 @@
 #define FLAG_DISABLE_BAG     0x493 // Disables the use of items
 #define FLAG_UNUSED_0x033    0x33 // hides gym youngster
 #define FLAG_UNUSED_0x034    0x34 // AskMomForClothes
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_UNUSED_0x035    0x35 // hides reporter and cameraman after fight
+#define FLAG_UNUSED_0x036    0x36 // hides merchant Artist
+#define FLAG_UNUSED_0x037    0x37 // hides merchant scientist 
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag

@@ -829,6 +829,8 @@ schoolJanitor_text::
 
 firstEvilTeamMeeting_left::
 	lock
+	setflag FLAG_UNUSED_0x036
+	setflag FLAG_UNUSED_0x037
 	playbgm MUS_AJITO 0
 	applymovement OBJ_EVENT_ID_PLAYER, teamMeeting_playerMove1_left
 	applymovement 11, privateGirlMove1
@@ -3246,6 +3248,72 @@ Ururanta_artsyGuy1_text::
 	.string "impressive trainer, so I've heard.\p"
 	.string "Haven't seem them in a while though.$" 
 
+ururanta_lucy_scene2::
+	lock
+	applymovement 14, ururanta_lucyMove1
+	waitmovement 0
+	msgbox ururanta_lucyText1, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, ururanta_reporterMove1
+	waitmovement 0
+	msgbox ururanta_reporterText1, MSGBOX_DEFAULT
+	applymovement 5, ururanta_reporterMove1
+	waitmovement 0
+	msgbox ururanta_lucyText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 14, lucySmack
+	waitmovement 0
+	setvar VAR_0x8004, 3   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 3  @ num shakes
+	setvar VAR_0x8007, 0   @ shake delay
+	special ShakeCamera
+	applymovement 4, cameraMan_surprise
+	applymovement 5, reporterBack
+	waitmovement 0
+	applymovement 4, cameraMan_move1
+	waitmovement 0
+	applymovement 5, ururanta_reporterMove1
+	waitmovement 0
+	msgbox ururanta_reporterText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, ururanta_reporterTurn
+	waitmovement 0
+	msgbox ururanta_reporterText3, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, ururanta_reporterTurnBack
+	waitmovement 0
+	msgbox ururanta_reporterText4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, reporterMeanStep
+	applymovement 14, luckMoveBack
+	waitmovement 0
+	msgbox ururrantaLucyUMM, MSGBOX_DEFAULT
+	closemessage
+	applymovement 4, cameraMan_move2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ururanta_playerMoveToLucy2
+	waitmovement 0
+	applymovement 14, Ururanta_LucyNoticeyou
+	waitmovement 0
+	msgbox lucyGoodTiming, MSGBOX_DEFAULT
+	closemessage
+	applymovement 14, lucySmack
+	waitmovement 0
+	compare VAR_STARTER_MON, 1
+	goto_if_eq Ururanta_MultiBattle_lucyGrass
+	goto_if_gt Ururanta_MultiBattle_lucyFire
+	goto_if_lt Ururanta_MultiBattle_lucyWater
+	release
+	end
+
+ururanta_playerMoveToLucy2::
+	walk_fast_left
+	walk_fast_down
+	walk_fast_left
+	walk_in_place_fast_up
+	step_end
+
 ururanta_lucy_scene::
 	lock
 	applymovement 14, ururanta_lucyMove1
@@ -3266,11 +3334,297 @@ ururanta_lucy_scene::
 	setvar VAR_0x8006, 3  @ num shakes
 	setvar VAR_0x8007, 0   @ shake delay
 	special ShakeCamera
-	msgbox smackText, MSGBOX_DEFAULT
+	applymovement 4, cameraMan_surprise
 	applymovement 5, reporterBack
 	waitmovement 0
+	applymovement 4, cameraMan_move1
+	waitmovement 0
+	applymovement 5, ururanta_reporterMove1
+	waitmovement 0
+	msgbox ururanta_reporterText2, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, ururanta_reporterTurn
+	waitmovement 0
+	msgbox ururanta_reporterText3, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, ururanta_reporterTurnBack
+	waitmovement 0
+	msgbox ururanta_reporterText4, MSGBOX_DEFAULT
+	closemessage
+	applymovement 5, reporterMeanStep
+	applymovement 14, luckMoveBack
+	waitmovement 0
+	msgbox ururrantaLucyUMM, MSGBOX_DEFAULT
+	closemessage
+	applymovement 4, cameraMan_move2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ururanta_playerMoveToLucy
+	waitmovement 0
+	applymovement 14, Ururanta_LucyNoticeyou
+	waitmovement 0
+	msgbox lucyGoodTiming, MSGBOX_DEFAULT
+	closemessage
+	applymovement 14, lucySmack
+	waitmovement 0
+	compare VAR_STARTER_MON, 1
+	goto_if_eq Ururanta_MultiBattle_lucyGrass
+	goto_if_gt Ururanta_MultiBattle_lucyFire
+	goto_if_lt Ururanta_MultiBattle_lucyWater
 	release
 	end
+
+Ururanta_MultiBattle_lucyGrass::
+    multi_fixed_2_vs_2 TRAINER_MATT, reporterDefeatText, TRAINER_ZANDER, cameraDefeatText, TRAINER_ARCHIE, TRAINER_BACK_PIC_LEAF
+	applymovement 4, walkdowninplace
+	waitmovement 0
+	msgbox action, MSGBOX_DEFAULT
+	applymovement 5, reporterSpin
+	waitmovement 0
+	msgbox reporterMad, MSGBOX_DEFAULT
+	applymovement 5, reporterBookIt
+	applymovement 4, cameraManBookIt
+	waitmovement 0
+	removeobject 5
+	removeobject 4
+	setflag FLAG_UNUSED_0x035
+	applymovement 14, lucyFaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceLeft
+	msgbox ururanta_lucyText3, MSGBOX_DEFAULT
+	applymovement 14, Ururanta_lucyLeave1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 14, Ururanta_lucyLeave2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement 14, Ururanta_lucyLeave3
+	waitmovement 0
+	removeobject 14
+	setvar VAR_ROUTE107_STATE, 1
+    release
+    end
+
+Ururanta_MultiBattle_lucyFire::
+    multi_fixed_2_vs_2 TRAINER_MATT, reporterDefeatText, TRAINER_ZANDER, cameraDefeatText, TRAINER_SHELLY_SEAFLOOR_CAVERN, TRAINER_BACK_PIC_LEAF
+	applymovement 4, walkdowninplace
+	waitmovement 0
+	msgbox action, MSGBOX_DEFAULT
+	applymovement 5, reporterSpin
+	waitmovement 0
+	msgbox reporterMad, MSGBOX_DEFAULT
+	applymovement 5, reporterBookIt
+	applymovement 4, cameraManBookIt
+	waitmovement 0
+	removeobject 5
+	removeobject 4
+	setflag FLAG_UNUSED_0x035
+	applymovement 14, lucyFaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceLeft
+	msgbox ururanta_lucyText3, MSGBOX_DEFAULT
+	applymovement 14, Ururanta_lucyLeave1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 14, Ururanta_lucyLeave2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement 14, Ururanta_lucyLeave3
+	waitmovement 0
+	removeobject 14
+	setvar VAR_ROUTE107_STATE, 1
+    release
+    end
+
+Ururanta_MultiBattle_lucyWater::
+    multi_fixed_2_vs_2 TRAINER_MATT, reporterDefeatText, TRAINER_ZANDER, cameraDefeatText, TRAINER_SHELLY_WEATHER_INSTITUTE, TRAINER_BACK_PIC_LEAF
+	applymovement 4, walkdowninplace
+	waitmovement 0
+	msgbox action, MSGBOX_DEFAULT
+	applymovement 5, reporterSpin
+	waitmovement 0
+	msgbox reporterMad, MSGBOX_DEFAULT
+	applymovement 5, reporterBookIt
+	applymovement 4, cameraManBookIt
+	waitmovement 0
+	removeobject 5
+	removeobject 4
+	setflag FLAG_UNUSED_0x035
+	applymovement 14, lucyFaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, playerFaceLeft
+	msgbox ururanta_lucyText3, MSGBOX_DEFAULT
+	applymovement 14, Ururanta_lucyLeave1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 14, Ururanta_lucyLeave2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement 14, Ururanta_lucyLeave3
+	waitmovement 0
+	removeobject 14
+	setvar VAR_ROUTE107_STATE, 1
+    release
+    
+playerFaceUp::
+	face_up
+	step_end
+	
+playerFaceRight::
+	face_right
+	step_end
+
+Ururanta_lucyLeave1::
+	walk_up
+	step_end
+
+Ururanta_lucyLeave2::
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Ururanta_lucyLeave3::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+playerFaceLeft::
+	walk_in_place_left
+	step_end
+
+ururanta_lucyText3::
+	.string "{COLOR 06}Lucy: What is up with these people...?\p"
+	.string "Apparently they're closing down the\n"
+	.string "contest hall too.\p"
+	.string "It all seems fishy to me!\p"
+	.string "I am going to see what I can find out\n"
+	.string "about this Lucretius fellow.\p"
+	.string "You don't haven't been to the gym yet,\n"
+	.string "have you?\p"
+	.string "Hmm-- You might be able to take\n"
+	.string "them on.\p"
+	.string "As you are now, it will be a bit of a\n"
+	.string "gamble though, haha!\p"
+	.string "Well-- See you 'round, {PLAYER}\n"
+	.string "Good luck!$"
+
+reporterBookIt::
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+cameraManBookIt::
+	jump_in_place_up_down
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+action::
+	.string "Aaaand...\p"
+	.string "Action!$"
+
+walkdowninplace::
+	walk_in_place_down
+	step_end
+
+reporterDefeatText::
+	.string "Tsk!\p"
+	.string "Mitch!\n"
+	.string "Get the camera rolling.\p"
+	.string "I have an idea!$"
+
+cameraDefeatText::
+	.string "Roger!$"
+
+reporterMad::
+	.string "Oohh ow ow ow!!\p"
+	.string "Such cruelty! Such malice!\p"
+	.string "This just in: I have been assaulted by\n"
+	.string "two young hooligans!\p"
+	.string "...\p"
+	.string "Perfect! Now let's get outta here!$"
+
+script_PlayerLostTheFight::
+	release
+	end
+
+cameraMan_move2::
+	walk_left
+	walk_down
+	step_end
+
+lucyGoodTiming::
+	.string "{COLOR 06}Lucy: {PLAYER}! Good timing!\p"
+	.string "Wanna give me a hand?$"
+
+Ururanta_LucyNoticeyou::
+	face_right
+	emote_exclamation_mark
+	step_end
+
+lucyFaceRight::
+	walk_in_place_right
+	step_end
+
+ururanta_playerMoveToLucy::
+	walk_left
+	walk_left
+	walk_in_place_up
+	step_end
+
+ururrantaLucyUMM::
+	.string "{COLOR 06}Lucy: Uhh, umm!$"
+
+luckMoveBack::
+	walk_down_backwards
+	step_end 
+
+reporterMeanStep::
+	walk_slow_down
+	walk_slow_down
+	step_end
+
+ururanta_reporterText4::
+	.string "You're going to regret that.$"
+
+
+ururanta_reporterTurn::
+	walk_in_place_right
+	step_end
+
+ururanta_reporterTurnBack::
+	walk_in_place_down
+	step_end
+
+ururanta_reporterText3::
+	.string "Hey! Mitch!\p"
+	.string "Cut the camera.$"
+
+ururanta_reporterText2::
+	.string "Uhhg, you piece of--$"
+
+cameraMan_move1::
+	walk_right
+	walk_in_place_left
+	step_end
+
+cameraMan_surprise::
+	emote_exclamation_mark
+	step_end
 
 reporterSpin::
 	face_left
@@ -3284,9 +3638,7 @@ reporterSpin::
 	step_end
 
 reporterBack::
-	face_down
-	lock_facing_direction
-	jump_special_up
+	jump_up_backwards
 	step_end
 
 lucySmack::
@@ -3297,7 +3649,7 @@ smackText::
 	.string "SMAAAACK$"
 
 ururanta_lucyText2::
-	.string "Eep!!\n"
+	.string "{COLOR 06}Lucy: Eep!!\n"
 	.string "Let go of me!$"
 
 ururanta_reporterText1::
@@ -3314,8 +3666,276 @@ ururanta_lucyMove1::
 	step_end
 
 ururanta_lucyText1::
-	.string "I've already told you!\p"
+	.string "{COLOR 06}Lucy: I've already told you!\p"
 	.string "I don't know who Lucretius is,\n"
 	.string "and I don't care!\p"
 	.string "And, to be frank, he sounds kinda\n"
 	.string "pretencious!$"
+
+WestUruranta_girl1::
+	lock
+	applymovement 9, girl1Move
+	waitmovement 0
+	msgbox WestUruranta_girl1_text, MSGBOX_NPC
+	msgbox tipHer, MSGBOX_SIGN
+	multichoice 20, 4, MULTI_BRINEY_ON_DEWFORD, 0
+	waitmessage
+	switch VAR_RESULT
+	case 0, tipAnswer_100
+	case 1, tipAnswer_1000
+	case 2, tipAnswer_everything
+	release
+	end
+
+tipHer::
+	.string "Tip her?$"
+
+tipAnswer_100::
+	checkmoney 100, 0
+	compare VAR_RESULT, 0
+	goto_if_eq tip_NotEnoughMoney
+	removemoney 100, 0
+	msgbox thanks100, MSGBOX_NPC
+	release
+	end
+
+tipAnswer_1000::
+	checkmoney 1000, 0
+	compare VAR_RESULT, 0
+	goto_if_eq tip_NotEnoughMoney
+	removemoney 1000, 0
+	msgbox thanks1000, MSGBOX_NPC
+	release
+	end
+
+tip_NotEnoughMoney::
+	msgbox tip_NotEnoughMoney_text, MSGBOX_SIGN
+	release
+	end
+
+tip_NotEnoughMoney_text::
+	.string "You don't have anything left to give...$"
+
+thanks100::
+	.string "Huh?\p"
+	.string "Oh! Thanks!$"
+
+thanks1000::
+	.string "Oh wow!\p"
+	.string "Thanks a bunch!$"
+
+tipAnswer_everything::
+	msgbox areYouSure, MSGBOX_YESNO
+	waitmessage
+	compare VAR_RESULT, 1
+	goto_if_eq yeahEverything
+	release
+	end
+
+areYouSure::
+	.string "Are you sure?$"
+
+yeahEverything::
+	removemoney 999999, 0
+	msgbox gaveEVERYTHING, MSGBOX_NPC
+	release
+	end 
+
+gaveEVERYTHING::
+	.string "Wh-why are you..?\p"
+	.string "Umm... Okay!\p"
+	.string "Thanks!$"
+
+girl1Move::
+	jump_in_place_down
+	jump_in_place_down
+	step_end
+
+WestUruranta_girl1_text::
+	.string "Yo yo yoooo!\p"
+	.string "My name is Sarah McJean and imma rapping\n"
+	.string "machine.\p"
+	.string "I hope you're ready to get bullied\n"
+	.string "'cause my rhymes are mean!\p"
+	.string "You think you're hot stuff, strutting\n"
+	.string "in the summer sun?\p"
+	.string "Well come inside my papa's shop and he'll\n"
+	.string "show you how it's done!\p"
+	.string "CHA!$"
+
+WestUruranta_oldLadyScene::
+	lock
+	applymovement 25, Common_Movement_WalkInPlaceLeft
+	waitmovement 0
+	msgbox lassEmbarrased, MSGBOX_DEFAULT
+	applymovement 24, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox oldLadyInDirt, MSGBOX_DEFAULT
+	release
+	end
+
+lassEmbarrased::
+	.string "G-Grandma!!\p"
+	.string "The beach is that way!\p"
+	.string "This isn't even sand, this\n"
+	.string "is just dirt!$"
+
+oldLadyInDirt::
+	.string "Ehh?\p"
+	.string "It all looks the same to me!$"
+
+WestUruranta_oldLadyInDirt::
+	msgbox oldLadyInDirt_text, MSGBOX_NPC
+	end
+
+oldLadyInDirt_text::
+	.string "Ohh hello there, deary!\p"
+	.string "Are you here to visit the beach too?$"
+
+WestUruranta_mom1::
+	msgbox WestUruranta_mom1_text, MSGBOX_NPC
+	end
+
+WestUruranta_mom1_text::
+	.string "This is the largest beach in Yuronashi.\p"
+	.string "It's not huge, but I guess we were\n"
+	.string "never known for our shores anyway!$"
+
+WestUruranta_mom2::
+	msgbox WestUruranta_mom2_text, MSGBOX_NPC
+	end
+
+WestUruranta_mom2_text::
+	.string "Being a nanny is hard work.\p"
+	.string "Maybe I'll head up north and grab a\n"
+	.string "drink once I am off for the day.$"
+
+WestUruranta_floatyBoy::
+	msgbox WestUruranta_floatyBoy_text, MSGBOX_NPC
+	end
+
+WestUruranta_floatyBoy_text::
+	.string "Wooah!\p"
+	.string "My feet can't touch!\n"
+	.string "I-I'm floating awaayyyy-- urp!\p"
+	.string "I got water up my nose...$"
+
+WestUruranta_treasureMan::
+	msgbox WestUruranta_treasureMan_text, MSGBOX_NPC
+	end
+
+WestUruranta_treasureMan_text::
+	.string "I can feel it...\p"
+	.string "Treasure... all around me.$"
+
+WestUruranta_dad1::
+	msgbox WestUruranta_dad1_text, MSGBOX_NPC
+	end
+
+WestUruranta_dad1_text::
+	.string "Hmmm... everyone here is so young!\p"
+	.string "I hope my boy doesn't feel too out\n"
+	.string "of place.$"
+
+WestUruranta_youngster::
+	msgbox WestUruranta_youngster_text, MSGBOX_NPC
+	end
+
+WestUruranta_youngster_text::
+	.string "It's nice to get some time to spend\n"
+	.string "with my Dad...\p"
+	.string "Wh-What?\p"
+	.string "Family's important!$"
+
+WestUruranta_grandma::
+	lock
+	msgbox WestUruranta_grandma_text, MSGBOX_DEFAULT
+	release
+	end
+
+WestUruranta_grandma_text::
+	.string "She seems to be sleeping...$"
+
+WestUruranta_tubeGirl1::
+	msgbox WestUruranta_tubeGirl1_text, MSGBOX_NPC
+	end
+
+WestUruranta_tubeGirl1_text::
+	.string "Why do old people burry themselves\n"
+	.string "in sand...?\p"
+	.string "Is that a thing?\p"
+	.string "What if they get stuck?$"
+
+
+WestUruranta_herbshop::
+	message WestUruranta_herbshop_text
+	waitmessage
+	pokemart Pokemart_HerbShop
+	msgbox WestUruranta_herbshop_goodbye, MSGBOX_NPC
+	release
+	end
+
+WestUruranta_herbshop_text::
+	.string "Would you like some medicine?\p"
+	.string "You'll find only the finest here!$"
+
+WestUruranta_herbshop_goodbye::
+	.string "Thank you-- very much!$"
+
+WestUruranta_fancyQuestGiver::
+	msgbox WestUruranta_fancyQuestGiver_text, MSGBOX_NPC
+	end
+
+WestUruranta_fancyQuestGiver_text::
+	.string "There used to be an artist who would set\n"
+	.string "up shop around here...\p"
+	.string "He was a nice man; I wonder what\n"
+	.string "happened to him.\p"
+	.string "You... You're a traveler, aren't you?\p"
+	.string "Yes-- I do see wisdom in your eyes.\p"
+	.string "If you find any information about this\n"
+	.string "man, can you let me know?\p"
+	.string "Perhaps the museum in town has more\n"
+	.string "information.$"
+
+	.align 2
+Pokemart_HerbShop::
+	.2byte ITEM_ENERGY_POWDER
+	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_HEAL_POWDER
+	.2byte ITEM_REVIVAL_HERB
+	.2byte ITEM_NONE
+	release
+	end
+
+lighthouse::
+	msgbox lighthouse_text, MSGBOX_SIGN
+	end
+
+lighthouse_text::
+	.string "It's a light house?\p"
+	.string "It looks a little small...$"
+
+WestUruranta_sailor1::
+	trainerbattle_single TRAINER_LEAH, WestUruranta_sailor1_intro, WestUruranta_sailor1_defeat
+	msgbox WestUruranta_sailor1_text, MSGBOX_NPC
+	end 
+
+WestUruranta_sailor1_defeat::
+	.string "OooOooh...\p"
+	.string "I think I am land sick!$"
+
+WestUruranta_sailor1_intro::
+	.string "Now that I don't have to worry about sea\n"
+	.string "sickness, there's no way I can lose!$"
+
+WestUruranta_sailor1_text::
+	.string "I should have figured I would be out\n"
+	.string "of my element on land.\p"
+	.string "I miss my boat!$"
+
+
+
+
+
+

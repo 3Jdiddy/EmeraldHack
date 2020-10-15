@@ -1,11 +1,11 @@
 // multichoice lists
 
-//dodinasWishQuestion
+//tipingGirl
 static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
 {
     {gText_Petalburg},
     {gText_Slateport},
-    {gText_Exit},
+    {gText_Dewford},
 };
 
 static const struct MenuAction MultichoiceList_EnterInfo[] =

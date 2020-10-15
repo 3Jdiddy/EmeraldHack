@@ -2,7 +2,7 @@
   "id": "MAP_LILYCOVE_CITY",
   "name": "LilycoveCity",
   "layout": "LAYOUT_LILYCOVE_CITY",
-  "music": "MUS_GRANROAD",
+  "music": "MUS_FINECITY",
   "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -80,10 +80,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x035"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_REPORTER_M",
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
       "x": 12,
       "y": 25,
       "elevation": 3,
@@ -93,7 +93,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x035"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
@@ -210,6 +210,19 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
+      "flag": "FLAG_UNUSED_0x035"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "x": 10,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "NULL",
       "flag": "0"
     }
   ],
@@ -307,7 +320,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE107_STATE",
       "var_value": "0",
-      "script": "ururanta_lucy_scene"
+      "script": "ururanta_lucy_scene2"
     },
     {
       "type": "trigger",

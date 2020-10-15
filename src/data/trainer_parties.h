@@ -263,53 +263,88 @@ static const struct TrainerMonNoItemDefaultMoves sParty_dodinas_houndour[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Alberto[] = {
+//Reporter INgrid
+static const struct TrainerMonNoItemDefaultMoves sParty_Ingrid3J[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .lvl = 18,
+    .species = SPECIES_WHISMUR,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .lvl = 20,
+    .species = SPECIES_LOUDRED,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Ed[] = {
+//CameraMan Mitch
+static const struct TrainerMonNoItemDefaultMoves sParty_Mitch3J[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
+    .lvl = 17,
+    .species = SPECIES_PATRAT,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
+    .lvl = 20,
+    .species = SPECIES_WATCHOG,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern4[] = {
+//Lucy Water 2
+static const struct TrainerMonNoItemDefaultMoves sParty_LucyWater2[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 17,
+    .species = SPECIES_STARYU,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_GROWLITHE,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_RALTS,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
+//Lucy Fire 2
+static const struct TrainerMonNoItemDefaultMoves sParty_LucyFire2[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_GYARADOS,
+    .lvl = 17,
+    .species = SPECIES_HOUNDOUR,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_ODDISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_RALTS,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntRusturfTunnel[] = {
+//Lucy Grass 2
+static const struct TrainerMonNoItemDefaultMoves sParty_LucyGrass2[] = {
     {
     .iv = 0,
-    .lvl = 11,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 17,
+    .species = SPECIES_SHROOMISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_SHELLOS,
+    },
+    {
+    .iv = 0,
+    .lvl = 16,
+    .species = SPECIES_RALTS,
     }
 };
 
@@ -6577,16 +6612,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Edmond[] = {
     }
 };
 
+//sailor Randall
 static const struct TrainerMonNoItemDefaultMoves sParty_Ernest1[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WINGULL,
+    .lvl = 18,
+    .species = SPECIES_KRABBY,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_MACHOKE,
+    .lvl = 18,
+    .species = SPECIES_POLIWHIRL,
     }
 };
 
