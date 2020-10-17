@@ -3747,7 +3747,202 @@ const struct Item gItems[] =
 
     [ITEM_SUPER_ROD] =
     {
+<<<<<<< HEAD
         .name = _("Super Rod"),
+=======
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_0FA] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_0FB] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_0FC] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_0FD] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RED_SCARF] =
+    {
+        .name = _("RED SCARF"),
+        .itemId = ITEM_RED_SCARF,
+        .price = 100,
+        .description = sRedScarfDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_BLUE_SCARF] =
+    {
+        .name = _("BLUE SCARF"),
+        .itemId = ITEM_BLUE_SCARF,
+        .price = 100,
+        .description = sBlueScarfDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_PINK_SCARF] =
+    {
+        .name = _("PINK SCARF"),
+        .itemId = ITEM_PINK_SCARF,
+        .price = 100,
+        .description = sPinkScarfDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_GREEN_SCARF] =
+    {
+        .name = _("GREEN SCARF"),
+        .itemId = ITEM_GREEN_SCARF,
+        .price = 100,
+        .description = sGreenScarfDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_YELLOW_SCARF] =
+    {
+        .name = _("YELLOW SCARF"),
+        .itemId = ITEM_YELLOW_SCARF,
+        .price = 100,
+        .description = sYellowScarfDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+// Key items
+
+    [ITEM_MACH_BIKE] =
+    {
+        .name = _("MACH BIKE"),
+        .itemId = ITEM_MACH_BIKE,
+        .price = 0,
+        .description = sMachBikeDesc,
+        .importance = 1,
+        .unk19 = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 2,
+        .fieldUseFunc = ItemUseOutOfBattle_Bike,
+        .secondaryId = 0,
+    },
+
+    [ITEM_COIN_CASE] =
+    {
+        .name = _("COIN CASE"),
+        .itemId = ITEM_COIN_CASE,
+        .price = 0,
+        .description = sCoinCaseDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CoinCase,
+        .secondaryId = 0,
+    },
+
+    [ITEM_ITEMFINDER] =
+    {
+        .name = _("ITEMFINDER"),
+        .itemId = ITEM_ITEMFINDER,
+        .price = 0,
+        .description = sItemfinderDesc,
+        .importance = 1,
+        .unk19 = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 2,
+        .fieldUseFunc = ItemUseOutOfBattle_Itemfinder,
+        .secondaryId = 0,
+    },
+
+    [ITEM_OLD_ROD] =
+    {
+        .name = _("OLD ROD"),
+        .itemId = ITEM_OLD_ROD,
+        .price = 0,
+        .description = sOldRodDesc,
+        .importance = 1,
+        .unk19 = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 2,
+        .fieldUseFunc = ItemUseOutOfBattle_Rod,
+        .secondaryId = OLD_ROD,
+    },
+
+    [ITEM_GOOD_ROD] =
+    {
+        .name = _("GOOD ROD"),
+        .itemId = ITEM_GOOD_ROD,
+        .price = 0,
+        .description = sGoodRodDesc,
+        .importance = 1,
+        .unk19 = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 2,
+        .fieldUseFunc = ItemUseOutOfBattle_Rod,
+        .secondaryId = GOOD_ROD,
+    },
+
+    [ITEM_SUPER_ROD] =
+    {
+        .name = _("SUPER ROD"),
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
         .itemId = ITEM_SUPER_ROD,
         .price = 0,
         .description = sSuperRodDesc,
@@ -3756,7 +3951,7 @@ const struct Item gItems[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = 2,
         .fieldUseFunc = ItemUseOutOfBattle_Rod,
-        .secondaryId = 2,
+        .secondaryId = SUPER_ROD,
     },
 
     [ITEM_SS_TICKET] =

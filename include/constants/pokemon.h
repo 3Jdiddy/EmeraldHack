@@ -70,6 +70,7 @@
 #define NATURE_SASSY    22
 #define NATURE_CAREFUL  23
 #define NATURE_QUIRKY   24
+#define NUM_NATURES     25
 
 // Pokemon Stats
 #define STAT_HP      0
@@ -81,9 +82,10 @@
 #define STAT_ACC     6 // Only in battles.
 #define STAT_EVASION 7 // Only in battles.
 
-#define NUM_EV_STATS     NUM_STATS - 1 // excludes HP
+#define NUM_NATURE_STATS NUM_STATS - 1 // excludes HP
 #define NUM_BATTLE_STATS NUM_STATS + 2 // includes Accuracy and Evasion
 
+<<<<<<< HEAD
 // Move flags.
 #define FLAG_MAKES_CONTACT          0x1
 #define FLAG_PROTECT_AFFECTED       0x2
@@ -114,6 +116,11 @@
 #define SPLIT_PHYSICAL  0x0
 #define SPLIT_SPECIAL   0x1
 #define SPLIT_STATUS    0x2
+=======
+#define MIN_STAT_STAGE     0
+#define DEFAULT_STAT_STAGE 6
+#define MAX_STAT_STAGE    12
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
 
 // Shiny odds
 #define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
@@ -232,6 +239,8 @@
 #define LEVEL_UP_MOVE_LV   0xFE00
 #define LEVEL_UP_END       0xFFFF
 
+#define MAX_LEVEL_UP_MOVES       20
+
 #define MON_MALE       0x00
 #define MON_FEMALE     0xFE
 #define MON_GENDERLESS 0xFF
@@ -258,18 +267,19 @@
 #define STATUS_PRIMARY_POKERUS   6
 #define STATUS_PRIMARY_FAINTED   7
 
+#define MAX_PER_STAT_EVS 255
 #define MAX_TOTAL_EVS 510
 #define EV_ITEM_RAISE_LIMIT 100
 
 #define UNOWN_FORM_COUNT 28
 
 // Battle move flags
-#define FLAG_MAKES_CONTACT          0x1
-#define FLAG_PROTECT_AFFECTED       0x2
-#define FLAG_MAGICCOAT_AFFECTED     0x4
-#define FLAG_SNATCH_AFFECTED        0x8
-#define FLAG_MIRROR_MOVE_AFFECTED   0x10
-#define FLAG_KINGSROCK_AFFECTED     0x20
+#define FLAG_MAKES_CONTACT          (1 << 0)
+#define FLAG_PROTECT_AFFECTED       (1 << 1)
+#define FLAG_MAGICCOAT_AFFECTED     (1 << 2)
+#define FLAG_SNATCH_AFFECTED        (1 << 3)
+#define FLAG_MIRROR_MOVE_AFFECTED   (1 << 4)
+#define FLAG_KINGSROCK_AFFECTED     (1 << 5)
 
 // Growth rates
 #define GROWTH_MEDIUM_FAST  0
@@ -293,6 +303,7 @@
 
 #define F_SUMMARY_SCREEN_FLIP_SPRITE 0x80
 
+<<<<<<< HEAD
 // Evolution type flags
 #define EVO_MEGA_EVOLUTION   0xffff // Not an actual evolution, used to temporarily mega evolve in battle.
 #define EVO_FRIENDSHIP       0x0001 // Pokémon levels up with friendship ≥ 220
@@ -325,6 +336,24 @@
 #define EVO_LEVEL_RAIN       0x001C // Pokémon reaches the specified level while it's raining
 #define EVO_SPECIFIC_MON_IN_PARTY  0x001D // Pokémon levels up with a specified Pokémon in party
 #define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  0x001E // Pokémon reaches the specified level with a Dark Type Pokémon in party
+=======
+// Evolution types
+#define EVO_FRIENDSHIP       1  // Pokémon levels up with friendship ≥ 220
+#define EVO_FRIENDSHIP_DAY   2  // Pokémon levels up during the day with friendship ≥ 220
+#define EVO_FRIENDSHIP_NIGHT 3  // Pokémon levels up at night with friendship ≥ 220
+#define EVO_LEVEL            4  // Pokémon reaches the specified level
+#define EVO_TRADE            5  // Pokémon is traded
+#define EVO_TRADE_ITEM       6  // Pokémon is traded while it's holding the specified item
+#define EVO_ITEM             7  // specified item is used on Pokémon
+#define EVO_LEVEL_ATK_GT_DEF 8  // Pokémon reaches the specified level with attack > defense
+#define EVO_LEVEL_ATK_EQ_DEF 9  // Pokémon reaches the specified level with attack = defense
+#define EVO_LEVEL_ATK_LT_DEF 10 // Pokémon reaches the specified level with attack < defense
+#define EVO_LEVEL_SILCOON    11 // Pokémon reaches the specified level with a Silcoon personality value
+#define EVO_LEVEL_CASCOON    12 // Pokémon reaches the specified level with a Cascoon personality value
+#define EVO_LEVEL_NINJASK    13 // Pokémon reaches the specified level (special value for Ninjask)
+#define EVO_LEVEL_SHEDINJA   14 // Pokémon reaches the specified level (special value for Shedinja)
+#define EVO_BEAUTY           15 // Pokémon levels up with beauty ≥ specified value
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
 
 #define EVOS_PER_MON 8
 

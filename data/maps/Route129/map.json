@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE129",
   "name": "Route129",
   "layout": "LAYOUT_ROUTE129",
-  "music": "MUS_GRANROAD",
+  "music": "MUS_ROUTE119",
   "region_map_section": "MAPSEC_ROUTE_129",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -20,8 +20,18 @@
     },
     {
       "direction": "left",
+<<<<<<< HEAD
       "offset": 8,
       "map": "MAP_ROUTE105"
+=======
+      "offset": 0,
+      "map": "MAP_ROUTE130"
+    },
+    {
+      "direction": "dive",
+      "offset": 0,
+      "map": "MAP_UNDERWATER_ROUTE129"
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     }
   ],
   "object_events": [

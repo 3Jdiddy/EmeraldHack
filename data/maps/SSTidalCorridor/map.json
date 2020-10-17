@@ -2,8 +2,13 @@
   "id": "MAP_SS_TIDAL_CORRIDOR",
   "name": "SSTidalCorridor",
   "layout": "LAYOUT_SS_TIDAL_CORRIDOR",
+<<<<<<< HEAD
   "music": "MUS_RG_NANA45",
   "region_map_section": "MAPSEC_NONE",
+=======
+  "music": "MUS_SAILING",
+  "region_map_section": "MAPSEC_DYNAMIC",
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

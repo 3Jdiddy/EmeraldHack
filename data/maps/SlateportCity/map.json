@@ -2,7 +2,11 @@
   "id": "MAP_SLATEPORT_CITY",
   "name": "SlateportCity",
   "layout": "LAYOUT_SLATEPORT_CITY",
+<<<<<<< HEAD
   "music": "MUS_RG_NANA45",
+=======
+  "music": "MUS_SLATEPORT",
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
   "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

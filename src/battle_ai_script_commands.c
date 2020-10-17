@@ -16,7 +16,6 @@
 #include "constants/battle_move_effects.h"
 #include "constants/hold_effects.h"
 #include "constants/moves.h"
-#include "constants/species.h"
 
 #define AI_ACTION_DONE          0x0001
 #define AI_ACTION_FLEE          0x0002
@@ -589,9 +588,9 @@ static u8 ChooseMoveOrAction_Doubles(void)
         else
         {
             if (gBattleTypeFlags & BATTLE_TYPE_PALACE)
-                BattleAI_SetupAIData(gBattleStruct->field_92 >> 4);
+                BattleAI_SetupAIData(gBattleStruct->palaceFlags >> 4);
             else
-                BattleAI_SetupAIData(0xF);
+                BattleAI_SetupAIData((1 << MAX_MON_MOVES) - 1);
 
             gBattlerTarget = i;
 
@@ -1609,6 +1608,10 @@ static s32 CountUsablePartyMons(u8 battlerId)
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
     {
+<<<<<<< HEAD
+=======
+        u8 position;
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
         battlerOnField1 = gBattlerPartyIndexes[battlerId];
         battlerOnField2 = gBattlerPartyIndexes[GetBattlerAtPosition(GetBattlerPosition(battlerId) ^ BIT_FLANK)];
     }

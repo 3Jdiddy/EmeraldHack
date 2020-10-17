@@ -3,1275 +3,2291 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_NONE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BULBASAUR] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_IVYSAUR] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VENUSAUR] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHARMANDER] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHARMELEON] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHARIZARD] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SQUIRTLE] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WARTORTLE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BLASTOISE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CATERPIE] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_METAPOD] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BUTTERFREE] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WEEDLE] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KAKUNA] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BEEDRILL] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PIDGEY] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PIDGEOTTO] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PIDGEOT] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RATTATA] =
     {
         .size = 0x44,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RATICATE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SPEAROW] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FEAROW] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_EKANS] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ARBOK] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PIKACHU] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RAICHU] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SANDSHREW] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SANDSLASH] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NIDORAN_F] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NIDORINA] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NIDOQUEEN] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NIDORAN_M] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NIDORINO] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NIDOKING] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CLEFAIRY] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CLEFABLE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VULPIX] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NINETALES] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_JIGGLYPUFF] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WIGGLYTUFF] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ZUBAT] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x10,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GOLBAT] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ODDISH] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GLOOM] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VILEPLUME] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PARAS] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PARASECT] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VENONAT] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VENOMOTH] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DIGLETT] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0x11,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DUGTRIO] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MEOWTH] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PERSIAN] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PSYDUCK] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GOLDUCK] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MANKEY] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PRIMEAPE] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GROWLITHE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ARCANINE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_POLIWAG] =
     {
         .size = 0x74,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 19,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_POLIWHIRL] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_POLIWRATH] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ABRA] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KADABRA] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ALAKAZAM] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MACHOP] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MACHOKE] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MACHAMP] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BELLSPROUT] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WEEPINBELL] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VICTREEBEL] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TENTACOOL] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TENTACRUEL] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GEODUDE] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0x13,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GRAVELER] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GOLEM] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PONYTA] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RAPIDASH] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SLOWPOKE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x10,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SLOWBRO] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAGNEMITE] =
     {
         .size = 0x43,
+<<<<<<< HEAD
         .y_offset = 0x14,
+=======
+        .y_offset = 21,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAGNETON] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FARFETCHD] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DODUO] =
     {
         .size = 0x57,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DODRIO] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SEEL] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DEWGONG] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GRIMER] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MUK] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHELLDER] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CLOYSTER] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GASTLY] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HAUNTER] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GENGAR] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ONIX] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DROWZEE] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HYPNO] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KRABBY] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KINGLER] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VOLTORB] =
     {
         .size = 0x44,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 19,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ELECTRODE] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_EXEGGCUTE] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_EXEGGUTOR] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CUBONE] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAROWAK] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HITMONLEE] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HITMONCHAN] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LICKITUNG] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KOFFING] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WEEZING] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RHYHORN] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RHYDON] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHANSEY] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TANGELA] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KANGASKHAN] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HORSEA] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SEADRA] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GOLDEEN] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SEAKING] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_STARYU] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_STARMIE] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MR_MIME] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SCYTHER] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_JYNX] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ELECTABUZZ] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAGMAR] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PINSIR] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TAUROS] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAGIKARP] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GYARADOS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LAPRAS] =
     {
         .size = 0x85,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DITTO] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_EEVEE] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VAPOREON] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_JOLTEON] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FLAREON] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PORYGON] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_OMANYTE] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_OMASTAR] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KABUTO] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0x10,
+=======
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KABUTOPS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_AERODACTYL] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SNORLAX] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ARTICUNO] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ZAPDOS] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MOLTRES] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DRATINI] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DRAGONAIR] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DRAGONITE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MEWTWO] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MEW] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHIKORITA] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BAYLEEF] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MEGANIUM] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CYNDAQUIL] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_QUILAVA] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TYPHLOSION] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TOTODILE] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CROCONAW] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FERALIGATR] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SENTRET] =
     {
         .size = 0x47,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FURRET] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HOOTHOOT] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NOCTOWL] =
     {
         .size = 0x58,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LEDYBA] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LEDIAN] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SPINARAK] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0x10,
+=======
+        .y_offset = 19,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ARIADOS] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CROBAT] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHINCHOU] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LANTURN] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PICHU] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CLEFFA] =
     {
         .size = 0x44,
+<<<<<<< HEAD
         .y_offset = 0x12,
+=======
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_IGGLYBUFF] =
     {
         .size = 0x44,
+<<<<<<< HEAD
         .y_offset = 0x11,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TOGEPI] =
     {
         .size = 0x34,
+<<<<<<< HEAD
         .y_offset = 0x10,
+=======
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TOGETIC] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NATU] =
     {
         .size = 0x44,
+<<<<<<< HEAD
         .y_offset = 0x11,
+=======
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_XATU] =
     {
         .size = 0x47,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAREEP] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FLAAFFY] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_AMPHAROS] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BELLOSSOM] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MARILL] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_AZUMARILL] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SUDOWOODO] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_POLITOED] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HOPPIP] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SKIPLOOM] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_JUMPLUFF] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_AIPOM] =
     {
         .size = 0x58,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SUNKERN] =
     {
         .size = 0x44,
+<<<<<<< HEAD
         .y_offset = 0x11,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SUNFLORA] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_YANMA] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WOOPER] =
     {
         .size = 0x54,
-        .y_offset = 0x10,
+        .y_offset = 16,
     },
     [SPECIES_QUAGSIRE] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ESPEON] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_UMBREON] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MURKROW] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SLOWKING] =
     {
         .size = 0x58,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MISDREAVUS] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 12,
+    },
+    [SPECIES_UNOWN] =
+    {
+        .size = 0x35,
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WOBBUFFET] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GIRAFARIG] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PINECO] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FORRETRESS] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DUNSPARCE] =
     {
         .size = 0x74,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GLIGAR] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_STEELIX] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SNUBBULL] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GRANBULL] =
     {
         .size = 0x57,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_QWILFISH] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SCIZOR] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHUCKLE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HERACROSS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SNEASEL] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TEDDIURSA] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_URSARING] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SLUGMA] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAGCARGO] =
     {
         .size = 0x57,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SWINUB] =
     {
         .size = 0x43,
+<<<<<<< HEAD
         .y_offset = 0x12,
+=======
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PILOSWINE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CORSOLA] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_REMORAID] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_OCTILLERY] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DELIBIRD] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MANTINE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SKARMORY] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HOUNDOUR] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HOUNDOOM] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KINGDRA] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PHANPY] =
     {
         .size = 0x54,
-        .y_offset = 0x10,
+        .y_offset = 16,
     },
     [SPECIES_DONPHAN] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PORYGON2] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_STANTLER] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SMEARGLE] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TYROGUE] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HITMONTOP] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SMOOCHUM] =
     {
         .size = 0x35,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ELEKID] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAGBY] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MILTANK] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BLISSEY] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RAIKOU] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ENTEI] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SUICUNE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LARVITAR] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PUPITAR] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TYRANITAR] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LUGIA] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HO_OH] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CELEBI] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TREECKO] =
     {
+<<<<<<< HEAD
         .size = 0x66,
         .y_offset = 0x8,
+=======
+        .size = 0x87,
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GROVYLE] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SCEPTILE] =
     {
+<<<<<<< HEAD
         .size = 0x88,
         .y_offset = 0x0,
+=======
+        .size = 0x87,
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TORCHIC] =
     {
+<<<<<<< HEAD
         .size = 0x56,
         .y_offset = 0xc,
     },
@@ -1279,699 +2295,1390 @@ const struct MonCoords gMonFrontPicCoords[] =
     {
         .size = 0x88,
         .y_offset = 0x3,
+=======
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_F] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_G] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_H] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_I] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_J] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_K] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_L] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_M] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_N] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_O] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_P] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_Q] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_R] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_S] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_T] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_U] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_V] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_W] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_X] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_Y] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_OLD_UNOWN_Z] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_TREECKO] =
+    {
+        .size = 0x66,
+        .y_offset = 8,
+    },
+    [SPECIES_GROVYLE] =
+    {
+        .size = 0x87,
+        .y_offset = 4,
+    },
+    [SPECIES_SCEPTILE] =
+    {
+        .size = 0x88,
+        .y_offset = 0,
+    },
+    [SPECIES_TORCHIC] =
+    {
+        .size = 0x56,
+        .y_offset = 8,
+    },
+    [SPECIES_COMBUSKEN] =
+    {
+        .size = 0x88,
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BLAZIKEN] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MUDKIP] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MARSHTOMP] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SWAMPERT] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_POOCHYENA] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MIGHTYENA] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ZIGZAGOON] =
     {
         .size = 0x85,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LINOONE] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WURMPLE] =
     {
         .size = 0x45,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SILCOON] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BEAUTIFLY] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CASCOON] =
     {
         .size = 0x74,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DUSTOX] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LOTAD] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LOMBRE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LUDICOLO] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SEEDOT] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NUZLEAF] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHIFTRY] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NINCADA] =
     {
         .size = 0x74,
+<<<<<<< HEAD
         .y_offset = 0x10,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NINJASK] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHEDINJA] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TAILLOW] =
     {
         .size = 0x64,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SWELLOW] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHROOMISH] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BRELOOM] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SPINDA] =
     {
         .size = 0x68,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WINGULL] =
     {
         .size = 0x84,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 24,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PELIPPER] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SURSKIT] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MASQUERAIN] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WAILMER] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WAILORD] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SKITTY] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DELCATTY] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KECLEON] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BALTOY] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CLAYDOL] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NOSEPASS] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TORKOAL] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SABLEYE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BARBOACH] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WHISCASH] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LUVDISC] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 24,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CORPHISH] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CRAWDAUNT] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x4,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FEEBAS] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MILOTIC] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CARVANHA] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHARPEDO] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TRAPINCH] =
     {
         .size = 0x54,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VIBRAVA] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_FLYGON] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAKUHITA] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HARIYAMA] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ELECTRIKE] =
     {
         .size = 0x64,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MANECTRIC] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_NUMEL] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CAMERUPT] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SPHEAL] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SEALEO] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WALREIN] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CACNEA] =
     {
         .size = 0x74,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CACTURNE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SNORUNT] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GLALIE] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LUNATONE] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SOLROCK] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_AZURILL] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SPOINK] =
     {
         .size = 0x46,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GRUMPIG] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PLUSLE] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MINUN] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MAWILE] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MEDITITE] =
     {
         .size = 0x65,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MEDICHAM] =
     {
         .size = 0x68,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SWABLU] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ALTARIA] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x1,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WYNAUT] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DUSKULL] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 10,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DUSCLOPS] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ROSELIA] =
     {
         .size = 0x76,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SLAKOTH] =
     {
         .size = 0x74,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_VIGOROTH] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SLAKING] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GULPIN] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 18,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SWALOT] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TROPIUS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_WHISMUR] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LOUDRED] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_EXPLOUD] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CLAMPERL] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_HUNTAIL] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GOREBYSS] =
     {
         .size = 0x86,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ABSOL] =
     {
         .size = 0x68,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHUPPET] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BANETTE] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 12,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SEVIPER] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ZANGOOSE] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 5,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RELICANTH] =
     {
         .size = 0x77,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ARON] =
     {
         .size = 0x43,
+<<<<<<< HEAD
         .y_offset = 0xe,
+=======
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LAIRON] =
     {
         .size = 0x75,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_AGGRON] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CASTFORM] =
     {
         .size = 0x34,
-        .y_offset = 0x11,
+        .y_offset = 17,
     },
     [SPECIES_VOLBEAT] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ILLUMISE] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0xa,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LILEEP] =
     {
         .size = 0x67,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CRADILY] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ANORITH] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x7,
+=======
+        .y_offset = 8,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_ARMALDO] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RALTS] =
     {
         .size = 0x35,
+<<<<<<< HEAD
         .y_offset = 0xc,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KIRLIA] =
     {
         .size = 0x47,
+<<<<<<< HEAD
         .y_offset = 0x6,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GARDEVOIR] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BAGON] =
     {
         .size = 0x56,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 11,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SHELGON] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 9,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_SALAMENCE] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_BELDUM] =
     {
         .size = 0x55,
+<<<<<<< HEAD
         .y_offset = 0xf,
+=======
+        .y_offset = 15,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_METANG] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 7,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_METAGROSS] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x9,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_REGIROCK] =
     {
         .size = 0x78,
+<<<<<<< HEAD
         .y_offset = 0x3,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_REGICE] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x2,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_REGISTEEL] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x5,
+=======
+        .y_offset = 3,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_KYOGRE] =
     {
         .size = 0x87,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 4,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GROUDON] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_RAYQUAZA] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 0,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LATIAS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x8,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_LATIOS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 2,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_JIRACHI] =
     {
         .size = 0x66,
+<<<<<<< HEAD
         .y_offset = 0xd,
+=======
+        .y_offset = 13,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_DEOXYS] =
     {
         .size = 0x88,
+<<<<<<< HEAD
         .y_offset = 0x0,
+=======
+        .y_offset = 1,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHIMECHO] =
     {
         .size = 0x37,
+<<<<<<< HEAD
         .y_offset = 0xb,
+=======
+        .y_offset = 6,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TURTWIG] =
     {
+<<<<<<< HEAD
         .size = 0x45,
         .y_offset = 0xb,
+=======
+        .size = 0x33,
+        .y_offset = 20,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_GROTLE] =
     {
+<<<<<<< HEAD
         .size = 0x56,
         .y_offset = 0x7,
+=======
+        .size = 0x34,
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_TORTERRA] =
     {
+<<<<<<< HEAD
         .size = 0x88,
         .y_offset = 0x0,
+=======
+        .size = 0x44,
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_CHIMCHAR] =
     {
+<<<<<<< HEAD
         .size = 0x55,
         .y_offset = 0xa,
+=======
+        .size = 0x44,
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_MONFERNO] =
     {
+<<<<<<< HEAD
         .size = 0x66,
         .y_offset = 0x8,
+=======
+        .size = 0x44,
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_INFERNAPE] =
     {
+<<<<<<< HEAD
         .size = 0x88,
         .y_offset = 0x1,
+=======
+        .size = 0x44,
+        .y_offset = 17,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PIPLUP] =
     {
+<<<<<<< HEAD
         .size = 0x65,
         .y_offset = 0xe,
+=======
+        .size = 0x35,
+        .y_offset = 14,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_PRINPLUP] =
     {
+<<<<<<< HEAD
         .size = 0x66,
         .y_offset = 0x7,
+=======
+        .size = 0x44,
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_EMPOLEON] =
     {
+<<<<<<< HEAD
         .size = 0x88,
         .y_offset = 0x0,
     },
@@ -4095,101 +5802,105 @@ const struct MonCoords gMonFrontPicCoords[] =
     {
         .size = 0x34,
         .y_offset = 0x10,
+=======
+        .size = 0x34,
+        .y_offset = 16,
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
     },
     [SPECIES_UNOWN_J] =
     {
         .size = 0x34,
-        .y_offset = 0x11,
+        .y_offset = 17,
     },
     [SPECIES_UNOWN_K] =
     {
         .size = 0x44,
-        .y_offset = 0x11,
+        .y_offset = 17,
     },
     [SPECIES_UNOWN_L] =
     {
         .size = 0x34,
-        .y_offset = 0x13,
+        .y_offset = 19,
     },
     [SPECIES_UNOWN_M] =
     {
         .size = 0x44,
-        .y_offset = 0x13,
+        .y_offset = 19,
     },
     [SPECIES_UNOWN_N] =
     {
         .size = 0x43,
-        .y_offset = 0x14,
+        .y_offset = 20,
     },
     [SPECIES_UNOWN_O] =
     {
         .size = 0x44,
-        .y_offset = 0x10,
+        .y_offset = 16,
     },
     [SPECIES_UNOWN_P] =
     {
         .size = 0x34,
-        .y_offset = 0x13,
+        .y_offset = 19,
     },
     [SPECIES_UNOWN_Q] =
     {
         .size = 0x43,
-        .y_offset = 0x15,
+        .y_offset = 21,
     },
     [SPECIES_UNOWN_R] =
     {
         .size = 0x34,
-        .y_offset = 0x13,
+        .y_offset = 19,
     },
     [SPECIES_UNOWN_S] =
     {
         .size = 0x45,
-        .y_offset = 0x0c,
+        .y_offset = 12,
     },
     [SPECIES_UNOWN_T] =
     {
         .size = 0x34,
-        .y_offset = 0x12,
+        .y_offset = 18,
     },
     [SPECIES_UNOWN_U] =
     {
         .size = 0x44,
-        .y_offset = 0x12,
+        .y_offset = 18,
     },
     [SPECIES_UNOWN_V] =
     {
         .size = 0x44,
-        .y_offset = 0x12,
+        .y_offset = 18,
     },
     [SPECIES_UNOWN_W] =
     {
         .size = 0x44,
-        .y_offset = 0x13,
+        .y_offset = 19,
     },
     [SPECIES_UNOWN_X] =
     {
         .size = 0x33,
-        .y_offset = 0x15,
+        .y_offset = 21,
     },
     [SPECIES_UNOWN_Y] =
     {
         .size = 0x34,
-        .y_offset = 0x11,
+        .y_offset = 17,
     },
     [SPECIES_UNOWN_Z] =
     {
         .size = 0x34,
-        .y_offset = 0x10,
+        .y_offset = 16,
     },
     [SPECIES_UNOWN_EMARK] =
     {
         .size = 0x35,
-        .y_offset = 0x0f,
+        .y_offset = 15,
     },
     [SPECIES_UNOWN_QMARK] =
     {
         .size = 0x35,
-        .y_offset = 0x0d,
+        .y_offset = 13,
     },
     // Megas
     [SPECIES_MEGA_DIANCIE] =

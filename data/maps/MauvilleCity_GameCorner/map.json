@@ -2,7 +2,11 @@
   "id": "MAP_MAUVILLE_CITY_GAME_CORNER",
   "name": "MauvilleCity_GameCorner",
   "layout": "LAYOUT_MAUVILLE_CITY_GAME_CORNER",
+<<<<<<< HEAD
   "music": "MUS_RG_RIVAL1",
+=======
+  "music": "MUS_GAME_CORNER",
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

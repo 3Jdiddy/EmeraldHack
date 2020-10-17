@@ -72,12 +72,12 @@ static const union AnimCmd *const sSpriteAnimTable_859F508[] =
     sSpriteAnim_859F500
 };
 
-static const struct CompressedSpriteSheet gUnknown_0859F514 =
+const struct CompressedSpriteSheet gBagSwapSpriteSheet =
 {
     gBagSwapLineGfx, 0x100, 109
 };
 
-static const struct CompressedSpritePalette gUnknown_0859F51C =
+const struct CompressedSpritePalette gBagSwapSpritePalette =
 {
     gBagSwapLinePal, 109
 };
@@ -94,6 +94,23 @@ static const struct SpriteTemplate gUnknown_0859F524 =
 };
 
 // code
+void ResetAllBgsCoordinatesAndBgCntRegs(void)
+{
+    SetGpuReg(REG_OFFSET_DISPCNT, 0);
+    SetGpuReg(REG_OFFSET_BG3CNT, 0);
+    SetGpuReg(REG_OFFSET_BG2CNT, 0);
+    SetGpuReg(REG_OFFSET_BG1CNT, 0);
+    SetGpuReg(REG_OFFSET_BG0CNT, 0);
+    ChangeBgX(0, 0, 0);
+    ChangeBgY(0, 0, 0);
+    ChangeBgX(1, 0, 0);
+    ChangeBgY(1, 0, 0);
+    ChangeBgX(2, 0, 0);
+    ChangeBgY(2, 0, 0);
+    ChangeBgX(3, 0, 0);
+    ChangeBgY(3, 0, 0);
+}
+
 void ResetVramOamAndBgCntRegs(void)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
@@ -183,7 +200,7 @@ bool8 AdjustQuantityAccordingToDPadInput(s16 *arg0, u16 arg1)
 {
     s16 valBefore = (*arg0);
 
-    if ((gMain.newAndRepeatedKeys & DPAD_ANY) == DPAD_UP)
+    if (JOY_REPEAT(DPAD_ANY) == DPAD_UP)
     {
         (*arg0)++;
         if ((*arg0) > arg1)
@@ -199,7 +216,7 @@ bool8 AdjustQuantityAccordingToDPadInput(s16 *arg0, u16 arg1)
             return TRUE;
         }
     }
-    else if ((gMain.newAndRepeatedKeys & DPAD_ANY) == DPAD_DOWN)
+    else if (JOY_REPEAT(DPAD_ANY) == DPAD_DOWN)
     {
         (*arg0)--;
         if ((*arg0) <= 0)
@@ -215,7 +232,7 @@ bool8 AdjustQuantityAccordingToDPadInput(s16 *arg0, u16 arg1)
             return TRUE;
         }
     }
-    else if ((gMain.newAndRepeatedKeys & DPAD_ANY) == DPAD_RIGHT)
+    else if (JOY_REPEAT(DPAD_ANY) == DPAD_RIGHT)
     {
         (*arg0) += 10;
         if ((*arg0) > arg1)
@@ -231,7 +248,7 @@ bool8 AdjustQuantityAccordingToDPadInput(s16 *arg0, u16 arg1)
             return TRUE;
         }
     }
-    else if ((gMain.newAndRepeatedKeys & DPAD_ANY) == DPAD_LEFT)
+    else if (JOY_REPEAT(DPAD_ANY) == DPAD_LEFT)
     {
         (*arg0) -= 10;
         if ((*arg0) <= 0)
@@ -255,9 +272,9 @@ u8 GetLRKeysPressed(void)
 {
     if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)
     {
-        if (gMain.newKeys & L_BUTTON)
+        if (JOY_NEW(L_BUTTON))
             return MENU_L_PRESSED;
-        if (gMain.newKeys & R_BUTTON)
+        if (JOY_NEW(R_BUTTON))
             return MENU_R_PRESSED;
     }
 
@@ -268,9 +285,9 @@ u8 GetLRKeysPressedAndHeld(void)
 {
     if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)
     {
-        if (gMain.newAndRepeatedKeys & L_BUTTON)
+        if (JOY_REPEAT(L_BUTTON))
             return MENU_L_PRESSED;
-        if (gMain.newAndRepeatedKeys & R_BUTTON)
+        if (JOY_REPEAT(R_BUTTON))
             return MENU_R_PRESSED;
     }
 
@@ -299,7 +316,7 @@ bool8 itemid_80BF6D8_mail_related(u16 itemId)
         return FALSE;
 }
 
-bool8 sub_81221AC(void)
+bool8 MenuHelpers_LinkSomething(void)
 {
     if (IsUpdateLinkStateCBActive() == TRUE || gReceivedRemoteLinkPlayers == 1)
         return TRUE;
@@ -309,13 +326,13 @@ bool8 sub_81221AC(void)
 
 static bool8 sub_81221D0(void)
 {
-    if (!sub_81221AC())
+    if (!MenuHelpers_LinkSomething())
         return FALSE;
     else
         return sub_8087598();
 }
 
-bool8 sub_81221EC(void)
+bool8 MenuHelpers_CallLinkSomething(void)
 {
     if (sub_81221D0() == TRUE)
         return TRUE;
@@ -392,8 +409,8 @@ void sub_8122298(u16 *arg0, u16 *arg1, u8 arg2, u8 arg3, u8 arg4)
 
 void LoadListMenuArrowsGfx(void)
 {
-    LoadCompressedSpriteSheet(&gUnknown_0859F514);
-    LoadCompressedSpritePalette(&gUnknown_0859F51C);
+    LoadCompressedSpriteSheet(&gBagSwapSpriteSheet);
+    LoadCompressedSpritePalette(&gBagSwapSpritePalette);
 }
 
 void sub_8122344(u8 *spriteIds, u8 count)

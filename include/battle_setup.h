@@ -29,9 +29,13 @@ void BattleSetup_StartLegendaryBattle(void);
 void StartGroudonKyogreBattle(void);
 void StartRegiBattle(void);
 u8 BattleSetup_GetTerrainId(void);
+<<<<<<< HEAD
 u8 GetWildBattleTransition(void);
 u8 GetTrainerBattleTransition(void);
 u8 sub_80B100C(s32 arg0);
+=======
+u8 GetSpecialBattleTransition(s32 arg0);
+>>>>>>> 184f75f83c9bbf5445d9a048daa2e86a7b41866b
 void ChooseStarter(void);
 void ResetTrainerOpponentIds(void);
 void SetMapVarsToTrainer(void);
